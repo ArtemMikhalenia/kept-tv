@@ -1,0 +1,30 @@
+.greetings-page-container {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('../../assets/images/backgrounds/entrance_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: 'Great Vibes', cursive;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 50px;
+  letter-spacing: 10px;
+  color: rgba(255, 255, 255, 0.8);
+
+  .greetings-page-content {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+    line-height: 120%;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: rgb(0, 110, 255) 1px 0 10px;
+  }
+}
