@@ -1,8 +1,10 @@
 .greetings-page-container {
+  position: relative;
+
   width: 100%;
   height: 100vh;
 
-  background-image: url('../../assets/images/backgrounds/entrance_background.png');
+  background-image: url('../../assets/images/backgrounds/greetings-page/entrance_background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,5 +28,28 @@
     line-height: 120%;
     color: rgba(255, 255, 255, 1);
     text-shadow: rgb(0, 110, 255) 1px 0 10px;
+  }
+
+  .image1,
+  .image2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -0.5%;
+    z-index: 1;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .image1 {
+    left: -1%;
+    background-image: url('../../assets/images/backgrounds/greetings-page/entrance_background_left.png');
+  }
+
+  .image2 {
+    right: -1%;
+    background-image: url('../../assets/images/backgrounds/greetings-page/entrance_background_right.png');
   }
 }
