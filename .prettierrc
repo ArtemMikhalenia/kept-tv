@@ -10,7 +10,11 @@
   "arrowParens": "always",
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
-    "^[react]",
+    "^react",
+    "^react-",
+    "^motion",
+    "^./pages",
+    "^./components",
     "^./hooks",
     "^~/icons",
     "^@(?!/)",

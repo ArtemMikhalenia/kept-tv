@@ -1,11 +1,15 @@
-import './index.scss';
-import GreetingsPage from './pages/GreetingsPage/GreetingsPage';
+import type { JSX } from 'react';
+import { BrowserRouter } from 'react-router';
 
-const App = () => {
+import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes';
+
+import './index.scss';
+
+const App = (): JSX.Element => {
   return (
-    <>
-      <GreetingsPage />
-    </>
+    <BrowserRouter>
+      <AnimatedRoutes />
+    </BrowserRouter>
   );
 };
 
