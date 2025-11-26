@@ -93,7 +93,6 @@
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
-    backdrop-filter: blur(10px);
 
     opacity: 0;
 
@@ -107,7 +106,7 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    z-index: 20;
+    z-index: 2;
     opacity: 1;
 
     animation: randomFlicker 4s ease-in-out infinite;

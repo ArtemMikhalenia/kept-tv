@@ -8,6 +8,9 @@ import Snowfall from 'react-snowfall';
 
 import { motion } from 'motion/react';
 
+import Light from '../../components/Light/Light';
+import { lightsData } from '../../data/lightData';
+import type { lightInterface } from '../../interfaces/lightInterface';
 import './greetingsPage.scss';
 
 const GreetingsPage = (): JSX.Element => {
@@ -29,13 +32,31 @@ const GreetingsPage = (): JSX.Element => {
           <MouseParallaxChild factorX={0.4} factorY={0.4}>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <Link className="greeting" to="/livingroom">
-                С Новым годом!
+                С новым годом!
               </Link>
             </motion.div>
           </MouseParallaxChild>
         </motion.div>
         <MouseParallaxChild className="image1" factorX={0.15} factorY={0.05} />
         <MouseParallaxChild className="image2" factorX={0.15} factorY={0.05} />
+        {lightsData.map(
+          (light: lightInterface): JSX.Element => (
+            <MouseParallaxChild
+              style={{
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+              }}
+              factorX={Math.random() * 0.5}
+              factorY={Math.random() * 0.5}
+              key={light.id}
+            >
+              <Light id={light.id} color={light.color} />
+            </MouseParallaxChild>
+          )
+        )}
       </MouseParallaxContainer>
     </section>
   );

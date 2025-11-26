@@ -57,4 +57,31 @@
     right: -1%;
     background-image: url('../../assets/images/backgrounds/greetings-page/entrance_background_right.png');
   }
+
+  .light {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 20;
+    opacity: 0;
+    backdrop-filter: blur(3px);
+
+    animation: randomLight 10s linear infinite;
+  }
+}
+
+@keyframes randomLight {
+  25% {
+    opacity: 0.38;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.36;
+  }
+  100% {
+    opacity: 0;
+  }
 }

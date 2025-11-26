@@ -1,4 +1,4 @@
-import { type JSX, useState } from 'react';
+import { type JSX, useMemo, useState } from 'react';
 import {
   MouseParallaxChild,
   MouseParallaxContainer,
@@ -11,7 +11,7 @@ import { firefliesData } from '../../data/fireflyData';
 import type { fireflyInterface } from '../../interfaces/fireflyInterface';
 import './livingRoomPage.scss';
 
-const LivingRoomPage = () => {
+const LivingRoomPage = (): JSX.Element => {
   const [isTvHovered, setIsTvHovered] = useState(false);
   const [isTvTapped, setIsTvTapped] = useState(false);
   const [isTableHovered, setIsTableHovered] = useState(false);
@@ -35,12 +35,23 @@ const LivingRoomPage = () => {
     setIsNewspaperVisible(true);
   };
 
+  const memoizedFireflies = useMemo(
+    () =>
+      firefliesData.map((firefly: fireflyInterface) => (
+        <Firefly key={firefly.id} id={firefly.id} color={firefly.color} />
+      )),
+    []
+  );
+
   return (
     <section className="living-room-page-container">
       <MouseParallaxContainer
         globalFactorX={0.1}
         globalFactorY={0.1}
-        containerStyle={{ height: '100%' }}
+        containerStyle={{
+          height: '100%',
+          backdropFilter: isNewspaperVisible ? 'blur(3px)' : 'none',
+        }}
       >
         <MouseParallaxChild
           factorX={0.4}
@@ -53,7 +64,9 @@ const LivingRoomPage = () => {
         />
         <motion.div
           className="tv-image"
-          animate={{ scale: isTvTapped ? 0.98 : isTvHovered ? 1.03 : 1 }}
+          animate={{
+            scale: isTvTapped ? 0.98 : isTvHovered ? 1.03 : 1,
+          }}
           transition={{ duration: 0.3 }}
         />
       </MouseParallaxContainer>
@@ -82,25 +95,10 @@ const LivingRoomPage = () => {
           height: '100%',
           top: 0,
           left: 0,
+          backdropFilter: isNewspaperVisible ? 'blur(3px)' : 'none',
         }}
       >
-        {firefliesData.map(
-          (firefly: fireflyInterface): JSX.Element => (
-            <MouseParallaxChild
-              style={{ width: '100%', height: '100%' }}
-              factorX={0.4}
-              factorY={0.05}
-              key={firefly.id}
-            >
-              <Firefly
-                id={firefly.id}
-                top={firefly.top}
-                left={firefly.left}
-                color={firefly.color}
-              />
-            </MouseParallaxChild>
-          )
-        )}
+        {memoizedFireflies}
       </MouseParallaxContainer>
       <motion.div
         className="newspaper-image"

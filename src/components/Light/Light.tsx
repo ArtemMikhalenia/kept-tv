@@ -1,0 +1,20 @@
+import type { JSX } from 'react';
+
+import type { lightInterface } from '../../interfaces/lightInterface';
+
+const Light = ({ id, color }: lightInterface): JSX.Element => {
+  return (
+    <div
+      className="light"
+      id={id}
+      style={{
+        top: `${Math.random() * 90}%`,
+        left: `${Math.random() * 90}%`,
+        backgroundColor: color,
+        animationDelay: `${Math.random() * 10}s`,
+      }}
+    ></div>
+  );
+};
+
+export default Light;
