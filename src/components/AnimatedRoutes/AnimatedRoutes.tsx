@@ -21,7 +21,7 @@ const AnimatedRoutes = (): JSX.Element => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<GreetingsPage />} />
-        <Route path="/living" element={<LivingRoomPage />} />
+        <Route path="/livingroom" element={<LivingRoomPage />} />
       </Routes>
     </AnimatePresence>
   );

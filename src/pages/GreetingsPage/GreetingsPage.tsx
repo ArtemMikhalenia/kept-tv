@@ -28,7 +28,7 @@ const GreetingsPage = (): JSX.Element => {
         <motion.div className="greetings-page-content">
           <MouseParallaxChild factorX={0.4} factorY={0.4}>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Link className="greeting" to="/living">
+              <Link className="greeting" to="/livingroom">
                 С Новым годом!
               </Link>
             </motion.div>

@@ -1,12 +1,30 @@
+@use '../src/variables' as var;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
+html {
+  height: 100%;
+
+  scrollbar-width: none;
+}
+
+#root {
   width: 100%;
-  height: 100vh;
+  margin: 0 auto;
+  min-height: 100vh;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  height: 100%;
+  height: '-webkit-fill-available';
+  overflow: hidden;
 }
 
 a {
