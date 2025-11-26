@@ -44,7 +44,7 @@
 
     @media (max-width: 1750px) {
       width: 23vw;
-      left: 6vw;
+      left: 10vw;
     }
 
     @media (max-width: 1500px) {
@@ -93,6 +93,7 @@
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
 
     opacity: 0;
 
