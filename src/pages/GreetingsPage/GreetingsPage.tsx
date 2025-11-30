@@ -8,9 +8,12 @@ import Snowfall from 'react-snowfall';
 
 import { motion } from 'motion/react';
 
-import Light from '../../components/Light/Light';
 import { lightsData } from '../../data/lightData';
+
 import type { lightInterface } from '../../interfaces/lightInterface';
+
+import Light from '../../components/Light/Light';
+
 import './greetingsPage.scss';
 
 const GreetingsPage = (): JSX.Element => {

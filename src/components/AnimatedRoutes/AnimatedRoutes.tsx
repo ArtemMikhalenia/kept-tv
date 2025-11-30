@@ -3,6 +3,9 @@ import { Route, Routes, useLocation } from 'react-router';
 
 import { AnimatePresence } from 'motion/react';
 
+import TVLayout from '../../layouts/TVLayout';
+import Channel1Page from '../../pages/Channel1/Channel1Page';
+import Channel2Page from '../../pages/Channel2/Channel2Page';
 import GreetingsPage from '../../pages/GreetingsPage/GreetingsPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
 
@@ -22,6 +25,10 @@ const AnimatedRoutes = (): JSX.Element => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<GreetingsPage />} />
         <Route path="/livingroom" element={<LivingRoomPage />} />
+        <Route path="/tv" element={<TVLayout />}>
+          <Route path="channel1" element={<Channel1Page />} />
+          <Route path="channel2" element={<Channel2Page />} />
+        </Route>
       </Routes>
     </AnimatePresence>
   );

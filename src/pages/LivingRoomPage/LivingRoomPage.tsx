@@ -3,6 +3,7 @@ import {
   MouseParallaxChild,
   MouseParallaxContainer,
 } from 'react-parallax-mouse';
+import { Link } from 'react-router';
 
 import { motion } from 'motion/react';
 
@@ -70,7 +71,8 @@ const LivingRoomPage = (): JSX.Element => {
           transition={{ duration: 0.3 }}
         />
       </MouseParallaxContainer>
-      <div
+      <Link
+        to="/tv"
         className="tv-click-area"
         onMouseDown={handleTvTap}
         onMouseUp={handleTvTap}
