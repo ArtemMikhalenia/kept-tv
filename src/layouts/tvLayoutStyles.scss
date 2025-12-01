@@ -12,80 +12,81 @@
     height: 100%;
     top: 0;
     left: 0;
-
-    background-image: url('../assets/images/backgrounds/tv/tv_v5.png');
+    background-image: url('../assets/images/backgrounds/tv/tv.png');
+    background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
 
-    z-index: 1000;
+    z-index: 100;
 
-    .grid-buttons {
-      position: absolute;
-      max-width: 130px;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 15px;
+    pointer-events: none;
+  }
+
+  .grid-buttons {
+    position: absolute;
+    max-width: 130px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+
+    z-index: 2000;
+
+    .big-btn-container {
       display: grid;
+      justify-content: center;
+      align-items: center;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, 1fr);
-      align-items: center;
+      row-gap: 20px;
 
-      z-index: 2000;
+      padding: 20px 0px;
 
-      .big-btn-container {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        row-gap: 20px;
+      .big-btn {
+        cursor: pointer;
 
-        padding: 20px 0px;
-
-        .big-btn {
-          cursor: pointer;
-
-          img {
-            max-width: 100%;
-            width: 100%;
-          }
+        img {
+          max-width: 100%;
+          width: 100%;
         }
       }
-      .switch-channel-btn-container {
-        display: grid;
+    }
+    .switch-channel-btn-container {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      gap: 15px;
+
+      padding: 20px 0px;
+
+      .switch-channel-btn {
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        gap: 15px;
+        padding: 5px 0px;
 
-        padding: 20px 0px;
+        cursor: pointer;
 
-        .switch-channel-btn {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 5px 0px;
+        background-image: url('../assets/images/backgrounds/tv/switch_channel_btn.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-          cursor: pointer;
+        .switch-btn-number {
+          width: 100%;
+          text-align: center;
+          font-family: 'Jura', sans-serif;
+          font-size: 16px;
+          font-weight: 700;
 
-          background-image: url('../assets/images/backgrounds/tv/switch_channel_btn.png');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-
-          .switch-btn-number {
-            width: 100%;
-            text-align: center;
-            font-family: 'Jura', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-
-            color: var.$font-color;
-          }
+          color: var.$font-color;
         }
       }
     }
@@ -98,6 +99,6 @@
     top: 0;
     left: 0;
 
-    z-index: 100;
+    z-index: 99;
   }
 }

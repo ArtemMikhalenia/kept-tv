@@ -13,22 +13,21 @@ import './tvLayoutStyles.scss';
 const TVLayout = (): JSX.Element => {
   return (
     <section className="tv-container">
-      <div className="tv-frame">
-        <div className="grid-buttons">
-          <div className="big-btn-container">
-            {[1, 2].map(
-              (item: number): JSX.Element => (
-                <BigBtn key={item} />
-              )
-            )}
-          </div>
-          <div className="switch-channel-btn-container">
-            {switchBtnData.map(
-              (item: switchBtnInterface, i: number): JSX.Element => (
-                <SwitchBtn key={i} number={item.number} link={item.link} />
-              )
-            )}
-          </div>
+      <div className="tv-frame" />
+      <div className="grid-buttons">
+        <div className="big-btn-container">
+          {[1, 2].map(
+            (item: number): JSX.Element => (
+              <BigBtn key={item} />
+            )
+          )}
+        </div>
+        <div className="switch-channel-btn-container">
+          {switchBtnData.map(
+            (item: switchBtnInterface, i: number): JSX.Element => (
+              <SwitchBtn key={i} number={item.number} link={item.link} />
+            )
+          )}
         </div>
       </div>
       <div className="tv-layout">
