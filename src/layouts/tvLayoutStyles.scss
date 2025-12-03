@@ -2,49 +2,52 @@
 
 .tv-container {
   position: relative;
+  z-index: 80;
   width: 100vw;
   height: 100vh;
-  z-index: 100;
+
+  // background-image: url('../assets/images/backgrounds/tv/not-found.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 
   .tv-frame {
+    pointer-events: none;
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+
+    z-index: 100;
+    width: 100%;
+    height: 100%;
     background-image: url('../assets/images/backgrounds/tv/tv.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-
-    z-index: 100;
-
-    pointer-events: none;
   }
 
   .grid-buttons {
     position: absolute;
+    top: 0;
+    right: 15px;
+
+    z-index: 2000;
     max-width: 130px;
     width: 100%;
     height: 100%;
-    top: 0;
-    right: 15px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: center;
 
-    z-index: 2000;
-
     .big-btn-container {
+      padding: 20px 0px;
       display: grid;
-      justify-content: center;
-      align-items: center;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, 1fr);
       row-gap: 20px;
-
-      padding: 20px 0px;
+      justify-content: center;
+      align-items: center;
 
       .big-btn {
         cursor: pointer;
@@ -56,36 +59,64 @@
       }
     }
     .switch-channel-btn-container {
+      padding: 20px 0px;
       display: grid;
-      justify-content: center;
-      align-items: center;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(7, 1fr);
       gap: 15px;
-
-      padding: 20px 0px;
+      justify-content: center;
+      align-items: center;
 
       .switch-channel-btn {
         position: relative;
+        padding: 5px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 5px 0px;
+
+        background-image: url('../assets/images/backgrounds/tv/switch_channel_btn.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
         cursor: pointer;
 
-        background-image: url('../assets/images/backgrounds/tv/switch_channel_btn.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
         .switch-btn-number {
           width: 100%;
-          text-align: center;
           font-family: 'Jura', sans-serif;
           font-size: 16px;
           font-weight: 700;
+          text-align: center;
 
+          color: var.$font-color;
+        }
+      }
+    }
+
+    .arrow-btn-container {
+      display: flex;
+      gap: 15px;
+      justify-content: space-between;
+      align-items: center;
+
+      .switch-channel-btn {
+        position: relative;
+        width: 100%;
+        padding: 5px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url('../assets/images/backgrounds/tv/switch_channel_btn.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          display: block;
           color: var.$font-color;
         }
       }
@@ -94,11 +125,11 @@
 
   .tv-layout {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
 
     z-index: 99;
+    width: 100%;
+    height: 100%;
   }
 }

@@ -1,0 +1,30 @@
+@use '../../variables' as var;
+
+.guess-song-page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .guess-button-container {
+    display: block;
+
+    .guess-button-link {
+      text-decoration: none;
+
+      .guess-button-start {
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255, 1);
+        padding: 10px 20px;
+        display: inline-block;
+
+        color: rgba(255, 255, 255, 1);
+
+        border-radius: 50px;
+      }
+    }
+  }
+}

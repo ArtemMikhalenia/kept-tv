@@ -7,9 +7,12 @@ import { Link } from 'react-router';
 
 import { motion } from 'motion/react';
 
-import Firefly from '../../components/Firefly/Firefly';
 import { firefliesData } from '../../data/fireflyData';
-import type { fireflyInterface } from '../../interfaces/fireflyInterface';
+
+import type { FireflyInterface } from '../../interfaces/fireflyInterface';
+
+import Firefly from '../../components/Firefly/Firefly';
+
 import './livingRoomPage.scss';
 
 const LivingRoomPage = (): JSX.Element => {
@@ -38,7 +41,7 @@ const LivingRoomPage = (): JSX.Element => {
 
   const memoizedFireflies = useMemo(
     () =>
-      firefliesData.map((firefly: fireflyInterface) => (
+      firefliesData.map((firefly: FireflyInterface) => (
         <Firefly key={firefly.id} id={firefly.id} color={firefly.color} />
       )),
     []

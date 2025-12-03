@@ -1,4 +1,4 @@
-export interface fireflyInterface {
+export interface FireflyInterface {
   id: string;
   color: string;
 }

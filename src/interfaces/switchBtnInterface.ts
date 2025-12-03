@@ -1,4 +1,4 @@
-export interface switchBtnInterface {
+export interface SwitchBtnInterface {
   number: number;
   link: string;
 }

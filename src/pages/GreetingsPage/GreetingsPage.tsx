@@ -10,7 +10,7 @@ import { motion } from 'motion/react';
 
 import { lightsData } from '../../data/lightData';
 
-import type { lightInterface } from '../../interfaces/lightInterface';
+import type { LightInterface } from '../../interfaces/lightInterface';
 
 import Light from '../../components/Light/Light';
 
@@ -34,7 +34,7 @@ const GreetingsPage = (): JSX.Element => {
         <motion.div className="greetings-page-content">
           <MouseParallaxChild factorX={0.4} factorY={0.4}>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Link className="greeting" to="/livingroom">
+              <Link className="greeting" to="/living-room">
                 С новым годом!
               </Link>
             </motion.div>
@@ -43,7 +43,7 @@ const GreetingsPage = (): JSX.Element => {
         <MouseParallaxChild className="image1" factorX={0.15} factorY={0.05} />
         <MouseParallaxChild className="image2" factorX={0.15} factorY={0.05} />
         {lightsData.map(
-          (light: lightInterface): JSX.Element => (
+          (light: LightInterface): JSX.Element => (
             <MouseParallaxChild
               style={{
                 width: '100%',

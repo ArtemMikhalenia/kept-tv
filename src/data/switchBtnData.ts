@@ -1,7 +1,7 @@
-import type { switchBtnInterface } from '../interfaces/switchBtnInterface';
+import type { SwitchBtnInterface } from '../interfaces/switchBtnInterface';
 
-export const switchBtnData: switchBtnInterface[] = [
-  { number: 1, link: 'channel1' },
+export const switchBtnData: SwitchBtnInterface[] = [
+  { number: 1, link: '/tv/guess-song/guess-page-video' },
   { number: 8, link: 'channel8' },
   { number: 2, link: 'channel2' },
   { number: 9, link: 'channel9' },

@@ -1,4 +1,4 @@
-export interface lightInterface {
+export interface LightInterface {
   id: string;
   color: string;
 }

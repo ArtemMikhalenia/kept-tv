@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 
 import { motion } from 'motion/react';
 
-import type { switchBtnInterface } from '../../interfaces/switchBtnInterface';
+import type { SwitchBtnInterface } from '../../interfaces/switchBtnInterface';
 
-const SwitchBtn = ({ number, link }: switchBtnInterface): JSX.Element => {
+const SwitchBtn = ({ number, link }: SwitchBtnInterface): JSX.Element => {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
