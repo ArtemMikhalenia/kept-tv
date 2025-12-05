@@ -34,7 +34,7 @@ const PageLayout = () => {
         position: 'relative',
         width: '100%',
         height: '100%',
-        padding: '5vh 15vw 5vh 5vw',
+        padding: '3vh 13vw 3vh 3vw',
         backgroundImage: `url("${background}")`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

@@ -12,6 +12,7 @@ import { motion } from 'motion/react';
 
 import type { DetectiveInterface } from '../../interfaces/detectiveInterface';
 
+import flashSound from '../../assets/sounds/detective_game/flash.wav';
 import type { DetectiveDataTypes } from '../../types/detectiveTypes';
 import './detectiveGameStyles.scss';
 
@@ -23,9 +24,15 @@ const DetectiveGameSlide = ({
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
+  const flashAudio = new Audio(flashSound);
+
   const handleFlip = (): void => {
     if (!isAnimating) {
       setIsFlipped(!isFlipped);
+    }
+    if (!isFlipped) {
+      flashAudio.volume = 0.1;
+      flashAudio.play();
     }
   };
   return (
@@ -57,6 +64,7 @@ const DetectiveGameSlide = ({
           factorX={0.4}
           factorY={0.4}
           style={{
+            maxWidth: '450px',
             width: '100%',
             height: '100%',
             display: 'flex',
@@ -78,6 +86,7 @@ const DetectiveGameSlide = ({
                   backgroundImage: `url('${element.frontImg.src}')`,
                   backgroundSize: 'cover',
                   backfaceVisibility: 'hidden',
+                  backgroundPosition: 'center',
                 }}
               />
               <div
@@ -92,6 +101,7 @@ const DetectiveGameSlide = ({
           </div>
         </MouseParallaxChild>
       </div>
+      <div className={isFlipped ? 'flash active' : 'flash'} />
     </MouseParallaxContainer>
   );
 };
