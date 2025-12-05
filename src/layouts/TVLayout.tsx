@@ -1,12 +1,5 @@
-import {
-  type JSX,
-  // useEffect, useState
-} from 'react';
-import {
-  Link,
-  Outlet,
-  // useLocation
-} from 'react-router';
+import { type JSX, useEffect, useState } from 'react';
+import { Link, Outlet, useLocation } from 'react-router';
 
 import { motion } from 'motion/react';
 
@@ -17,29 +10,24 @@ import type { SwitchBtnInterface } from '../interfaces/switchBtnInterface';
 import BigBtn from '../components/BigBtn/BigBtn';
 import SwitchBtn from '../components/SwitchBtn/SwitchBtn';
 
-// import guessSongBgImg from '../assets/images/backgrounds/guess-song/slide_bg.png';
-// import notFoundImg from '../assets/images/backgrounds/tv/not-found.jpg';
 import './tvLayoutStyles.scss';
 
 const TVLayout = (): JSX.Element => {
-  // const location = useLocation();
-  // const [background, setBackground] = useState('');
-  // const currentLocation: string = location.pathname.slice(1);
+  const location = useLocation();
+  const currentLocation: string = location.pathname.slice(1);
+  const [linkToNextPage, setLinkToNextPage] = useState('');
 
-  // useEffect(() => {
-  //   if (currentLocation === 'tv') {
-  //     setBackground(notFoundImg);
-  //   } else if (currentLocation === 'tv/guess-song') {
-  //     setBackground(guessSongBgImg);
-  //   }
-  // }, [location]);
+  useEffect(() => {
+    if (currentLocation === 'tv/guess-song-video') {
+      setLinkToNextPage('/tv/guess-song');
+    } else if (currentLocation === 'tv/guess-song/game') {
+      setLinkToNextPage('/tv/guess-song/results');
+    } else if (currentLocation === 'tv/detective-video') {
+      setLinkToNextPage('/tv/detective');
+    }
+  }, [location]);
   return (
-    <section
-      className="tv-container"
-      // style={{
-      //   backgroundImage: `url("${background}")`,
-      // }}
-    >
+    <section className="tv-container">
       <div className="tv-frame" />
       <div className="grid-buttons">
         <div className="big-btn-container">
@@ -69,7 +57,7 @@ const TVLayout = (): JSX.Element => {
             whileTap={{ scale: 0.95 }}
             className="switch-channel-btn"
           >
-            <Link to={''}>&#9658;</Link>
+            <Link to={linkToNextPage}>&#9658;</Link>
           </motion.div>
         </div>
       </div>

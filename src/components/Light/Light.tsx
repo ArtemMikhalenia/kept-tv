@@ -1,8 +1,8 @@
 import type { JSX } from 'react';
 
-import type { lightInterface } from '../../interfaces/lightInterface';
+import type { LightInterface } from '../../interfaces/lightInterface';
 
-const Light = ({ id, color }: lightInterface): JSX.Element => {
+const Light = ({ id, color }: LightInterface): JSX.Element => {
   return (
     <div
       className="light"

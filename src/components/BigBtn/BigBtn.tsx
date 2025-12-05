@@ -2,7 +2,7 @@ import type { JSX } from 'react';
 
 import { motion } from 'motion/react';
 
-import bigBtnImg from '../../assets/images/backgrounds/tv/big_btn_tv.png';
+import bigBtnImg from '../../assets/images/backgrounds/tv/big_btn_tv.webp';
 
 const BigBtn = (): JSX.Element => {
   return (

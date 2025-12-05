@@ -1,5 +1,5 @@
 // import { useEffect, useState } from 'react';
-import 'react-router-dom';
+import type { JSX } from 'react';
 
 import { motion } from 'motion/react';
 
@@ -8,10 +8,7 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import type { VideoPageTypes } from '../../types/videoPlayerTypes';
 import './videopage.scss';
 
-const VideoPage = ({ url }: VideoPageTypes) => {
-  // const location = useLocation();
-  // const currentLocation: string = location.pathname.slice(1);
-
+const VideoPage = ({ url }: VideoPageTypes): JSX.Element => {
   return (
     <motion.div
       className="video-page"

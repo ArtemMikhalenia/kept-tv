@@ -4,5 +4,4 @@ export type VideoTypes = {
 
 export type VideoPageTypes = {
   url: string;
-  link: string;
 };

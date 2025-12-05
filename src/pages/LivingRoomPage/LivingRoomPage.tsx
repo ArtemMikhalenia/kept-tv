@@ -16,25 +16,25 @@ import Firefly from '../../components/Firefly/Firefly';
 import './livingRoomPage.scss';
 
 const LivingRoomPage = (): JSX.Element => {
-  const [isTvHovered, setIsTvHovered] = useState(false);
-  const [isTvTapped, setIsTvTapped] = useState(false);
-  const [isTableHovered, setIsTableHovered] = useState(false);
-  const [isTableTapped, setIsTableTapped] = useState(false);
-  const [isNewspaperVisible, setIsNewspaperVisible] = useState(false);
+  const [isTvHovered, setIsTvHovered] = useState<boolean>(false);
+  const [isTvTapped, setIsTvTapped] = useState<boolean>(false);
+  const [isTableHovered, setIsTableHovered] = useState<boolean>(false);
+  const [isTableTapped, setIsTableTapped] = useState<boolean>(false);
+  const [isNewspaperVisible, setIsNewspaperVisible] = useState<boolean>(false);
 
-  const handleTvHover = () => {
+  const handleTvHover = (): void => {
     setIsTvHovered((prev) => !prev);
   };
 
-  const handleTvTap = () => {
+  const handleTvTap = (): void => {
     setIsTvTapped((prev) => !prev);
   };
 
-  const handleTableHover = () => {
+  const handleTableHover = (): void => {
     setIsTableHovered((prev) => !prev);
   };
 
-  const handleTableTap = () => {
+  const handleTableTap = (): void => {
     setIsTableTapped((prev) => !prev);
     setIsNewspaperVisible(true);
   };

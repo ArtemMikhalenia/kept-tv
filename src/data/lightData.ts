@@ -1,6 +1,6 @@
-import type { lightInterface } from '../interfaces/lightInterface';
+import type { LightInterface } from '../interfaces/lightInterface';
 
-export const lightsData: lightInterface[] = [
+export const lightsData: LightInterface[] = [
   {
     id: '1',
     color: 'rgba(208, 0, 16, 1)',

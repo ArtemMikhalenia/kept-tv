@@ -1,6 +1,6 @@
-import type { fireflyInterface } from '../interfaces/fireflyInterface';
+import type { FireflyInterface } from '../interfaces/fireflyInterface';
 
-export const firefliesData: fireflyInterface[] = [
+export const firefliesData: FireflyInterface[] = [
   {
     id: '1',
     color: 'rgba(23, 220, 163, 1)',

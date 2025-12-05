@@ -1,8 +1,8 @@
 import type { JSX } from 'react';
 
-import type { fireflyInterface } from '../../interfaces/fireflyInterface';
+import type { FireflyInterface } from '../../interfaces/fireflyInterface';
 
-const Firefly = ({ id, color }: fireflyInterface): JSX.Element => {
+const Firefly = ({ id, color }: FireflyInterface): JSX.Element => {
   return (
     <div
       className="firefly"

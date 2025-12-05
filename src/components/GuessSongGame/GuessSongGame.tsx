@@ -2,19 +2,22 @@ import { EffectCreative } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router';
 
-import { guessSongData } from '../../data/guessSongData';
+import type { GuessSongInterface } from '../../interfaces/guessSongInterface';
 
 import type { GuessSongDataTypes } from '../../types/guessSongTypes';
 import './guessSongGameStyles.scss';
 
 const GuessSongGame = (): JSX.Element => {
+  const guessCard = useLoaderData() as GuessSongDataTypes;
   const [guessSongCards, setGuessSongCards] =
-    useState<GuessSongDataTypes>(guessSongData);
+    useState<GuessSongInterface[]>(guessCard);
 
   useEffect(() => {
-    setGuessSongCards(guessSongData);
+    setGuessSongCards(guessCard);
   }, []);
+
   return (
     <div className="guess-song-game-container">
       <Swiper

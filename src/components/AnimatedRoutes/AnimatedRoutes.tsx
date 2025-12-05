@@ -11,42 +11,20 @@ import {
 
 import { AnimatePresence } from 'motion/react';
 
+import { detectiveData } from '../../data/detectiveData';
 import { guessSongData } from '../../data/guessSongData';
 
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
-import Channel2Page from '../../pages/Channel2/Channel2Page';
+import DetectivePage from '../../pages/DetectivePage/DetectivePage';
 import GreetingsPage from '../../pages/GreetingsPage/GreetingsPage';
 import GuessSongPage from '../../pages/GuessSongPage/GuessSongPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
+import ResultsPage from '../../pages/ResultsPage/ResultsPage';
 import VideoPage from '../../pages/VideoPage/VideoPage';
 
 const GuessSongGame = lazy(() => import('../GuessSongGame/GuessSongGame'));
-
-// const AnimatedRoutes = (): JSX.Element => {
-//   const location = useLocation();
-
-//   // const getRouteKey = (pathname: string) => {
-//   //   const segments = pathname.split('/').filter((segment) => segment !== '');
-//   //   if (segments.length <= 1) return pathname;
-//   //   return `/${segments.slice(0, 2).join('/')}`;
-//   // };
-
-//   // const routeKey = getRouteKey(location.pathname);
-
-//   return (
-//     <AnimatePresence mode="wait">
-//       <Routes location={location} key={location.pathname}>
-//         <Route path="/" element={<GreetingsPage />} />
-//         <Route path="/livingroom" element={<LivingRoomPage />} />
-//         <Route path="/tv" element={<TVLayout />}>
-//           <Route path="channel1" element={<Channel1Page />} />
-//           <Route path="channel2" element={<Channel2Page />} />
-//         </Route>
-//       </Routes>
-//     </AnimatePresence>
-//   );
-// };
+const DetectiveGame = lazy(() => import('../DetectiveGame/DetectiveGame'));
 
 const AnimatedOutlet = (): JSX.Element => {
   const location = useLocation();
@@ -64,17 +42,15 @@ const router = createBrowserRouter(
       <Route path="/" element={<GreetingsPage />} />
       <Route path="/living-room" element={<LivingRoomPage />} />
       <Route path="/tv" element={<TVLayout />}>
+        <Route
+          index
+          path="guess-song-video"
+          element={
+            <VideoPage url="https://youtu.be/L5s1twj6SqQ?si=6lapbroaVF4R3yn0" />
+          }
+        />
         <Route path="guess-song" element={<PageLayout />}>
           <Route index element={<GuessSongPage />} />
-          <Route
-            path="guess-page-video"
-            element={
-              <VideoPage
-                url="https://youtu.be/L5s1twj6SqQ?si=6lapbroaVF4R3yn0"
-                link="/guess-song"
-              />
-            }
-          />
           <Route
             path={'game'}
             loader={() => guessSongData}
@@ -84,17 +60,35 @@ const router = createBrowserRouter(
               </Suspense>
             }
           />
+          <Route
+            path="results"
+            element={<ResultsPage title="Поиск победителя" />}
+          />
         </Route>
-
-        {/* <Route
-            path="nowpage"
+        <Route
+          index
+          path="detective-video"
+          element={
+            <VideoPage url="https://youtu.be/L5s1twj6SqQ?si=6lapbroaVF4R3yn0" />
+          }
+        />
+        <Route path="detective" element={<PageLayout />}>
+          <Route index element={<DetectivePage />} />
+          <Route
+            path={'game'}
+            loader={() => detectiveData}
             element={
-              <NowPage title="Поиск победителя" url="/parkgame/nextpage" />
+              <Suspense fallback={<TailSpin />}>
+                <DetectiveGame />
+              </Suspense>
             }
-          /> */}
+          />
+          <Route
+            path="results"
+            element={<ResultsPage title="Поиск детектива" />}
+          />
+        </Route>
       </Route>
-
-      <Route path="channel2" element={<Channel2Page />} />
     </Route>
   )
 );

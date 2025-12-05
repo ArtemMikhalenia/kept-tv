@@ -3,8 +3,9 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import { motion } from 'motion/react';
 
+import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game_bg.webp';
+import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
 import guessSongBgImg from '../assets/images/backgrounds/guess-song/slide_bg.png';
-import notFoundImg from '../assets/images/backgrounds/tv/not-found.jpg';
 
 const PageLayout = () => {
   const location = useLocation();
@@ -13,12 +14,15 @@ const PageLayout = () => {
 
   useEffect(() => {
     if (currentLocation === 'tv') {
-      setBackground(notFoundImg);
     } else if (
       currentLocation === 'tv/guess-song' ||
       currentLocation === 'tv/guess-song/game'
     ) {
       setBackground(guessSongBgImg);
+    } else if (currentLocation === 'tv/detective') {
+      setBackground(detectiveBgImg);
+    } else if (currentLocation === 'tv/detective/game') {
+      setBackground(detectiveGameBgImg);
     }
   }, [currentLocation]);
   return (
@@ -30,7 +34,7 @@ const PageLayout = () => {
         position: 'relative',
         width: '100%',
         height: '100%',
-        padding: '10vh 15vw 10vh 5vw',
+        padding: '5vh 15vw 5vh 5vw',
         backgroundImage: `url("${background}")`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

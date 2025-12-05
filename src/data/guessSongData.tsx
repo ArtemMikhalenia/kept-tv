@@ -73,8 +73,9 @@ import livniImg from '../assets/images/guess_song_images/16/livni.jpg';
 import uprugoImg from '../assets/images/guess_song_images/16/uprugo.png';
 import yanvarskayaImg from '../assets/images/guess_song_images/16/yanvarskaya.jpg';
 import zvenitImg from '../assets/images/guess_song_images/16/zvenit.avif';
+import type { GuessSongDataTypes } from '../types/guessSongTypes';
 
-export const guessSongData = [
+export const guessSongData: GuessSongDataTypes = [
   {
     lvl: 0,
     images: [
