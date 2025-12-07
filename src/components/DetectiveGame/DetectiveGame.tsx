@@ -35,6 +35,7 @@ const DetectiveGameSlide = ({
       flashAudio.play();
     }
   };
+
   return (
     <MouseParallaxContainer
       globalFactorX={0.1}
@@ -52,9 +53,29 @@ const DetectiveGameSlide = ({
               <h2>Предъявленные обвинения:</h2>
               <ul>
                 {element.textList.map(
-                  (item: string, index: number): JSX.Element => (
-                    <li key={index}>{item}</li>
-                  )
+                  (item: string[], lineIndex: number): JSX.Element => {
+                    const lineDelay = lineIndex * 0.5;
+
+                    return (
+                      <li key={lineIndex}>
+                        {item.map((letter, letterIndex) => (
+                          <motion.span
+                            key={`${lineIndex}-${letterIndex}`}
+                            initial={{ opacity: 0 }}
+                            whileInView={{
+                              opacity: 1,
+                              transition: {
+                                duration: 0.2,
+                                delay: lineDelay + letterIndex * 0.05,
+                              },
+                            }}
+                          >
+                            {letter}
+                          </motion.span>
+                        ))}
+                      </li>
+                    );
+                  }
                 )}
               </ul>
             </div>

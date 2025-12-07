@@ -60,14 +60,16 @@ const GuessSongGameRound1 = (): JSX.Element => {
                       factorX={0.2}
                       factorY={0.2}
                       key={img.id}
+                      style={{ width: '100%' }}
+                      className="guess-song-parallax-child-r1"
                     >
                       <motion.img
-                        className="guess-song-image"
+                        className="guess-song-image-r1"
                         key={img.id}
                         initial={{ scale: 0 }}
                         whileInView={{
                           scale: 1,
-                          transition: { duration: 0.5, delay: img.id + 0.01 },
+                          transition: { duration: 0.3, delay: img.id },
                         }}
                         src={img.src}
                         alt={img.alt}
