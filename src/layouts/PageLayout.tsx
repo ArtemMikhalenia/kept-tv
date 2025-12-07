@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game_bg.webp';
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
-import guessSongBgImg from '../assets/images/backgrounds/guess-song/slide_bg.png';
+import guessSongMainBgImg from '../assets/images/backgrounds/guess-song/main_bg.jpg';
 
 const PageLayout = () => {
   const location = useLocation();
@@ -16,9 +16,9 @@ const PageLayout = () => {
     if (currentLocation === 'tv') {
     } else if (
       currentLocation === 'tv/guess-song' ||
-      currentLocation === 'tv/guess-song/game'
+      currentLocation === 'tv/guess-song/round1'
     ) {
-      setBackground(guessSongBgImg);
+      setBackground(guessSongMainBgImg);
     } else if (currentLocation === 'tv/detective') {
       setBackground(detectiveBgImg);
     } else if (currentLocation === 'tv/detective/game') {

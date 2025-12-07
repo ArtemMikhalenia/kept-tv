@@ -1,39 +1,68 @@
 import { type JSX } from 'react';
+import {
+  MouseParallaxChild,
+  MouseParallaxContainer,
+} from 'react-parallax-mouse';
 import { Link } from 'react-router';
 
 import { motion } from 'motion/react';
 
+import { guessSongLinksData } from '../../data/guessSongData';
+
+import type { GuessSongLinkInterface } from '../../interfaces/guessSongInterface';
+
 import './guessSongPageStyles.scss';
+
+const GuessSongLink = ({
+  className,
+  link,
+  text,
+}: GuessSongLinkInterface): JSX.Element => {
+  return (
+    <motion.div
+      className={className}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ duration: 0.3 }}
+    >
+      <Link to={link}>{text}</Link>
+    </motion.div>
+  );
+};
 
 const GuessSongPage = (): JSX.Element => {
   return (
-    <motion.div
-      className="guess-song-page-container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.2 } }}
-      exit={{ opacity: 0, transition: { duration: 0.2 } }}
-      viewport={{ once: true, amount: 0.1 }}
+    <MouseParallaxContainer
+      globalFactorX={0.1}
+      globalFactorY={0.1}
+      containerStyle={{ height: '100%' }}
     >
-      <motion.div
-        className="guess-button-container"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
-        exit={{ opacity: 0, scale: 0, transition: { duration: 0.5 } }}
+      <MouseParallaxChild
+        className="guess-song-page-container"
+        factorX={0.3}
+        factorY={0.3}
+        style={{ height: '100%' }}
       >
-        <Link to="game" className="guess-button-link">
-          <motion.span
-            className="guess-button-start"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{
-              y: '10px',
-              boxShadow: '0 5px 3px 3px rgba(255,255,255,1)',
-            }}
-          >
-            Опа опа опапа
-          </motion.span>
-        </Link>
-      </motion.div>
-    </motion.div>
+        <motion.div
+          className="guess-song-grid"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1, transition: { duration: 1, delay: 2 } }}
+        >
+          {guessSongLinksData.map(
+            (item: GuessSongLinkInterface, i: number): JSX.Element => (
+              <GuessSongLink
+                key={i}
+                className={item.className}
+                link={item.link}
+                text={item.text}
+              />
+            )
+          )}
+        </motion.div>
+      </MouseParallaxChild>
+    </MouseParallaxContainer>
   );
 };
 

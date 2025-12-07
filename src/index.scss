@@ -7,24 +7,27 @@
 }
 
 html {
-  height: 100%;
-
   scrollbar-width: none;
+  height: 100%;
 }
 
 #root {
   width: 100%;
-  margin: 0 auto;
   min-height: 100vh;
   height: 100%;
+  margin: 0 auto;
 }
 
 body {
-  margin: 0;
+  overflow: hidden;
+  font-optical-sizing: auto;
   min-width: 320px;
   height: 100%;
   height: '-webkit-fill-available';
-  overflow: hidden;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 a {

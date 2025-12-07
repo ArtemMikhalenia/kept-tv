@@ -8,3 +8,9 @@ export interface GuessSongImgInterface {
   src: string;
   alt: string;
 }
+
+export interface GuessSongLinkInterface {
+  className: string;
+  link: string;
+  text: string;
+}

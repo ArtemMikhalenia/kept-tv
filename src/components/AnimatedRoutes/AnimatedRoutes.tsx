@@ -23,7 +23,9 @@ import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
 import ResultsPage from '../../pages/ResultsPage/ResultsPage';
 import VideoPage from '../../pages/VideoPage/VideoPage';
 
-const GuessSongGame = lazy(() => import('../GuessSongGame/GuessSongGame'));
+const GuessSongGameRound1 = lazy(
+  () => import('../GuessSongGame/GuessSongGameRound1')
+);
 const DetectiveGame = lazy(() => import('../DetectiveGame/DetectiveGame'));
 
 const AnimatedOutlet = (): JSX.Element => {
@@ -52,11 +54,11 @@ const router = createBrowserRouter(
         <Route path="guess-song" element={<PageLayout />}>
           <Route index element={<GuessSongPage />} />
           <Route
-            path={'game'}
+            path="round1"
             loader={() => guessSongData}
             element={
               <Suspense fallback={<TailSpin />}>
-                <GuessSongGame />
+                <GuessSongGameRound1 />
               </Suspense>
             }
           />
