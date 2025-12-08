@@ -15,12 +15,24 @@ import './tvLayoutStyles.scss';
 const TVLayout = (): JSX.Element => {
   const location = useLocation();
   const currentLocation: string = location.pathname.slice(1);
+  const [linkToPrevPage, setLinkToPrevPage] = useState('');
   const [linkToNextPage, setLinkToNextPage] = useState('');
+
+  const guessSongLinks = [
+    'tv/guess-song/round1',
+    'tv/guess-song/round2',
+    'tv/guess-song/round3',
+    'tv/guess-song/round4',
+    'tv/guess-song/round5',
+    'tv/guess-song/round6',
+  ];
 
   useEffect(() => {
     if (currentLocation === 'tv/guess-song-video') {
       setLinkToNextPage('/tv/guess-song');
-    } else if (currentLocation === 'tv/guess-song/game') {
+    } else if (guessSongLinks.includes(currentLocation)) {
+      setLinkToPrevPage('/tv/guess-song');
+    } else if (currentLocation === 'tv/guess-song') {
       setLinkToNextPage('/tv/guess-song/results');
     } else if (currentLocation === 'tv/detective-video') {
       setLinkToNextPage('/tv/detective');
@@ -50,7 +62,7 @@ const TVLayout = (): JSX.Element => {
             whileTap={{ scale: 0.95 }}
             className="switch-channel-btn"
           >
-            <Link to={''}>&#9668;</Link>
+            <Link to={linkToPrevPage}>&#9668;</Link>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.05 }}

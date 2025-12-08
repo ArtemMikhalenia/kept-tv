@@ -12,12 +12,19 @@ const PageLayout = () => {
   const [background, setBackground] = useState('');
   const currentLocation: string = location.pathname.slice(1);
 
+  const guessSongLinks = [
+    'tv/guess-song',
+    'tv/guess-song/round1',
+    'tv/guess-song/round2',
+    'tv/guess-song/round3',
+    'tv/guess-song/round4',
+    'tv/guess-song/round5',
+    'tv/guess-song/round6',
+  ];
+
   useEffect(() => {
     if (currentLocation === 'tv') {
-    } else if (
-      currentLocation === 'tv/guess-song' ||
-      currentLocation === 'tv/guess-song/round1'
-    ) {
+    } else if (guessSongLinks.includes(currentLocation)) {
       setBackground(guessSongMainBgImg);
     } else if (currentLocation === 'tv/detective') {
       setBackground(detectiveBgImg);

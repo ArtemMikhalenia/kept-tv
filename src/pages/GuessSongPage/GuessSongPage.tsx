@@ -1,4 +1,4 @@
-import { type JSX } from 'react';
+import { type JSX, useState } from 'react';
 import {
   MouseParallaxChild,
   MouseParallaxContainer,
@@ -18,16 +18,29 @@ const GuessSongLink = ({
   link,
   text,
 }: GuessSongLinkInterface): JSX.Element => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
   return (
     <motion.div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className={className}
       initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
+      animate={{ scale: 0.7 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3 }}
+      style={{
+        filter: isHovered ? 'blur(0px)' : 'blur(8px)',
+      }}
     >
-      <Link to={link}>{text}</Link>
+      <span
+        style={{
+          opacity: isHovered ? 1 : 1,
+        }}
+      >
+        <Link to={link}>{text}</Link>
+      </span>
     </motion.div>
   );
 };

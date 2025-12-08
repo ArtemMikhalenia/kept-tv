@@ -46,29 +46,22 @@
       background-position: center;
       background-size: cover;
 
-      a {
-        z-index: 0;
+      span {
         width: 100%;
         height: 100%;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 40px;
-        font-weight: 400;
-        color: white;
-        border-radius: 10px;
-      }
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        backdrop-filter: blur(1px) brightness(0.5);
+        a {
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+          font-weight: 400;
+          color: white;
+          border-radius: 10px;
+        }
       }
     }
 

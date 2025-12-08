@@ -12,7 +12,11 @@ import {
 import { AnimatePresence } from 'motion/react';
 
 import { detectiveData } from '../../data/detectiveData';
-import { guessSongData } from '../../data/guessSongData';
+import {
+  guessSongDataRound1,
+  guessSongDataRound2,
+  guessSongDataRound4,
+} from '../../data/guessSongData';
 
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
@@ -25,6 +29,12 @@ import VideoPage from '../../pages/VideoPage/VideoPage';
 
 const GuessSongGameRound1 = lazy(
   () => import('../GuessSongGame/GuessSongGameRound1')
+);
+const GuessSongGameRound2 = lazy(
+  () => import('../GuessSongGame/GuessSongGameRound2')
+);
+const GuessSongGameRound4 = lazy(
+  () => import('../GuessSongGame/GuessSongGameRound4')
 );
 const DetectiveGame = lazy(() => import('../DetectiveGame/DetectiveGame'));
 
@@ -55,10 +65,28 @@ const router = createBrowserRouter(
           <Route index element={<GuessSongPage />} />
           <Route
             path="round1"
-            loader={() => guessSongData}
+            loader={() => guessSongDataRound1}
             element={
               <Suspense fallback={<TailSpin />}>
                 <GuessSongGameRound1 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="round2"
+            loader={() => guessSongDataRound2}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <GuessSongGameRound2 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="round4"
+            loader={() => guessSongDataRound4}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <GuessSongGameRound4 />
               </Suspense>
             }
           />

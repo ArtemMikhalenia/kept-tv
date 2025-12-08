@@ -1,4 +1,4 @@
-import { EffectCreative } from 'swiper/modules';
+import { EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -13,9 +13,10 @@ import { motion } from 'motion/react';
 import type { GuessSongInterface } from '../../interfaces/guessSongInterface';
 
 import type { GuessSongDataTypes } from '../../types/guessSongTypes';
+import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import './guessSongGameStyles.scss';
 
-const GuessSongGameRound1 = (): JSX.Element => {
+const GuessSongGameRound4 = (): JSX.Element => {
   const guessCard = useLoaderData() as GuessSongDataTypes;
   const [guessSongCards, setGuessSongCards] =
     useState<GuessSongInterface[]>(guessCard);
@@ -26,7 +27,7 @@ const GuessSongGameRound1 = (): JSX.Element => {
 
   return (
     <MouseParallaxContainer
-      className="guess-song-game-round1"
+      className="guess-song-game-round4"
       globalFactorX={0.1}
       globalFactorY={0.1}
     >
@@ -36,36 +37,31 @@ const GuessSongGameRound1 = (): JSX.Element => {
         style={{ height: '100%' }}
       >
         <Swiper
-          className="swiper-r1"
-          effect={'creative'}
+          className="swiper-r4"
+          effect={'fade'}
           grabCursor={true}
-          modules={[EffectCreative]}
-          creativeEffect={{
-            prev: {
-              shadow: true,
-              translate: [0, 0, -400],
-            },
-            next: {
-              translate: ['100%', 0, 0],
-            },
-          }}
+          modules={[EffectFade]}
           centeredSlides={true}
           spaceBetween={50}
         >
+          <SwiperSlide className="guess-song-slide-r4">
+            <VideoPlayer url="https://youtu.be/L5s1twj6SqQ?si=6lapbroaVF4R3yn0" />
+          </SwiperSlide>
+          <SwiperSlide className="guess-song-slide-r4">2</SwiperSlide>
           {guessSongCards.map(
             (element, index) =>
               index === element.lvl && (
-                <SwiperSlide key={index} className="guess-song-slide-r1">
+                <SwiperSlide key={index} className="guess-song-slide-r4">
                   {element.images.map((img) => (
                     <MouseParallaxChild
                       factorX={0.2}
                       factorY={0.2}
                       key={img.id}
                       style={{ width: '100%' }}
-                      className="guess-song-parallax-child-r1"
+                      className="guess-song-parallax-child-r4"
                     >
                       <motion.img
-                        className="guess-song-image-r1"
+                        className="guess-song-image-r4"
                         key={img.id}
                         initial={{ scale: 0 }}
                         whileInView={{
@@ -86,4 +82,4 @@ const GuessSongGameRound1 = (): JSX.Element => {
   );
 };
 
-export default GuessSongGameRound1;
+export default GuessSongGameRound4;

@@ -73,7 +73,32 @@ import livniImg from '../assets/images/guess_song_images/round1/16/livni.jpg';
 import uprugoImg from '../assets/images/guess_song_images/round1/16/uprugo.png';
 import yanvarskayaImg from '../assets/images/guess_song_images/round1/16/yanvarskaya.jpg';
 import zvenitImg from '../assets/images/guess_song_images/round1/16/zvenit.avif';
+import peppersImg from '../assets/images/guess_song_images/round2/1_Red_Hot_Chili Peppers.png';
+import rollingImg from '../assets/images/guess_song_images/round2/2_Rolling_Stones.png';
+import panicImg from '../assets/images/guess_song_images/round2/3_Panic!_At The Disco_ili_discoteca_avaria.png';
+import glukozaImg from '../assets/images/guess_song_images/round2/4_rus_glukoza.png';
+import greenImg from '../assets/images/guess_song_images/round2/5_Green_Day1.png';
+import deepImg from '../assets/images/guess_song_images/round2/6_Deep_Purple.jpg';
+import chaiImg from '../assets/images/guess_song_images/round2/7_rus_chai_vdvoem.png';
+import alicaImg from '../assets/images/guess_song_images/round2/8_rus_alica.png';
+import rukiImg from '../assets/images/guess_song_images/round2/9_rus_ruki_vverh.png';
+import serebroImg from '../assets/images/guess_song_images/round2/10_rus_serebro.png';
+import gradusiImg from '../assets/images/guess_song_images/round2/11_rus_gradusi.png';
+import sveloImg from '../assets/images/guess_song_images/round2/12_rus_nogu_svelo.png';
+import kishImg from '../assets/images/guess_song_images/round2/13_rus_kish.png';
+import smyslovieImg from '../assets/images/guess_song_images/round2/14_rus_smyslovie_gluki.png';
+import mumiyImg from '../assets/images/guess_song_images/round2/15_rus_mumiy_troll.png';
+import beatlesImg from '../assets/images/guess_song_images/round2/16_beatles.jpg';
+import dragonsImg from '../assets/images/guess_song_images/round2/17_Imagine_Dragons.png';
+import monkeysImg from '../assets/images/guess_song_images/round2/18_Arctic_Monkeys.jpg';
+import rosesImg from '../assets/images/guess_song_images/round2/19_Guns_N’_Roses.jpg';
+import pilotsImg from '../assets/images/guess_song_images/round2/20_Twenty_One_Pilots.png';
+import papaImg from '../assets/images/guess_song_images/round2/21_Papa_Roach.png';
+import zveriImg from '../assets/images/guess_song_images/round2/22_rus_zveri.png';
+import kissImg from '../assets/images/guess_song_images/round2/23_Kiss.png';
+import coldplayImg from '../assets/images/guess_song_images/round2/24_Coldplay.png';
 import type {
+  GuessSongDataRound2Types,
   GuessSongDataTypes,
   GuessSongLinkTypes,
 } from '../types/guessSongTypes';
@@ -111,7 +136,7 @@ export const guessSongLinksData: GuessSongLinkTypes = [
   },
 ];
 
-export const guessSongData: GuessSongDataTypes = [
+export const guessSongDataRound1: GuessSongDataTypes = [
   {
     lvl: 0,
     images: [
@@ -282,3 +307,128 @@ export const guessSongData: GuessSongDataTypes = [
     ],
   },
 ];
+
+export const guessSongDataRound2: GuessSongDataRound2Types = [
+  {
+    lvl: 0,
+    src: peppersImg,
+    alt: 'peppers-image',
+  },
+  {
+    lvl: 1,
+    src: rollingImg,
+    alt: 'rolling-image',
+  },
+  {
+    lvl: 2,
+    src: panicImg,
+    alt: 'panic-image',
+  },
+  {
+    lvl: 3,
+    src: glukozaImg,
+    alt: 'glukoza-image',
+  },
+  {
+    lvl: 4,
+    src: greenImg,
+    alt: 'green-image',
+  },
+  {
+    lvl: 5,
+    src: deepImg,
+    alt: 'deep-image',
+  },
+  {
+    lvl: 6,
+    src: chaiImg,
+    alt: 'chai-image',
+  },
+  {
+    lvl: 7,
+    src: alicaImg,
+    alt: 'alica-image',
+  },
+  {
+    lvl: 8,
+    src: rukiImg,
+    alt: 'ruki-image',
+  },
+  {
+    lvl: 9,
+    src: serebroImg,
+    alt: 'serebro-image',
+  },
+  {
+    lvl: 10,
+    src: gradusiImg,
+    alt: 'gradusi-image',
+  },
+  {
+    lvl: 11,
+    src: sveloImg,
+    alt: 'svelo-image',
+  },
+  {
+    lvl: 12,
+    src: kishImg,
+    alt: 'kish-image',
+  },
+  {
+    lvl: 13,
+    src: smyslovieImg,
+    alt: 'smyslovie-image',
+  },
+  {
+    lvl: 14,
+    src: mumiyImg,
+    alt: 'mumiy-image',
+  },
+  {
+    lvl: 15,
+    src: beatlesImg,
+    alt: 'beatles-image',
+  },
+  {
+    lvl: 16,
+    src: dragonsImg,
+    alt: 'dragons-image',
+  },
+  {
+    lvl: 17,
+    src: monkeysImg,
+    alt: 'monkeys-image',
+  },
+  {
+    lvl: 18,
+    src: rosesImg,
+    alt: 'roses-image',
+  },
+  {
+    lvl: 19,
+    src: pilotsImg,
+    alt: 'pilots-image',
+  },
+  {
+    lvl: 20,
+    src: papaImg,
+    alt: 'papa-image',
+  },
+  {
+    lvl: 21,
+    src: zveriImg,
+    alt: 'zveri-image',
+  },
+  {
+    lvl: 22,
+    src: kissImg,
+    alt: 'kiss-image',
+  },
+  {
+    lvl: 23,
+    src: coldplayImg,
+    alt: 'coldplay-image',
+  },
+];
+
+export const guessSongDataRound4 = [];

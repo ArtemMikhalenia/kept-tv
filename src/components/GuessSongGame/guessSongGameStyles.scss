@@ -1,6 +1,8 @@
 @use '../../variables' as var;
 @use 'swiper/css';
 @use 'swiper/css/effect-cards';
+@use 'swiper/css/effect-cube';
+@use 'swiper/css/effect-fade';
 @use 'swiper/css/navigation';
 @use 'swiper/css/pagination';
 @use 'swiper/css/scrollbar';
@@ -16,7 +18,7 @@
   background-position: center;
   background-size: cover;
 
-  .swiper {
+  .swiper-r1 {
     pointer-events: auto;
     position: relative;
     width: 100%;
@@ -63,6 +65,88 @@
           border-radius: 18px;
         }
       }
+    }
+  }
+}
+
+.guess-song-game-round2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+
+  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px) brightness(0.7);
+  }
+
+  .swiper-r2 {
+    position: relative;
+    z-index: 3;
+    max-width: 530px;
+    width: 100%;
+    height: 100%;
+
+    .guess-song-slide-r2 {
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        aspect-ratio: 8 / 10;
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.guess-song-game-round4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+
+  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px) brightness(0.7);
+  }
+
+  .swiper-r4 {
+    position: relative;
+    z-index: 3;
+    // max-width: 530px;
+    width: 100%;
+    height: 100%;
+
+    .guess-song-slide-r4 {
+      width: 100%;
+      height: 100%;
+      background-color: white;
     }
   }
 }

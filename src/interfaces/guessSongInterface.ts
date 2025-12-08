@@ -14,3 +14,9 @@ export interface GuessSongLinkInterface {
   link: string;
   text: string;
 }
+
+export interface GuessSongRound2Interface {
+  lvl: number;
+  src: string;
+  alt: string;
+}
