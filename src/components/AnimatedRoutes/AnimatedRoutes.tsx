@@ -12,15 +12,21 @@ import {
 import { AnimatePresence } from 'motion/react';
 
 import { detectiveData } from '../../data/detectiveData';
+import { factsData } from '../../data/factsData';
 import {
   guessSongDataRound1,
   guessSongDataRound2,
   guessSongDataRound4,
+  guessSongDataRound5,
 } from '../../data/guessSongData';
 
+import thumbnailDetectiveImg from '../../assets/images/backgrounds/detective-game/thumbnail.jpg';
+import thumbnailFactsImg from '../../assets/images/backgrounds/facts-page/thumbnail.jpg';
+import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/thumbnail.jpg';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
 import DetectivePage from '../../pages/DetectivePage/DetectivePage';
+import FactsPage from '../../pages/FactsPage/FactsPage';
 import GreetingsPage from '../../pages/GreetingsPage/GreetingsPage';
 import GuessSongPage from '../../pages/GuessSongPage/GuessSongPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
@@ -36,7 +42,11 @@ const GuessSongGameRound2 = lazy(
 const GuessSongGameRound4 = lazy(
   () => import('../GuessSongGame/GuessSongGameRound4')
 );
+const GuessSongGameRound5 = lazy(
+  () => import('../GuessSongGame/GuessSongGameRound5')
+);
 const DetectiveGame = lazy(() => import('../DetectiveGame/DetectiveGame'));
+const FactsGame = lazy(() => import('../FactsGame/FactsGame'));
 
 const AnimatedOutlet = (): JSX.Element => {
   const location = useLocation();
@@ -58,7 +68,10 @@ const router = createBrowserRouter(
           index
           path="guess-song-video"
           element={
-            <VideoPage url="https://youtu.be/L5s1twj6SqQ?si=6lapbroaVF4R3yn0" />
+            <VideoPage
+              url="https://vimeo.com/1145728297"
+              thumbnail={thumbnailGuessSongImg}
+            />
           }
         />
         <Route path="guess-song" element={<PageLayout />}>
@@ -91,6 +104,15 @@ const router = createBrowserRouter(
             }
           />
           <Route
+            path="round5"
+            loader={() => guessSongDataRound5}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <GuessSongGameRound5 />
+              </Suspense>
+            }
+          />
+          <Route
             path="results"
             element={<ResultsPage title="Поиск победителя" />}
           />
@@ -99,7 +121,10 @@ const router = createBrowserRouter(
           index
           path="detective-video"
           element={
-            <VideoPage url="https://youtu.be/L5s1twj6SqQ?si=6lapbroaVF4R3yn0" />
+            <VideoPage
+              url="https://vimeo.com/1145728225"
+              thumbnail={thumbnailDetectiveImg}
+            />
           }
         />
         <Route path="detective" element={<PageLayout />}>
@@ -116,6 +141,32 @@ const router = createBrowserRouter(
           <Route
             path="results"
             element={<ResultsPage title="Поиск детектива" />}
+          />
+        </Route>
+        <Route
+          index
+          path="facts-video"
+          element={
+            <VideoPage
+              url="https://vimeo.com/1145728271"
+              thumbnail={thumbnailFactsImg}
+            />
+          }
+        />
+        <Route path="facts" element={<PageLayout />}>
+          <Route index element={<FactsPage />} />
+          <Route
+            path={'game'}
+            loader={() => factsData}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <FactsGame />
+              </Suspense>
+            }
+          />
+          <Route
+            path="results"
+            element={<ResultsPage title="Поиск победителя" />}
           />
         </Route>
       </Route>

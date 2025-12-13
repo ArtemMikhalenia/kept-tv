@@ -36,6 +36,10 @@ const TVLayout = (): JSX.Element => {
       setLinkToNextPage('/tv/guess-song/results');
     } else if (currentLocation === 'tv/detective-video') {
       setLinkToNextPage('/tv/detective');
+    } else if (currentLocation === 'tv/facts-video') {
+      setLinkToNextPage('/tv/facts');
+    } else if (currentLocation === 'tv/facts') {
+      setLinkToNextPage('/tv/facts/game');
     }
   }, [location]);
   return (

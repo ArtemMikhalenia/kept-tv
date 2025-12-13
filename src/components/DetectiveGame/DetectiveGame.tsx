@@ -31,7 +31,6 @@ const DetectiveGameSlide = ({
       setIsFlipped(!isFlipped);
     }
     if (!isFlipped) {
-      flashAudio.volume = 0.1;
       flashAudio.play();
     }
   };

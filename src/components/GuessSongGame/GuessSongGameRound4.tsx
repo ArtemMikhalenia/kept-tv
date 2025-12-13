@@ -10,16 +10,85 @@ import { useLoaderData } from 'react-router';
 
 import { motion } from 'motion/react';
 
-import type { GuessSongInterface } from '../../interfaces/guessSongInterface';
+import type { GuessSongRound4Interface } from '../../interfaces/guessSongInterface';
 
-import type { GuessSongDataTypes } from '../../types/guessSongTypes';
+import type { GuessSongDataRound4Types } from '../../types/guessSongTypes';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import './guessSongGameStyles.scss';
 
+const GuessSongGameRound4Slide = ({
+  element,
+}: {
+  element: GuessSongRound4Interface;
+}): JSX.Element => {
+  const [showFakeImg, setShowFakeImg] = useState<boolean>(false);
+  const [showOriginalImg, setShowOriginalImg] = useState<boolean>(false);
+
+  const handleFakeImg = (): void => {
+    setShowFakeImg((prev) => !prev);
+  };
+
+  const handleOriginalImg = (): void => {
+    setShowOriginalImg((prev) => !prev);
+  };
+
+  return (
+    <>
+      <div className="videoplayer-container-r4">
+        <VideoPlayer url={element.videoLink} thumbnail={element.thumbnail} />
+      </div>
+      <div className="img-container-r4">
+        <div
+          className="img-fake"
+          onClick={handleFakeImg}
+          style={{
+            opacity: showFakeImg ? 1 : 0,
+            transform: showFakeImg ? 'scale(1)' : 'scale(0)',
+            backgroundImage: `url(${element.imgFake})`,
+          }}
+        />
+        <div
+          className="img-original"
+          onClick={handleOriginalImg}
+          style={{
+            opacity: showOriginalImg ? 1 : 0,
+            transform: showOriginalImg ? 'scale(1)' : 'scale(0)',
+            backgroundImage: `url(${element.imgOriginal})`,
+          }}
+        />
+      </div>
+      <div className="btn-container-r4">
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{
+            scale: 1,
+            transition: { duration: 0.5, delay: 0.3 },
+          }}
+          className="pulse-task"
+          onClick={handleFakeImg}
+        >
+          Фэйк
+        </motion.button>
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{
+            scale: 1,
+            transition: { duration: 0.5, delay: 0.3 },
+          }}
+          className="pulse-answer"
+          onClick={handleOriginalImg}
+        >
+          Оригинал
+        </motion.button>
+      </div>
+    </>
+  );
+};
+
 const GuessSongGameRound4 = (): JSX.Element => {
-  const guessCard = useLoaderData() as GuessSongDataTypes;
+  const guessCard = useLoaderData() as GuessSongDataRound4Types;
   const [guessSongCards, setGuessSongCards] =
-    useState<GuessSongInterface[]>(guessCard);
+    useState<GuessSongRound4Interface[]>(guessCard);
 
   useEffect(() => {
     setGuessSongCards(guessCard);
@@ -42,39 +111,14 @@ const GuessSongGameRound4 = (): JSX.Element => {
           grabCursor={true}
           modules={[EffectFade]}
           centeredSlides={true}
-          spaceBetween={50}
+          spaceBetween={30}
         >
-          <SwiperSlide className="guess-song-slide-r4">
-            <VideoPlayer url="https://youtu.be/L5s1twj6SqQ?si=6lapbroaVF4R3yn0" />
-          </SwiperSlide>
-          <SwiperSlide className="guess-song-slide-r4">2</SwiperSlide>
           {guessSongCards.map(
-            (element, index) =>
-              index === element.lvl && (
-                <SwiperSlide key={index} className="guess-song-slide-r4">
-                  {element.images.map((img) => (
-                    <MouseParallaxChild
-                      factorX={0.2}
-                      factorY={0.2}
-                      key={img.id}
-                      style={{ width: '100%' }}
-                      className="guess-song-parallax-child-r4"
-                    >
-                      <motion.img
-                        className="guess-song-image-r4"
-                        key={img.id}
-                        initial={{ scale: 0 }}
-                        whileInView={{
-                          scale: 1,
-                          transition: { duration: 0.3, delay: img.id * 0.3 },
-                        }}
-                        src={img.src}
-                        alt={img.alt}
-                      />
-                    </MouseParallaxChild>
-                  ))}
-                </SwiperSlide>
-              )
+            (element, i: number): JSX.Element => (
+              <SwiperSlide key={i} className="guess-song-slide-r4">
+                <GuessSongGameRound4Slide key={i} element={element} />
+              </SwiperSlide>
+            )
           )}
         </Swiper>
       </MouseParallaxChild>

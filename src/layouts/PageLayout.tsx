@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 
 import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game_bg.webp';
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
+import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_background.jpg';
 import guessSongMainBgImg from '../assets/images/backgrounds/guess-song/main_bg.jpg';
 
 const PageLayout = () => {
@@ -19,8 +20,9 @@ const PageLayout = () => {
     'tv/guess-song/round3',
     'tv/guess-song/round4',
     'tv/guess-song/round5',
-    'tv/guess-song/round6',
   ];
+
+  const factsLinks = ['tv/facts', 'tv/facts/game'];
 
   useEffect(() => {
     if (currentLocation === 'tv') {
@@ -30,6 +32,8 @@ const PageLayout = () => {
       setBackground(detectiveBgImg);
     } else if (currentLocation === 'tv/detective/game') {
       setBackground(detectiveGameBgImg);
+    } else if (factsLinks.includes(currentLocation)) {
+      setBackground(factsMainBgImg);
     }
   }, [currentLocation]);
   return (

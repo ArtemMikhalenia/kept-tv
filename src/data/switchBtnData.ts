@@ -3,7 +3,7 @@ import type { SwitchBtnInterface } from '../interfaces/switchBtnInterface';
 export const switchBtnData: SwitchBtnInterface[] = [
   { number: 1, link: '/tv/guess-song-video' },
   { number: 8, link: '/tv/detective-video' },
-  { number: 2, link: '/tv' },
+  { number: 2, link: '/tv/facts-video' },
   { number: 9, link: '/tv' },
   { number: 3, link: '/tv' },
   { number: 10, link: '/tv' },

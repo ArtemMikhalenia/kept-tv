@@ -20,3 +20,15 @@ export interface GuessSongRound2Interface {
   src: string;
   alt: string;
 }
+
+export interface GuessSongRound4Interface {
+  videoLink: string;
+  thumbnail: string;
+  imgFake: string;
+  imgOriginal: string;
+}
+
+export interface GuessSongRound5Interface {
+  id: number;
+  text: string;
+}

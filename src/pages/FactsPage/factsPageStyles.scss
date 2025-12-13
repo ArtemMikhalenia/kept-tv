@@ -1,0 +1,12 @@
+@use '../../variables' as var;
+
+.facts-page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('../../assets/images/backgrounds/facts-page/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+}

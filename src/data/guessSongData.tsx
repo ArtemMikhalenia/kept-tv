@@ -1,104 +1,130 @@
-import coldImg from '../assets/images/guess_song_images/round1/1/cold.jpg';
+import coldImg from '../assets/images/guess_song_images/round1/1/cold.webp';
 import elochkeImg from '../assets/images/guess_song_images/round1/1/elochke.webp';
-import malenkoiImg from '../assets/images/guess_song_images/round1/1/malenkoi.png';
-import zimoiImg from '../assets/images/guess_song_images/round1/1/zimoi.png';
-import etoImg from '../assets/images/guess_song_images/round1/2/eto.jpg';
-import luchshiyImg from '../assets/images/guess_song_images/round1/2/luchshiy.png';
+import malenkoiImg from '../assets/images/guess_song_images/round1/1/malenkoi.webp';
+import zimoiImg from '../assets/images/guess_song_images/round1/1/zimoi.webp';
+import etoImg from '../assets/images/guess_song_images/round1/2/eto.webp';
+import luchshiyImg from '../assets/images/guess_song_images/round1/2/luchshiy.webp';
 import moiImg from '../assets/images/guess_song_images/round1/2/moi.webp';
-import podarochekImg from '../assets/images/guess_song_images/round1/2/podarochek.png';
+import podarochekImg from '../assets/images/guess_song_images/round1/2/podarochek.webp';
 import tiImg from '../assets/images/guess_song_images/round1/2/ti.webp';
 import elochkaImg from '../assets/images/guess_song_images/round1/3/elochka.webp';
-import lesyImg from '../assets/images/guess_song_images/round1/3/lesy.jpg';
-import rodilasImg from '../assets/images/guess_song_images/round1/3/rodilas.jfif';
-import vImg from '../assets/images/guess_song_images/round1/3/v.jpg';
-import twelveImg from '../assets/images/guess_song_images/round1/4/12.jpg';
-import biutImg from '../assets/images/guess_song_images/round1/4/biut.jpg';
+import lesyImg from '../assets/images/guess_song_images/round1/3/lesy.webp';
+import rodilasImg from '../assets/images/guess_song_images/round1/3/rodilas.webp';
+import vImg from '../assets/images/guess_song_images/round1/3/v.webp';
+import twelveImg from '../assets/images/guess_song_images/round1/4/12.webp';
+import biutImg from '../assets/images/guess_song_images/round1/4/biut.webp';
 import chasiImg from '../assets/images/guess_song_images/round1/4/chasi.webp';
-import pokaImg from '../assets/images/guess_song_images/round1/4/poka.jfif';
-import godImg from '../assets/images/guess_song_images/round1/5/god.jpg';
-import new1Img from '../assets/images/guess_song_images/round1/5/new1.avif';
-import new2Img from '../assets/images/guess_song_images/round1/5/new2.png';
+import pokaImg from '../assets/images/guess_song_images/round1/4/poka.webp';
+import godImg from '../assets/images/guess_song_images/round1/5/god.webp';
+import new1Img from '../assets/images/guess_song_images/round1/5/new1.webp';
+import new2Img from '../assets/images/guess_song_images/round1/5/new2.webp';
 import new3Img from '../assets/images/guess_song_images/round1/5/new3.webp';
-import newImg from '../assets/images/guess_song_images/round1/5/new.jfif';
-import ineiImg from '../assets/images/guess_song_images/round1/6/inei.png';
-import legImg from '../assets/images/guess_song_images/round1/6/leg.avif';
-import naImg from '../assets/images/guess_song_images/round1/6/na.jfif';
+import newImg from '../assets/images/guess_song_images/round1/5/new.webp';
+import ineiImg from '../assets/images/guess_song_images/round1/6/inei.webp';
+import legImg from '../assets/images/guess_song_images/round1/6/leg.webp';
+import naImg from '../assets/images/guess_song_images/round1/6/na.webp';
 import provodaImg from '../assets/images/guess_song_images/round1/6/provoda.webp';
-import siniiImg from '../assets/images/guess_song_images/round1/6/sinii.png';
+import siniiImg from '../assets/images/guess_song_images/round1/6/sinii.webp';
 import kruzhitsaImg from '../assets/images/guess_song_images/round1/7/kruzhitsa.webp';
-import letaetImg from '../assets/images/guess_song_images/round1/7/letaet.png';
-import snegImg from '../assets/images/guess_song_images/round1/7/sneg.png';
-import dverImg from '../assets/images/guess_song_images/round1/8/dver.jpg';
-import ledyanoiImg from '../assets/images/guess_song_images/round1/8/ledyanoi.png';
+import letaetImg from '../assets/images/guess_song_images/round1/7/letaet.webp';
+import snegImg from '../assets/images/guess_song_images/round1/7/sneg.webp';
+import dverImg from '../assets/images/guess_song_images/round1/8/dver.webp';
+import ledyanoiImg from '../assets/images/guess_song_images/round1/8/ledyanoi.webp';
 import potolokImg from '../assets/images/guess_song_images/round1/8/potolok.webp';
-import skripychayaImg from '../assets/images/guess_song_images/round1/8/skripychaya.jpg';
-import threeImg from '../assets/images/guess_song_images/round1/9/3.jpg';
-import belihImg from '../assets/images/guess_song_images/round1/9/belih.jpg';
-import dekabrImg from '../assets/images/guess_song_images/round1/9/dekabr.jpg';
-import konyaImg from '../assets/images/guess_song_images/round1/9/konya.jpg';
-import hlopushkiImg from '../assets/images/guess_song_images/round1/10/hlopushki.avif';
-import iImg from '../assets/images/guess_song_images/round1/10/i.jpg';
-import igryshkiImg from '../assets/images/guess_song_images/round1/10/igryshki.png';
-import novogodnieImg from '../assets/images/guess_song_images/round1/10/novogodnie.jfif';
-import svechiImg from '../assets/images/guess_song_images/round1/10/svechi.jpg';
-import aImg from '../assets/images/guess_song_images/round1/11/a.jpg';
-import begutImg from '../assets/images/guess_song_images/round1/11/begut.avif';
-import idutImg from '../assets/images/guess_song_images/round1/11/idut.jpg';
-import nosikiImg from '../assets/images/guess_song_images/round1/11/nosiki.jpg';
-import strelkiImg from '../assets/images/guess_song_images/round1/11/strelki.jpg';
-import tictacImg from '../assets/images/guess_song_images/round1/11/tictac.jfif';
-import dusheImg from '../assets/images/guess_song_images/round1/12/dushe.jpg';
-import serdtseImg from '../assets/images/guess_song_images/round1/12/serdtse.jpg';
-import viugaImg from '../assets/images/guess_song_images/round1/12/viuga.jfif';
-import zimaImg from '../assets/images/guess_song_images/round1/12/zima.png';
+import skripychayaImg from '../assets/images/guess_song_images/round1/8/skripychaya.webp';
+import threeImg from '../assets/images/guess_song_images/round1/9/3.webp';
+import belihImg from '../assets/images/guess_song_images/round1/9/belih.webp';
+import dekabrImg from '../assets/images/guess_song_images/round1/9/dekabr.webp';
+import konyaImg from '../assets/images/guess_song_images/round1/9/konya.webp';
+import hlopushkiImg from '../assets/images/guess_song_images/round1/10/hlopushki.webp';
+import iImg from '../assets/images/guess_song_images/round1/10/i.webp';
+import igryshkiImg from '../assets/images/guess_song_images/round1/10/igryshki.webp';
+import novogodnieImg from '../assets/images/guess_song_images/round1/10/novogodnie.webp';
+import svechiImg from '../assets/images/guess_song_images/round1/10/svechi.webp';
+import aImg from '../assets/images/guess_song_images/round1/11/a.webp';
+import begutImg from '../assets/images/guess_song_images/round1/11/begut.webp';
+import idutImg from '../assets/images/guess_song_images/round1/11/idut.webp';
+import nosikiImg from '../assets/images/guess_song_images/round1/11/nosiki.webp';
+import strelkiImg from '../assets/images/guess_song_images/round1/11/strelki.webp';
+import tictacImg from '../assets/images/guess_song_images/round1/11/tictac.webp';
+import dusheImg from '../assets/images/guess_song_images/round1/12/dushe.webp';
+import serdtseImg from '../assets/images/guess_song_images/round1/12/serdtse.webp';
+import viugaImg from '../assets/images/guess_song_images/round1/12/viuga.webp';
+import zimaImg from '../assets/images/guess_song_images/round1/12/zima.webp';
 import mneImg from '../assets/images/guess_song_images/round1/13/mne.webp';
 import poImg from '../assets/images/guess_song_images/round1/13/po.webp';
 import shekamImg from '../assets/images/guess_song_images/round1/13/shekam.webp';
-import denImg from '../assets/images/guess_song_images/round1/14/den.jpg';
-import dveImg from '../assets/images/guess_song_images/round1/14/dve.jpg';
-import korotkiyImg from '../assets/images/guess_song_images/round1/14/korotkiy.jpg';
-import odinImg from '../assets/images/guess_song_images/round1/14/odin.png';
-import soshlisImg from '../assets/images/guess_song_images/round1/14/soshlis.jpg';
-import vechnostiImg from '../assets/images/guess_song_images/round1/14/vechnosti.jpg';
-import doImg from '../assets/images/guess_song_images/round1/15/do.jpg';
-import razImg from '../assets/images/guess_song_images/round1/15/raz.jpg';
+import denImg from '../assets/images/guess_song_images/round1/14/den.webp';
+import dveImg from '../assets/images/guess_song_images/round1/14/dve.webp';
+import korotkiyImg from '../assets/images/guess_song_images/round1/14/korotkiy.webp';
+import odinImg from '../assets/images/guess_song_images/round1/14/odin.webp';
+import soshlisImg from '../assets/images/guess_song_images/round1/14/soshlis.webp';
+import vechnostiImg from '../assets/images/guess_song_images/round1/14/vechnosti.webp';
+import doImg from '../assets/images/guess_song_images/round1/15/do.webp';
+import razImg from '../assets/images/guess_song_images/round1/15/raz.webp';
 import schitatImg from '../assets/images/guess_song_images/round1/15/schitat.webp';
-import smotretImg from '../assets/images/guess_song_images/round1/15/smotret.avif';
+import smotretImg from '../assets/images/guess_song_images/round1/15/smotret.webp';
 import staImg from '../assets/images/guess_song_images/round1/15/sta.webp';
-import uchilsyaImg from '../assets/images/guess_song_images/round1/15/uchilsya.jpg';
-import vdalImg from '../assets/images/guess_song_images/round1/15/vdal.png';
-import hleshytImg from '../assets/images/guess_song_images/round1/16/hleshyt.avif';
+import uchilsyaImg from '../assets/images/guess_song_images/round1/15/uchilsya.webp';
+import vdalImg from '../assets/images/guess_song_images/round1/15/vdal.webp';
+import hleshytImg from '../assets/images/guess_song_images/round1/16/hleshyt.webp';
 import i1Img from '../assets/images/guess_song_images/round1/16/i.webp';
-import livniImg from '../assets/images/guess_song_images/round1/16/livni.jpg';
-import uprugoImg from '../assets/images/guess_song_images/round1/16/uprugo.png';
-import yanvarskayaImg from '../assets/images/guess_song_images/round1/16/yanvarskaya.jpg';
-import zvenitImg from '../assets/images/guess_song_images/round1/16/zvenit.avif';
-import peppersImg from '../assets/images/guess_song_images/round2/1_Red_Hot_Chili Peppers.png';
-import rollingImg from '../assets/images/guess_song_images/round2/2_Rolling_Stones.png';
-import panicImg from '../assets/images/guess_song_images/round2/3_Panic!_At The Disco_ili_discoteca_avaria.png';
-import glukozaImg from '../assets/images/guess_song_images/round2/4_rus_glukoza.png';
-import greenImg from '../assets/images/guess_song_images/round2/5_Green_Day1.png';
-import deepImg from '../assets/images/guess_song_images/round2/6_Deep_Purple.jpg';
-import chaiImg from '../assets/images/guess_song_images/round2/7_rus_chai_vdvoem.png';
-import alicaImg from '../assets/images/guess_song_images/round2/8_rus_alica.png';
-import rukiImg from '../assets/images/guess_song_images/round2/9_rus_ruki_vverh.png';
-import serebroImg from '../assets/images/guess_song_images/round2/10_rus_serebro.png';
-import gradusiImg from '../assets/images/guess_song_images/round2/11_rus_gradusi.png';
-import sveloImg from '../assets/images/guess_song_images/round2/12_rus_nogu_svelo.png';
-import kishImg from '../assets/images/guess_song_images/round2/13_rus_kish.png';
-import smyslovieImg from '../assets/images/guess_song_images/round2/14_rus_smyslovie_gluki.png';
-import mumiyImg from '../assets/images/guess_song_images/round2/15_rus_mumiy_troll.png';
-import beatlesImg from '../assets/images/guess_song_images/round2/16_beatles.jpg';
-import dragonsImg from '../assets/images/guess_song_images/round2/17_Imagine_Dragons.png';
-import monkeysImg from '../assets/images/guess_song_images/round2/18_Arctic_Monkeys.jpg';
-import rosesImg from '../assets/images/guess_song_images/round2/19_Guns_N’_Roses.jpg';
-import pilotsImg from '../assets/images/guess_song_images/round2/20_Twenty_One_Pilots.png';
-import papaImg from '../assets/images/guess_song_images/round2/21_Papa_Roach.png';
-import zveriImg from '../assets/images/guess_song_images/round2/22_rus_zveri.png';
-import kissImg from '../assets/images/guess_song_images/round2/23_Kiss.png';
-import coldplayImg from '../assets/images/guess_song_images/round2/24_Coldplay.png';
+import livniImg from '../assets/images/guess_song_images/round1/16/livni.webp';
+import uprugoImg from '../assets/images/guess_song_images/round1/16/uprugo.webp';
+import yanvarskayaImg from '../assets/images/guess_song_images/round1/16/yanvarskaya.webp';
+import zvenitImg from '../assets/images/guess_song_images/round1/16/zvenit.webp';
+import peppersImg from '../assets/images/guess_song_images/round2/1_Red_Hot_Chili Peppers.webp';
+import rollingImg from '../assets/images/guess_song_images/round2/2_Rolling_Stones.webp';
+import panicImg from '../assets/images/guess_song_images/round2/3_Panic!_At The Disco_ili_discoteca_avaria.webp';
+import glukozaImg from '../assets/images/guess_song_images/round2/4_rus_glukoza.webp';
+import greenImg from '../assets/images/guess_song_images/round2/5_Green_Day.webp';
+import deepImg from '../assets/images/guess_song_images/round2/6_Deep_Purple.webp';
+import chaiImg from '../assets/images/guess_song_images/round2/7_rus_chai_vdvoem.webp';
+import alicaImg from '../assets/images/guess_song_images/round2/8_rus_alica.webp';
+import rukiImg from '../assets/images/guess_song_images/round2/9_rus_ruki_vverh.webp';
+import serebroImg from '../assets/images/guess_song_images/round2/10_rus_serebro.webp';
+import gradusiImg from '../assets/images/guess_song_images/round2/11_rus_gradusi.webp';
+import sveloImg from '../assets/images/guess_song_images/round2/12_rus_nogu_svelo.webp';
+import kishImg from '../assets/images/guess_song_images/round2/13_rus_kish.webp';
+import smyslovieImg from '../assets/images/guess_song_images/round2/14_rus_smyslovie_gluki.webp';
+import mumiyImg from '../assets/images/guess_song_images/round2/15_rus_mumiy_troll.webp';
+import beatlesImg from '../assets/images/guess_song_images/round2/16_beatles.webp';
+import dragonsImg from '../assets/images/guess_song_images/round2/17_Imagine_Dragons.webp';
+import monkeysImg from '../assets/images/guess_song_images/round2/18_Arctic_Monkeys.webp';
+import rosesImg from '../assets/images/guess_song_images/round2/19_Guns_N’_Roses.webp';
+import pilotsImg from '../assets/images/guess_song_images/round2/20_Twenty_One_Pilots.webp';
+import papaImg from '../assets/images/guess_song_images/round2/21_Papa_Roach.webp';
+import zveriImg from '../assets/images/guess_song_images/round2/22_rus_zveri.webp';
+import kissImg from '../assets/images/guess_song_images/round2/23_Kiss.webp';
+import coldplayImg from '../assets/images/guess_song_images/round2/24_Coldplay.webp';
+import fake1Img from '../assets/images/guess_song_images/round4/fake1.webp';
+import fake2Img from '../assets/images/guess_song_images/round4/fake2.webp';
+import fake3Img from '../assets/images/guess_song_images/round4/fake3.webp';
+import fake4Img from '../assets/images/guess_song_images/round4/fake4.webp';
+import fake5Img from '../assets/images/guess_song_images/round4/fake5.webp';
+import fake6Img from '../assets/images/guess_song_images/round4/fake6.webp';
+import fake7Img from '../assets/images/guess_song_images/round4/fake7.webp';
+import fake8Img from '../assets/images/guess_song_images/round4/fake8.webp';
+import original1Img from '../assets/images/guess_song_images/round4/original1.webp';
+import original2Img from '../assets/images/guess_song_images/round4/original2.webp';
+import original3Img from '../assets/images/guess_song_images/round4/original3.webp';
+import original4Img from '../assets/images/guess_song_images/round4/original4.webp';
+import original5Img from '../assets/images/guess_song_images/round4/original5.webp';
+import original6Img from '../assets/images/guess_song_images/round4/original6.webp';
+import original7Img from '../assets/images/guess_song_images/round4/original7.webp';
+import original8Img from '../assets/images/guess_song_images/round4/original8.webp';
+import thumbnail1Img from '../assets/images/guess_song_images/round4/thumbnails/1.jpg';
+import thumbnail2Img from '../assets/images/guess_song_images/round4/thumbnails/2.jpg';
+import thumbnail3Img from '../assets/images/guess_song_images/round4/thumbnails/3.jpg';
+import thumbnail4Img from '../assets/images/guess_song_images/round4/thumbnails/4.jpg';
+import thumbnail5Img from '../assets/images/guess_song_images/round4/thumbnails/5.jpg';
+import thumbnail6Img from '../assets/images/guess_song_images/round4/thumbnails/6.jpg';
+import thumbnail7Img from '../assets/images/guess_song_images/round4/thumbnails/7.jpg';
+import thumbnail8Img from '../assets/images/guess_song_images/round4/thumbnails/8.jpg';
 import type {
   GuessSongDataRound2Types,
+  GuessSongDataRound4Types,
+  GuessSongDataRound5Types,
   GuessSongDataTypes,
   GuessSongLinkTypes,
 } from '../types/guessSongTypes';
@@ -112,7 +138,7 @@ export const guessSongLinksData: GuessSongLinkTypes = [
   {
     className: 'guess-song-round2-link',
     link: 'round2',
-    text: 'Раунд 2. AI портрет',
+    text: 'Раунд 2. ИИ портрет',
   },
   {
     className: 'guess-song-round3-link',
@@ -122,12 +148,12 @@ export const guessSongLinksData: GuessSongLinkTypes = [
   {
     className: 'guess-song-round4-link',
     link: 'round4',
-    text: 'Раунд 4. Мелодия шоу',
+    text: 'Раунд 4. Хит с подвохом',
   },
   {
     className: 'guess-song-round5-link',
     link: 'round5',
-    text: 'Раунд 5. Хит с подвохом',
+    text: 'Раунд 5. Темная сторона',
   },
   {
     className: 'guess-song-round6-link',
@@ -431,4 +457,142 @@ export const guessSongDataRound2: GuessSongDataRound2Types = [
   },
 ];
 
-export const guessSongDataRound4 = [];
+export const guessSongDataRound4: GuessSongDataRound4Types = [
+  {
+    videoLink: 'https://vimeo.com/1145734255',
+    thumbnail: thumbnail1Img,
+    imgFake: fake1Img,
+    imgOriginal: original1Img,
+  },
+  {
+    videoLink: 'https://vimeo.com/1145734307',
+    thumbnail: thumbnail2Img,
+    imgFake: fake2Img,
+    imgOriginal: original2Img,
+  },
+  {
+    videoLink: 'https://vimeo.com/1145734334',
+    thumbnail: thumbnail3Img,
+    imgFake: fake3Img,
+    imgOriginal: original3Img,
+  },
+  {
+    videoLink: 'https://vimeo.com/1145734373',
+    thumbnail: thumbnail4Img,
+    imgFake: fake4Img,
+    imgOriginal: original4Img,
+  },
+  {
+    videoLink: 'https://vimeo.com/1145734405',
+    thumbnail: thumbnail5Img,
+    imgFake: fake5Img,
+    imgOriginal: original5Img,
+  },
+  {
+    videoLink: 'https://vimeo.com/1145734428',
+    thumbnail: thumbnail6Img,
+    imgFake: fake6Img,
+    imgOriginal: original6Img,
+  },
+  {
+    videoLink: 'https://vimeo.com/1145734458',
+    thumbnail: thumbnail7Img,
+    imgFake: fake7Img,
+    imgOriginal: original7Img,
+  },
+  {
+    videoLink: 'https://vimeo.com/1145734494',
+    thumbnail: thumbnail8Img,
+    imgFake: fake8Img,
+    imgOriginal: original8Img,
+  },
+];
+
+export const guessSongDataRound5: GuessSongDataRound5Types = [
+  {
+    id: 0,
+    text: `День, что за обычная неволя: 
+От восхода до заката
+Забыть тебя, отчаявшись вновь,
+Ночь, я не молю тебя — да надо
+От заката до восхода
+Молчать мне про нелюбовь`,
+  },
+  {
+    id: 1,
+    text: `А на пустыне чёрная глина,
+тянет холодный вихрь в затылок
+Нельзя даже земли не тронуть ногой 
+
+Не захочу совсем-совсем интересоваться,
+не стану о тебе забывать
+Даже если ты близко-близко`,
+  },
+  {
+    id: 2,
+    text: `Ты не такой как наяву 
+Не такой как в файле
+Где я писала тебя водой`,
+  },
+  {
+    id: 3,
+    text: `Оставь меня с собой
+Я уйду сквозь добрые дни 
+Я останусь без тебя 
+Что бы бездорожье ни отвергало
+Я уйду оттуда, где ты 
+Сотрёшь в земле луну 
+Где целые реальности 
+Теряют навсегда слабость глубины`,
+  },
+  {
+    id: 4,
+    text: `Оставь меня медленнее, привези за одну степь 
+И пинай меня нигде, мне ещё не семнадцать
+Оставь меня медленнее, привези за одну степь 
+И пинай меня нигде, я ведь маленькая еще`,
+  },
+  {
+    id: 5,
+    text: `Как дремота в минуту дневную 
+Сохраняет, приветливая, нутро твоё, 
+Чьих, свободная, ты реальность? 
+Зачем тебе спасать монстров?`,
+  },
+  {
+    id: 6,
+    text: `Еда полегче
+Предложения подлиннее
+Так сложно, так тяжелее
+Рисуются дни
+Тишина с вопросом
+Сегодняшняя зима
+Грустная истина`,
+  },
+  {
+    id: 7,
+    text: `Я зависим наоборот как крот в земле
+Я зависим я вспомнил что не означает бесстрашие
+Я зависим, с домашним штилем порознь
+Я зависим во сне, а не наяву`,
+  },
+  {
+    id: 8,
+    text: `Громко плащом черным
+Зной хлев мой открой
+Там-то ты пробуждаешься
+Там-то, но рядом со мной`,
+  },
+  {
+    id: 9,
+    text: `Это не был равный мир 
+Между землёй и богами 
+Между разумом и свободой 
+Под анонимностью never die 
+
+Проигравший не будет виновен
+Победитель сложно мёртв 
+Этот — лишь работа
+Под анонимностью never die`,
+  },
+];

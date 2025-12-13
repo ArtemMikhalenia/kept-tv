@@ -8,7 +8,7 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import type { VideoPageTypes } from '../../types/videoPlayerTypes';
 import './videopage.scss';
 
-const VideoPage = ({ url }: VideoPageTypes): JSX.Element => {
+const VideoPage = ({ url, thumbnail }: VideoPageTypes): JSX.Element => {
   return (
     <motion.div
       className="video-page"
@@ -16,7 +16,7 @@ const VideoPage = ({ url }: VideoPageTypes): JSX.Element => {
       animate={{ opacity: 1, transition: { duration: 0.2 } }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
     >
-      <VideoPlayer url={url} />
+      <VideoPlayer url={url} thumbnail={thumbnail} />
     </motion.div>
   );
 };

@@ -138,15 +138,182 @@
 
   .swiper-r4 {
     position: relative;
-    z-index: 3;
-    // max-width: 530px;
     width: 100%;
     height: 100%;
 
     .guess-song-slide-r4 {
+      position: relative;
       width: 100%;
       height: 100%;
-      background-color: white;
+
+      padding: 0px 0px 0px;
+      border: 2px solid var.$color-white;
+      background-color: #180a17;
+      backdrop-filter: blur(5px);
+
+      .videoplayer-container-r4 {
+        height: 85%;
+      }
+
+      .img-container-r4 {
+        .img-fake,
+        .img-original {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: all 0.5s ease 0s;
+        }
+      }
+
+      .btn-container-r4 {
+        max-width: 300px;
+        padding: 20px 20px 0px;
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+
+        button {
+          padding: 15px 25px;
+          font-size: 16px;
+          border: 2px solid #47657a;
+          background: none;
+          transition: all 0.25s ease;
+          cursor: pointer;
+
+          &:hover {
+            border-color: #557992;
+            color: var.$color-white;
+          }
+        }
+
+        .pulse-task {
+          border-color: #47657a;
+          color: var.$color-white;
+
+          &:hover {
+            border-color: #557992;
+            box-shadow: 0 0 5px transparent;
+            color: var.$color-white;
+            animation: pulse-task 1s;
+          }
+        }
+
+        .pulse-answer {
+          border-color: #867d6c;
+          color: var.$color-white;
+
+          &:hover {
+            border-color: #a79b87;
+            box-shadow: 0 0 5px transparent;
+            color: var.$color-white;
+            animation: pulse-answer 1s;
+          }
+        }
+
+        @keyframes pulse-task {
+          0% {
+            box-shadow: 0 0 0 0 #47657a;
+          }
+          70% {
+            box-shadow: 0 0 0 15px transparent;
+          }
+          100% {
+            box-shadow: 0 0 0 0 transparent;
+          }
+        }
+
+        @keyframes pulse-answer {
+          0% {
+            box-shadow: 0 0 0 0 #867d6c;
+          }
+          70% {
+            box-shadow: 0 0 0 15px transparent;
+          }
+          100% {
+            box-shadow: 0 0 0 0 transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.guess-song-game-round5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+
+  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px) brightness(0.7);
+  }
+
+  .swiper-r5 {
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+    max-height: 550px;
+    height: 100%;
+
+    .guess-song-slide-r5 {
+      position: relative;
+      max-width: 550px;
+      width: 100%;
+      max-height: 550px;
+      height: 100%;
+
+      padding: 10px 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: 2px solid var.$color-white;
+      border-radius: 18px;
+
+      background-image: url('../../assets/images/guess_song_images/round5/slide_bg_r5.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      backdrop-filter: blur(3px) brightness(0.7);
+
+      .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000b7;
+      }
+
+      .text {
+        white-space: pre-line;
+        text-justify: auto;
+        z-index: 1;
+        width: 100%;
+        font-size: 28px;
+        color: #fff;
+      }
     }
   }
 }
