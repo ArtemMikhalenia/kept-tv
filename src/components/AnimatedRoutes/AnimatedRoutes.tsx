@@ -19,16 +19,19 @@ import {
   guessSongDataRound4,
   guessSongDataRound5,
 } from '../../data/guessSongData';
+import { howDoesItWorkData } from '../../data/howDoesItWorkData';
 
 import thumbnailDetectiveImg from '../../assets/images/backgrounds/detective-game/thumbnail.jpg';
 import thumbnailFactsImg from '../../assets/images/backgrounds/facts-page/thumbnail.jpg';
 import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/thumbnail.jpg';
+import thumbnailHowDoesItWorkImg from '../../assets/images/backgrounds/how-does-it-work/thumbnail.jpg';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
 import DetectivePage from '../../pages/DetectivePage/DetectivePage';
 import FactsPage from '../../pages/FactsPage/FactsPage';
 import GreetingsPage from '../../pages/GreetingsPage/GreetingsPage';
 import GuessSongPage from '../../pages/GuessSongPage/GuessSongPage';
+import HowDoesItWorkPage from '../../pages/HowDoesItWorkPage/HowDoesItWorkPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
 import ResultsPage from '../../pages/ResultsPage/ResultsPage';
 import VideoPage from '../../pages/VideoPage/VideoPage';
@@ -47,6 +50,9 @@ const GuessSongGameRound5 = lazy(
 );
 const DetectiveGame = lazy(() => import('../DetectiveGame/DetectiveGame'));
 const FactsGame = lazy(() => import('../FactsGame/FactsGame'));
+const HowDoesItWorkGame = lazy(
+  () => import('../HowDoesItWorkGame/HowDoesItWorkGame')
+);
 
 const AnimatedOutlet = (): JSX.Element => {
   const location = useLocation();
@@ -161,6 +167,32 @@ const router = createBrowserRouter(
             element={
               <Suspense fallback={<TailSpin />}>
                 <FactsGame />
+              </Suspense>
+            }
+          />
+          <Route
+            path="results"
+            element={<ResultsPage title="Поиск победителя" />}
+          />
+        </Route>
+        <Route
+          index
+          path="how-does-it-work-video"
+          element={
+            <VideoPage
+              url="https://vimeo.com/1145730537"
+              thumbnail={thumbnailHowDoesItWorkImg}
+            />
+          }
+        />
+        <Route path="how-does-it-work" element={<PageLayout />}>
+          <Route index element={<HowDoesItWorkPage />} />
+          <Route
+            path={'game'}
+            loader={() => howDoesItWorkData}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <HowDoesItWorkGame />
               </Suspense>
             }
           />

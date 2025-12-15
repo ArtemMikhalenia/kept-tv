@@ -16,7 +16,7 @@ import type {
   FactsSlideProps,
 } from '../../interfaces/factsInterface';
 
-import druzhkoImg from '../../assets/images/facts_images/druzhko.png';
+import druzhkoImg from '../../assets/images/facts_images/druzhko.webp';
 import druzhkoSound from '../../assets/sounds/facts_game/this-is-of-course-not-true.mp3';
 import './factsGameStyles.scss';
 

@@ -40,6 +40,8 @@ const TVLayout = (): JSX.Element => {
       setLinkToNextPage('/tv/facts');
     } else if (currentLocation === 'tv/facts') {
       setLinkToNextPage('/tv/facts/game');
+    } else if (currentLocation === 'tv/how-does-it-work-video') {
+      setLinkToNextPage('/tv/how-does-it-work');
     }
   }, [location]);
   return (

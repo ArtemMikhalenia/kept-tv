@@ -1,32 +1,32 @@
 import type { FactsInterface } from '../interfaces/factsInterface';
 
-import bg1 from '../assets/images/facts_images/facts_bg1.png';
-import bg2 from '../assets/images/facts_images/facts_bg2.png';
-import bg3 from '../assets/images/facts_images/facts_bg3.png';
-import bg4 from '../assets/images/facts_images/facts_bg4.png';
-import bg5 from '../assets/images/facts_images/facts_bg5.png';
-import newsImg1 from '../assets/images/facts_images/news/1.jpg';
-import newsImg2 from '../assets/images/facts_images/news/2.jpg';
-import newsImg3 from '../assets/images/facts_images/news/3.jpg';
-import newsImg4 from '../assets/images/facts_images/news/4.jpg';
-import newsImg5 from '../assets/images/facts_images/news/5.jpg';
-import newsImg6 from '../assets/images/facts_images/news/6.jpg';
-import newsImg7 from '../assets/images/facts_images/news/7.jpg';
-import newsImg8 from '../assets/images/facts_images/news/8.jpeg';
-import newsImg9_1 from '../assets/images/facts_images/news/9.1.jpeg';
-import newsImg9_2 from '../assets/images/facts_images/news/9.2.jpeg';
-import newsImg10_1 from '../assets/images/facts_images/news/10.1.jpg';
-import newsImg10_2 from '../assets/images/facts_images/news/10.2.jpg';
-import newsImg11_1 from '../assets/images/facts_images/news/11.1.jpg';
-import newsImg11_2 from '../assets/images/facts_images/news/11.2.jpg';
+import bg1 from '../assets/images/facts_images/facts_bg1.webp';
+import bg2 from '../assets/images/facts_images/facts_bg2.webp';
+import bg3 from '../assets/images/facts_images/facts_bg3.webp';
+import bg4 from '../assets/images/facts_images/facts_bg4.webp';
+import bg5 from '../assets/images/facts_images/facts_bg5.webp';
+import newsImg1 from '../assets/images/facts_images/news/1.webp';
+import newsImg2 from '../assets/images/facts_images/news/2.webp';
+import newsImg3 from '../assets/images/facts_images/news/3.webp';
+import newsImg4 from '../assets/images/facts_images/news/4.webp';
+import newsImg5 from '../assets/images/facts_images/news/5.webp';
+import newsImg6 from '../assets/images/facts_images/news/6.webp';
+import newsImg7 from '../assets/images/facts_images/news/7.webp';
+import newsImg8 from '../assets/images/facts_images/news/8.webp';
+import newsImg9_1 from '../assets/images/facts_images/news/9.1.webp';
+import newsImg9_2 from '../assets/images/facts_images/news/9.2.webp';
+import newsImg10_1 from '../assets/images/facts_images/news/10.1.webp';
+import newsImg10_2 from '../assets/images/facts_images/news/10.2.webp';
+import newsImg11_1 from '../assets/images/facts_images/news/11.1.webp';
+import newsImg11_2 from '../assets/images/facts_images/news/11.2.webp';
 import newsImg12_1 from '../assets/images/facts_images/news/12.1.webp';
 import newsImg12_2 from '../assets/images/facts_images/news/12.2.webp';
-import newsImg13_1 from '../assets/images/facts_images/news/13.1.jpg';
-import newsImg13_2 from '../assets/images/facts_images/news/13.2.jpg';
-import newsImg14_1 from '../assets/images/facts_images/news/14.1.jpg';
-import newsImg14_2 from '../assets/images/facts_images/news/14.2.jpg';
-import newsImg15_1 from '../assets/images/facts_images/news/15.1.jpg';
-import newsImg15_2 from '../assets/images/facts_images/news/15.2.jpg';
+import newsImg13_1 from '../assets/images/facts_images/news/13.1.webp';
+import newsImg13_2 from '../assets/images/facts_images/news/13.2.webp';
+import newsImg14_1 from '../assets/images/facts_images/news/14.1.webp';
+import newsImg14_2 from '../assets/images/facts_images/news/14.2.webp';
+import newsImg15_1 from '../assets/images/facts_images/news/15.1.webp';
+import newsImg15_2 from '../assets/images/facts_images/news/15.2.webp';
 
 export const factsData: FactsInterface[] = [
   {

@@ -7,6 +7,7 @@ import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
 import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_background.jpg';
 import guessSongMainBgImg from '../assets/images/backgrounds/guess-song/main_bg.jpg';
+import howDoesItWorkBgImg from '../assets/images/backgrounds/how-does-it-work/1.png';
 
 const PageLayout = () => {
   const location = useLocation();
@@ -24,6 +25,11 @@ const PageLayout = () => {
 
   const factsLinks = ['tv/facts', 'tv/facts/game'];
 
+  const howDoesItWorkLinks = [
+    'tv/how-does-it-work',
+    'tv/how-does-it-work/game',
+  ];
+
   useEffect(() => {
     if (currentLocation === 'tv') {
     } else if (guessSongLinks.includes(currentLocation)) {
@@ -34,6 +40,8 @@ const PageLayout = () => {
       setBackground(detectiveGameBgImg);
     } else if (factsLinks.includes(currentLocation)) {
       setBackground(factsMainBgImg);
+    } else if (howDoesItWorkLinks.includes(currentLocation)) {
+      setBackground(howDoesItWorkBgImg);
     }
   }, [currentLocation]);
   return (
