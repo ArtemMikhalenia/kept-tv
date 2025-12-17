@@ -17,7 +17,12 @@ import type {
 } from '../../interfaces/factsInterface';
 
 import druzhkoImg from '../../assets/images/facts_images/druzhko.webp';
-import druzhkoSound from '../../assets/sounds/facts_game/this-is-of-course-not-true.mp3';
+import druzhkoSound1 from '../../assets/sounds/facts_game/1.mp3';
+import druzhkoSound2 from '../../assets/sounds/facts_game/2.mp3';
+import druzhkoSound3 from '../../assets/sounds/facts_game/3.mp3';
+import druzhkoSound4 from '../../assets/sounds/facts_game/4.mp3';
+import druzhkoSound5 from '../../assets/sounds/facts_game/5.mp3';
+import { useSound } from '../../hooks/useSound';
 import './factsGameStyles.scss';
 
 export const FactsGameSlide = ({
@@ -28,14 +33,23 @@ export const FactsGameSlide = ({
   const [facts, setFacts] = useState<FactInterface[]>(initialFacts);
   const [showDruzhko, setShowDruzhko] = useState<boolean>(false);
   const [showNews, setShowNews] = useState<boolean>(false);
+  const { play: druzhko1 } = useSound(druzhkoSound1, 1);
+  const { play: druzhko2 } = useSound(druzhkoSound2, 1);
+  const { play: druzhko3 } = useSound(druzhkoSound3, 1);
+  const { play: druzhko4 } = useSound(druzhkoSound4, 1);
+  const { play: druzhko5 } = useSound(druzhkoSound5, 1);
 
-  const audio = new Audio(druzhkoSound);
+  const handleAudio = () => {
+    const audioArr = [druzhko1, druzhko2, druzhko3, druzhko4, druzhko5];
+    const randomIndex = Math.floor(Math.random() * audioArr.length);
+    audioArr[randomIndex]();
+  };
 
   useEffect(() => {
     if (showDruzhko) {
       const timeout = setTimeout(() => {
         setShowDruzhko(false);
-      }, 2000);
+      }, 4000);
 
       return () => clearTimeout(timeout);
     }
@@ -65,7 +79,7 @@ export const FactsGameSlide = ({
       if (selectedIds.length !== 0) {
         setShowDruzhko(true);
         setShowNews(false);
-        audio.play();
+        handleAudio();
       }
     }
     setFacts((prevFacts) =>

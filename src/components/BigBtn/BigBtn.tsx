@@ -1,17 +1,19 @@
 import type { JSX } from 'react';
+import { Link } from 'react-router';
 
 import { motion } from 'motion/react';
 
-import bigBtnImg from '../../assets/images/backgrounds/tv/big_btn_tv.webp';
+import type { BigBtnInterface } from '../../interfaces/bigBtnInterface';
 
-const BigBtn = (): JSX.Element => {
+const BigBtn = ({ id, link, title }: BigBtnInterface): JSX.Element => {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="big-btn"
+      id={id}
     >
-      <img src={bigBtnImg} alt="big-btn-img" />
+      <Link className="big-btn-link" title={title} to={link}></Link>
     </motion.div>
   );
 };

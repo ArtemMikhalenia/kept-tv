@@ -1,22 +1,28 @@
-import { type JSX, useEffect, useState } from 'react';
-import { Link, Outlet, useLocation } from 'react-router';
+import { type JSX, useCallback, useEffect, useState } from 'react';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router';
 
 import { motion } from 'motion/react';
 
+import { bigBtnData } from '../data/bigBtnData';
 import { switchBtnData } from '../data/switchBtnData';
 
+import type { BigBtnInterface } from '../interfaces/bigBtnInterface';
 import type { SwitchBtnInterface } from '../interfaces/switchBtnInterface';
 
 import BigBtn from '../components/BigBtn/BigBtn';
 import SwitchBtn from '../components/SwitchBtn/SwitchBtn';
 
+import druzhkoSoundStart from '../assets/sounds/facts_game/druzhkoStartSound.mp3';
+import { useSound } from '../hooks/useSound';
 import './tvLayoutStyles.scss';
 
 const TVLayout = (): JSX.Element => {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentLocation: string = location.pathname.slice(1);
-  const [linkToPrevPage, setLinkToPrevPage] = useState('');
-  const [linkToNextPage, setLinkToNextPage] = useState('');
+  const [linkToPrevPage, setLinkToPrevPage] = useState<string>('');
+  const [linkToNextPage, setLinkToNextPage] = useState<string>('');
+  const { play: playDruzhkoSound } = useSound(druzhkoSoundStart, 1);
 
   const guessSongLinks = [
     'tv/guess-song/round1',
@@ -36,29 +42,59 @@ const TVLayout = (): JSX.Element => {
       setLinkToNextPage('/tv/guess-song/results');
     } else if (currentLocation === 'tv/detective-video') {
       setLinkToNextPage('/tv/detective');
+    } else if (currentLocation === 'tv/detective/game') {
+      setLinkToNextPage('/tv/detective/results');
     } else if (currentLocation === 'tv/facts-video') {
       setLinkToNextPage('/tv/facts');
     } else if (currentLocation === 'tv/facts') {
       setLinkToNextPage('/tv/facts/game');
     } else if (currentLocation === 'tv/how-does-it-work-video') {
       setLinkToNextPage('/tv/how-does-it-work');
+    } else if (currentLocation === 'tv/house-video') {
+      setLinkToNextPage('/tv/house');
+    } else if (currentLocation === 'tv/house/game') {
+      setLinkToNextPage('/tv/house/final');
     }
   }, [location]);
+
+  const handleNextClickSound = useCallback(
+    (e: React.MouseEvent) => {
+      if (currentLocation === 'tv/facts') {
+        e.preventDefault();
+        playDruzhkoSound();
+        setTimeout(() => {
+          navigate(linkToNextPage);
+        }, 2000);
+      }
+    },
+    [currentLocation, playDruzhkoSound, linkToNextPage]
+  );
+
   return (
     <section className="tv-container">
       <div className="tv-frame" />
       <div className="grid-buttons">
         <div className="big-btn-container">
-          {[1, 2].map(
-            (item: number): JSX.Element => (
-              <BigBtn key={item} />
+          {bigBtnData.map(
+            (item: BigBtnInterface): JSX.Element => (
+              <BigBtn
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                link={item.link}
+              />
             )
           )}
         </div>
         <div className="switch-channel-btn-container">
           {switchBtnData.map(
             (item: SwitchBtnInterface, i: number): JSX.Element => (
-              <SwitchBtn key={i} number={item.number} link={item.link} />
+              <SwitchBtn
+                key={i}
+                number={item.number}
+                link={item.link}
+                title={item.title}
+              />
             )
           )}
         </div>
@@ -75,7 +111,9 @@ const TVLayout = (): JSX.Element => {
             whileTap={{ scale: 0.95 }}
             className="switch-channel-btn"
           >
-            <Link to={linkToNextPage}>&#9658;</Link>
+            <Link to={linkToNextPage} onClick={handleNextClickSound}>
+              &#9658;
+            </Link>
           </motion.div>
         </div>
       </div>

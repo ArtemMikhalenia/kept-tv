@@ -47,11 +47,23 @@
       align-items: center;
 
       .big-btn {
+        position: relative;
+        max-width: 130px;
+        width: 100%;
+        min-height: 130px;
+        height: 100%;
+        display: flex;
+
+        background-image: url('../assets/images/backgrounds/tv/big_btn_tv.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
         cursor: pointer;
 
-        img {
-          max-width: 100%;
+        .big-btn-link {
           width: 100%;
+          height: 100%;
         }
       }
     }

@@ -19,11 +19,13 @@ import {
   guessSongDataRound4,
   guessSongDataRound5,
 } from '../../data/guessSongData';
+import { houseData, houseDataFinal } from '../../data/houseData';
 import { howDoesItWorkData } from '../../data/howDoesItWorkData';
 
 import thumbnailDetectiveImg from '../../assets/images/backgrounds/detective-game/thumbnail.jpg';
 import thumbnailFactsImg from '../../assets/images/backgrounds/facts-page/thumbnail.jpg';
 import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/thumbnail.jpg';
+import thumbnailHouseImg from '../../assets/images/backgrounds/house-page/thumbnail.jpg';
 import thumbnailHowDoesItWorkImg from '../../assets/images/backgrounds/how-does-it-work/thumbnail.jpg';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
@@ -31,6 +33,7 @@ import DetectivePage from '../../pages/DetectivePage/DetectivePage';
 import FactsPage from '../../pages/FactsPage/FactsPage';
 import GreetingsPage from '../../pages/GreetingsPage/GreetingsPage';
 import GuessSongPage from '../../pages/GuessSongPage/GuessSongPage';
+import HousePage from '../../pages/HousePage/HousePage';
 import HowDoesItWorkPage from '../../pages/HowDoesItWorkPage/HowDoesItWorkPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
 import ResultsPage from '../../pages/ResultsPage/ResultsPage';
@@ -53,6 +56,8 @@ const FactsGame = lazy(() => import('../FactsGame/FactsGame'));
 const HowDoesItWorkGame = lazy(
   () => import('../HowDoesItWorkGame/HowDoesItWorkGame')
 );
+const HouseGame = lazy(() => import('../HouseGame/HouseGame'));
+const HouseGameFinal = lazy(() => import('../HouseGame/HouseGameFinal'));
 
 const AnimatedOutlet = (): JSX.Element => {
   const location = useLocation();
@@ -193,6 +198,41 @@ const router = createBrowserRouter(
             element={
               <Suspense fallback={<TailSpin />}>
                 <HowDoesItWorkGame />
+              </Suspense>
+            }
+          />
+          <Route
+            path="results"
+            element={<ResultsPage title="Поиск победителя" />}
+          />
+        </Route>
+        <Route
+          index
+          path="house-video"
+          element={
+            <VideoPage
+              url="https://vimeo.com/1145730479"
+              thumbnail={thumbnailHouseImg}
+            />
+          }
+        />
+        <Route path="house" element={<PageLayout />}>
+          <Route index element={<HousePage />} />
+          <Route
+            path={'game'}
+            loader={() => houseData}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <HouseGame />
+              </Suspense>
+            }
+          />
+          <Route
+            path={'final'}
+            loader={() => houseDataFinal}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <HouseGameFinal />
               </Suspense>
             }
           />

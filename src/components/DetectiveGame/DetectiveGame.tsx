@@ -13,6 +13,7 @@ import { motion } from 'motion/react';
 import type { DetectiveInterface } from '../../interfaces/detectiveInterface';
 
 import flashSound from '../../assets/sounds/detective_game/flash.wav';
+import { useSound } from '../../hooks/useSound';
 import type { DetectiveDataTypes } from '../../types/detectiveTypes';
 import './detectiveGameStyles.scss';
 
@@ -23,15 +24,14 @@ const DetectiveGameSlide = ({
 }): JSX.Element => {
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
-
-  const flashAudio = new Audio(flashSound);
+  const { play: flashAudio } = useSound(flashSound, 1);
 
   const handleFlip = (): void => {
     if (!isAnimating) {
       setIsFlipped(!isFlipped);
     }
     if (!isFlipped) {
-      flashAudio.play();
+      flashAudio();
     }
   };
 

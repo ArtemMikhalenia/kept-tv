@@ -1,11 +1,27 @@
-import type { JSX } from 'react';
+import { type JSX, useMemo } from 'react';
+import {
+  MouseParallaxChild,
+  MouseParallaxContainer,
+} from 'react-parallax-mouse';
 
 import { motion } from 'motion/react';
+
+import { sparkleData } from '../../data/sparkleData';
+
+import Sparkle from '../../components/Sparkle/Sparkle';
 
 import santaIcon from '../../assets/images/icons/santa-hat.png';
 import './resultsPage.scss';
 
 const ResultsPage = ({ title }: { title: string }): JSX.Element => {
+  const memoizedSparkles = useMemo(
+    () =>
+      sparkleData.map((sparkle, i) => (
+        <Sparkle key={i} width={sparkle.width} height={sparkle.height} />
+      )),
+    []
+  );
+
   return (
     <motion.div
       className="results-page"
@@ -13,21 +29,35 @@ const ResultsPage = ({ title }: { title: string }): JSX.Element => {
       animate={{ opacity: 1, transition: { duration: 0.2 } }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
     >
-      <div className="results-page-title-block">
-        <motion.div
-          className="results-page-title"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            transition: { duration: 1 },
-          }}
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <img className="santa-hat" src={santaIcon} alt="front-santa-hat" />
-          <h1>{title}</h1>
-        </motion.div>
-      </div>
+      <MouseParallaxContainer
+        globalFactorX={0.1}
+        globalFactorY={0.1}
+        containerStyle={{ width: '100%', height: '100%' }}
+        className="sparkles-container"
+      >
+        {memoizedSparkles}
+        <div className="results-page-title-block">
+          <MouseParallaxChild factorX={0.3} factorY={0.3}>
+            <motion.div
+              className="results-page-title"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 1 },
+              }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <img
+                className="santa-hat"
+                src={santaIcon}
+                alt="front-santa-hat"
+              />
+              <h1>{title}</h1>
+            </motion.div>
+          </MouseParallaxChild>
+        </div>
+      </MouseParallaxContainer>
     </motion.div>
   );
 };

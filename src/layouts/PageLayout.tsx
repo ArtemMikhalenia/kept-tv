@@ -7,7 +7,10 @@ import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
 import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_background.jpg';
 import guessSongMainBgImg from '../assets/images/backgrounds/guess-song/main_bg.jpg';
+import houseBgImg from '../assets/images/backgrounds/house-page/house_background.jpg';
 import howDoesItWorkBgImg from '../assets/images/backgrounds/how-does-it-work/1.png';
+import resultsBgImg from '../assets/images/backgrounds/results-page/background.png';
+import houseGameBgImg from '../assets/images/house_images/house_game_bg.jpg';
 
 const PageLayout = () => {
   const location = useLocation();
@@ -30,6 +33,10 @@ const PageLayout = () => {
     'tv/how-does-it-work/game',
   ];
 
+  const houseGameLinks = ['tv/house/game', 'tv/house/final'];
+
+  const resultsLinks = ['tv/detective/results'];
+
   useEffect(() => {
     if (currentLocation === 'tv') {
     } else if (guessSongLinks.includes(currentLocation)) {
@@ -42,6 +49,12 @@ const PageLayout = () => {
       setBackground(factsMainBgImg);
     } else if (howDoesItWorkLinks.includes(currentLocation)) {
       setBackground(howDoesItWorkBgImg);
+    } else if (currentLocation === 'tv/house') {
+      setBackground(houseBgImg);
+    } else if (houseGameLinks.includes(currentLocation)) {
+      setBackground(houseGameBgImg);
+    } else if (resultsLinks.includes(currentLocation)) {
+      setBackground(resultsBgImg);
     }
   }, [currentLocation]);
   return (
