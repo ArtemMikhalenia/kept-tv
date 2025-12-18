@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import { motion } from 'motion/react';
 
+import birthdayBgImg from '../assets/images/backgrounds/birthday-page/background.png';
 import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game_bg.webp';
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
 import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_background.jpg';
@@ -55,6 +56,8 @@ const PageLayout = () => {
       setBackground(houseGameBgImg);
     } else if (resultsLinks.includes(currentLocation)) {
       setBackground(resultsBgImg);
+    } else if (currentLocation === 'tv/birthday') {
+      setBackground(birthdayBgImg);
     }
   }, [currentLocation]);
   return (

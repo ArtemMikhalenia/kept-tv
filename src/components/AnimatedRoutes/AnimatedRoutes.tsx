@@ -29,6 +29,7 @@ import thumbnailHouseImg from '../../assets/images/backgrounds/house-page/thumbn
 import thumbnailHowDoesItWorkImg from '../../assets/images/backgrounds/how-does-it-work/thumbnail.jpg';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
+import BirthdayPage from '../../pages/BirthdayPage/BirthdayPage';
 import DetectivePage from '../../pages/DetectivePage/DetectivePage';
 import FactsPage from '../../pages/FactsPage/FactsPage';
 import GreetingsPage from '../../pages/GreetingsPage/GreetingsPage';
@@ -240,6 +241,9 @@ const router = createBrowserRouter(
             path="results"
             element={<ResultsPage title="Поиск победителя" />}
           />
+        </Route>
+        <Route path="birthday" element={<PageLayout />}>
+          <Route index element={<BirthdayPage />} />
         </Route>
       </Route>
     </Route>

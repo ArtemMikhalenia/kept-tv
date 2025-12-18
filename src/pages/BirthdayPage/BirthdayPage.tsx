@@ -11,9 +11,9 @@ import { sparkleData } from '../../data/sparkleData';
 import Sparkle from '../../components/Sparkle/Sparkle';
 
 import santaIcon from '../../assets/images/icons/santa-hat.png';
-import './resultsPageStyles.scss';
+import './birthdayPageStyles.scss';
 
-const ResultsPage = ({ title }: { title: string }): JSX.Element => {
+const BirthdayPage = (): JSX.Element => {
   const memoizedSparkles = useMemo(
     () =>
       sparkleData.map((sparkle, i) => (
@@ -24,7 +24,7 @@ const ResultsPage = ({ title }: { title: string }): JSX.Element => {
 
   return (
     <motion.div
-      className="results-page"
+      className="birthday-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.2 } }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
@@ -38,10 +38,10 @@ const ResultsPage = ({ title }: { title: string }): JSX.Element => {
         <MouseParallaxChild factorX={0.8} factorY={0.8} className="sparkles">
           {memoizedSparkles}
         </MouseParallaxChild>
-        <div className="results-page-title-block">
+        <div className="birthday-page-title-block">
           <MouseParallaxChild factorX={0.3} factorY={0.3}>
             <motion.div
-              className="results-page-title"
+              className="birthday-page-title"
               initial={{ opacity: 0, scale: 0 }}
               animate={{
                 opacity: 1,
@@ -55,7 +55,7 @@ const ResultsPage = ({ title }: { title: string }): JSX.Element => {
                 src={santaIcon}
                 alt="front-santa-hat"
               />
-              <h1>{title}</h1>
+              <h1>С Днём Рождения!</h1>
             </motion.div>
           </MouseParallaxChild>
         </div>
@@ -64,4 +64,4 @@ const ResultsPage = ({ title }: { title: string }): JSX.Element => {
   );
 };
 
-export default ResultsPage;
+export default BirthdayPage;
