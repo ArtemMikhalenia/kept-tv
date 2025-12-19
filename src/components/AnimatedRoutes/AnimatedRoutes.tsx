@@ -16,6 +16,7 @@ import { factsData } from '../../data/factsData';
 import {
   guessSongDataRound1,
   guessSongDataRound2,
+  guessSongDataRound3,
   guessSongDataRound4,
   guessSongDataRound5,
 } from '../../data/guessSongData';
@@ -48,6 +49,9 @@ const GuessSongGameRound1 = lazy(
 );
 const GuessSongGameRound2 = lazy(
   () => import('../GuessSongGame/GuessSongGameRound2')
+);
+const GuessSongGameRound3 = lazy(
+  () => import('../GuessSongGame/GuessSongGameRound3')
 );
 const GuessSongGameRound4 = lazy(
   () => import('../GuessSongGame/GuessSongGameRound4')
@@ -134,6 +138,15 @@ const router = createBrowserRouter(
             element={
               <Suspense fallback={<TailSpin />}>
                 <GuessSongGameRound2 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="round3"
+            loader={() => guessSongDataRound3}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <GuessSongGameRound3 />
               </Suspense>
             }
           />

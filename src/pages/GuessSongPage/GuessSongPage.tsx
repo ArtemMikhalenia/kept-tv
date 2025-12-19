@@ -46,6 +46,12 @@ const GuessSongLink = ({
 };
 
 const GuessSongPage = (): JSX.Element => {
+  const [showLinks, setShowLinks] = useState<boolean>(false);
+
+  const showLinksHandler = (): void => {
+    setShowLinks(true);
+  };
+
   return (
     <MouseParallaxContainer
       globalFactorX={0.1}
@@ -53,26 +59,34 @@ const GuessSongPage = (): JSX.Element => {
       containerStyle={{ height: '100%' }}
     >
       <MouseParallaxChild
-        className="guess-song-page-container"
+        className="links-activator"
         factorX={0.3}
         factorY={0.3}
         style={{ height: '100%' }}
       >
         <motion.div
-          className="guess-song-grid"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1, transition: { duration: 1, delay: 2 } }}
+          className="guess-song-page-container"
+          onClick={showLinksHandler}
         >
-          {guessSongLinksData.map(
-            (item: GuessSongLinkInterface, i: number): JSX.Element => (
-              <GuessSongLink
-                key={i}
-                className={item.className}
-                link={item.link}
-                text={item.text}
-              />
-            )
-          )}
+          <motion.div
+            className="guess-song-grid"
+            initial={{ scale: 0 }}
+            animate={{
+              scale: showLinks ? 1 : 0,
+              transition: { duration: 1 },
+            }}
+          >
+            {guessSongLinksData.map(
+              (item: GuessSongLinkInterface, i: number): JSX.Element => (
+                <GuessSongLink
+                  key={i}
+                  className={item.className}
+                  link={item.link}
+                  text={item.text}
+                />
+              )
+            )}
+          </motion.div>
         </motion.div>
       </MouseParallaxChild>
     </MouseParallaxContainer>

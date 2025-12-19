@@ -13,7 +13,7 @@
   height: 100%;
   padding: 80px;
 
-  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-image: url('../../assets/images/backgrounds/guess-song/background.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -75,7 +75,7 @@
   height: 100%;
   padding: 80px;
 
-  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-image: url('../../assets/images/backgrounds/guess-song/background.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -114,13 +114,94 @@
   }
 }
 
+.guess-song-game-round3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+
+  background-image: url('../../assets/images/backgrounds/guess-song/background.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px) brightness(0.7);
+  }
+
+  .swiper-r3 {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+
+    .guess-song-slide-r3 {
+      width: 100%;
+      height: 100%;
+
+      background-image: url('../../assets/images/guess_song_images/round3/slide_bg_r3.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      .slide-r3-content {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+        align-content: center;
+
+        .slide-r3-images {
+          position: relative;
+          z-index: 5;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+
+          .r3-swiper-logo-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transition: all 0.5s ease 0s;
+          }
+
+          .r3-swiper-answer-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
 .guess-song-game-round4 {
   position: relative;
   width: 100%;
   height: 100%;
   padding: 80px;
 
-  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-image: url('../../assets/images/backgrounds/guess-song/background.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -252,7 +333,7 @@
   height: 100%;
   padding: 80px;
 
-  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-image: url('../../assets/images/backgrounds/guess-song/background.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

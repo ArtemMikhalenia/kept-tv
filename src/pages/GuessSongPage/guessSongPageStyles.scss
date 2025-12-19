@@ -15,27 +15,27 @@
   background-position: center;
   background-size: cover;
 
+  cursor: pointer;
+
   .guess-song-grid {
+    grid-template-areas:
+      'round1 round2 round5'
+      'round3 round4 round5';
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 20px;
 
     .guess-song-round1-link,
     .guess-song-round2-link,
     .guess-song-round3-link,
     .guess-song-round4-link,
-    .guess-song-round5-link,
-    .guess-song-round6-link {
+    .guess-song-round5-link {
       text-decoration: none;
       position: relative;
       z-index: 1;
-      max-width: 300px;
-      width: 100%;
-      min-height: 350px;
-      height: 100%;
+      width: clamp(300px, 350px, 350px);
+      height: clamp(300px, 350px, 350px);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -66,24 +66,28 @@
     }
 
     .guess-song-round1-link {
+      grid-area: round1;
       background-image: url('../../assets/images/guess_song_images/round1/slide_bg_r1.png');
       background-position: right;
     }
 
     .guess-song-round2-link {
+      grid-area: round2;
       background-image: url('../../assets/images/guess_song_images/round2/slide_bg_r2.png');
     }
     .guess-song-round3-link {
+      grid-area: round3;
       background-image: url('../../assets/images/guess_song_images/round3/slide_bg_r3.png');
     }
     .guess-song-round4-link {
+      grid-area: round4;
       background-image: url('../../assets/images/guess_song_images/round4/slide_bg_r4.png');
     }
     .guess-song-round5-link {
+      grid-area: round5;
+      align-self: center;
+      max-height: 350px;
       background-image: url('../../assets/images/guess_song_images/round5/slide_bg_r5.png');
-    }
-    .guess-song-round6-link {
-      background-image: url('../../assets/images/guess_song_images/round6/slide_bg_r6.png');
     }
   }
 }
