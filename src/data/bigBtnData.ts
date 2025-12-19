@@ -1,4 +1,6 @@
-export const bigBtnData = [
+import type { BigBtnInterface } from '../interfaces/bigBtnInterface';
+
+export const bigBtnData: BigBtnInterface[] = [
   {
     id: '1',
     link: '/living-room',

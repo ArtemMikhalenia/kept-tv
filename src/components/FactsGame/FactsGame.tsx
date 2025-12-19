@@ -39,7 +39,7 @@ export const FactsGameSlide = ({
   const { play: druzhko4 } = useSound(druzhkoSound4, 1);
   const { play: druzhko5 } = useSound(druzhkoSound5, 1);
 
-  const handleAudio = () => {
+  const handleAudio = (): void => {
     const audioArr = [druzhko1, druzhko2, druzhko3, druzhko4, druzhko5];
     const randomIndex = Math.floor(Math.random() * audioArr.length);
     audioArr[randomIndex]();
@@ -55,7 +55,7 @@ export const FactsGameSlide = ({
     }
   }, [showDruzhko]);
 
-  const toggleCard = (id: string) => {
+  const toggleCard = (id: string): void => {
     setFacts((prevFacts) =>
       prevFacts.map((fact) =>
         fact.id === id ? { ...fact, clicked: !fact.clicked } : fact
@@ -63,7 +63,7 @@ export const FactsGameSlide = ({
     );
   };
 
-  const checkAnswer = () => {
+  const checkAnswer = (): void => {
     const selectedFacts = facts.filter((item) => item.clicked);
     const selectedIds = selectedFacts.map((item) => item.id);
     const correctAnswers = level.correctAnswer;
@@ -90,7 +90,7 @@ export const FactsGameSlide = ({
     );
   };
 
-  const closeNews = () => {
+  const closeNews = (): void => {
     setShowNews(false);
   };
 
@@ -110,7 +110,7 @@ export const FactsGameSlide = ({
         style={{ height: '100%' }}
         className={`grid-container ${level.containerType}`}
       >
-        {facts.map((fact) => (
+        {facts.map((fact: FactInterface) => (
           <motion.div
             key={fact.id}
             id={fact.id}
@@ -175,9 +175,11 @@ export const FactsGameSlide = ({
           transition: 'all 0.5s ease 0s',
         }}
       >
-        {level.correctImg.map((image, i) => (
-          <img key={i} src={image} className="img-fact" alt="fact-img" />
-        ))}
+        {level.correctImg.map(
+          (image, i: number): JSX.Element => (
+            <img key={i} src={image} className="img-fact" alt="fact-img" />
+          )
+        )}
       </div>
     </div>
   );
@@ -186,7 +188,7 @@ export const FactsGameSlide = ({
 const FactsGame = (): JSX.Element => {
   const factCard = useLoaderData() as FactsInterface[];
   const [slider, setSlider] = useState<FactsInterface[]>(factCard);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   useEffect(() => {
     setSlider(factCard);
@@ -205,20 +207,22 @@ const FactsGame = (): JSX.Element => {
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
-        {slider.map((level, index) => (
-          <SwiperSlide key={level.lvl}>
-            <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
-              <FactsGameSlide
-                level={level}
-                initialFacts={level.facts.map((fact) => ({
-                  ...fact,
-                  clicked: false,
-                }))}
-                isActive={index === activeIndex}
-              />
-            </MouseParallaxContainer>
-          </SwiperSlide>
-        ))}
+        {slider.map(
+          (level: FactsInterface, index: number): JSX.Element => (
+            <SwiperSlide key={level.lvl}>
+              <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
+                <FactsGameSlide
+                  level={level}
+                  initialFacts={level.facts.map((fact) => ({
+                    ...fact,
+                    clicked: false,
+                  }))}
+                  isActive={index === activeIndex}
+                />
+              </MouseParallaxContainer>
+            </SwiperSlide>
+          )
+        )}
       </Swiper>
     </div>
   );

@@ -11,8 +11,8 @@ import { motion } from 'motion/react';
 import type { HouseFinalInterface } from '../../interfaces/houseInterface';
 
 import houseTopImg from '../../assets/images/house_images/houses/maket_doma.webp';
-import gradusnikImg from '../../assets/images/house_images/results/gradusnik.png';
-import titleFinalImg from '../../assets/images/house_images/results/title_final.png';
+import gradusnikImg from '../../assets/images/house_images/results/gradusnik.webp';
+import titleFinalImg from '../../assets/images/house_images/results/title_final.webp';
 import type { HouseFinalDataTypes } from '../../types/houseTypes';
 import './houseGameStyles.scss';
 

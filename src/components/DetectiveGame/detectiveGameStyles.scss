@@ -116,19 +116,19 @@
   }
   @keyframes flash {
     0% {
-      background: rgb(0, 0, 0);
+      background: var.$color-black;
       opacity: 0;
     }
     10% {
-      background: rgb(0, 0, 0);
+      background: var.$color-black;
       opacity: 1;
     }
     11% {
-      background: rgb(255, 255, 255);
+      background: var.$color-white;
     }
     100% {
       z-index: 1;
-      background: rgb(255, 255, 255);
+      background: var.$color-white;
     }
   }
 }

@@ -1,3 +1,8 @@
+import type {
+  HouseFinalInterface,
+  HouseInterface,
+} from '../interfaces/houseInterface';
+
 import bottomHouse1Img from '../assets/images/house_images/houses/Dom1.webp';
 import bottomHouse2Img from '../assets/images/house_images/houses/Dom2.webp';
 import bottomHouse3Img from '../assets/images/house_images/houses/Dom3.webp';
@@ -42,7 +47,7 @@ import gif1 from '../assets/images/house_images/results/1.gif';
 import gif2 from '../assets/images/house_images/results/2.gif';
 import gif3 from '../assets/images/house_images/results/3.gif';
 
-export const houseData = [
+export const houseData: HouseInterface[] = [
   {
     id: 1,
     bottomHouseSrc: bottomHouse1Img,
@@ -165,7 +170,7 @@ export const houseData = [
   },
 ];
 
-export const houseDataFinal = [
+export const houseDataFinal: HouseFinalInterface[] = [
   {
     id: 1,
     gifSrc: gif1,

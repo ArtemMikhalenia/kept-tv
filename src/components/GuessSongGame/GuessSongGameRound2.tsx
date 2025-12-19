@@ -44,7 +44,7 @@ const GuessSongGameRound2 = (): JSX.Element => {
           centeredSlides={true}
         >
           {guessSongCards.map(
-            (element, index) =>
+            (element: GuessSongRound2Interface, index: number) =>
               index === element.lvl && (
                 <SwiperSlide key={index} className="guess-song-slide-r2">
                   <img src={element.src} alt={element.alt} />

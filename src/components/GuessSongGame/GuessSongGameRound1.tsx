@@ -10,7 +10,10 @@ import { useLoaderData } from 'react-router';
 
 import { motion } from 'motion/react';
 
-import type { GuessSongInterface } from '../../interfaces/guessSongInterface';
+import type {
+  GuessSongImgInterface,
+  GuessSongInterface,
+} from '../../interfaces/guessSongInterface';
 
 import type { GuessSongDataTypes } from '../../types/guessSongTypes';
 import './guessSongGameStyles.scss';
@@ -56,27 +59,29 @@ const GuessSongGameRound1 = (): JSX.Element => {
             (element, index) =>
               index === element.lvl && (
                 <SwiperSlide key={index} className="guess-song-slide-r1">
-                  {element.images.map((img) => (
-                    <MouseParallaxChild
-                      factorX={0.2}
-                      factorY={0.2}
-                      key={img.id}
-                      style={{ width: '100%' }}
-                      className="guess-song-parallax-child-r1"
-                    >
-                      <motion.img
-                        className="guess-song-image-r1"
+                  {element.images.map(
+                    (img: GuessSongImgInterface): JSX.Element => (
+                      <MouseParallaxChild
+                        factorX={0.2}
+                        factorY={0.2}
                         key={img.id}
-                        initial={{ scale: 0 }}
-                        whileInView={{
-                          scale: 1,
-                          transition: { duration: 0.3, delay: img.id * 0.3 },
-                        }}
-                        src={img.src}
-                        alt={img.alt}
-                      />
-                    </MouseParallaxChild>
-                  ))}
+                        style={{ width: '100%' }}
+                        className="guess-song-parallax-child-r1"
+                      >
+                        <motion.img
+                          className="guess-song-image-r1"
+                          key={img.id}
+                          initial={{ scale: 0 }}
+                          whileInView={{
+                            scale: 1,
+                            transition: { duration: 0.3, delay: img.id * 0.3 },
+                          }}
+                          src={img.src}
+                          alt={img.alt}
+                        />
+                      </MouseParallaxChild>
+                    )
+                  )}
                 </SwiperSlide>
               )
           )}

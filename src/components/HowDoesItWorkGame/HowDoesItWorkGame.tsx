@@ -79,7 +79,7 @@ export const HowDoesItWorkGameSlide = ({
 const HowDoesItWorkGame = (): JSX.Element => {
   const cardImg = useLoaderData() as HdiwInterface[];
   const [slider, setSlider] = useState<HdiwInterface[]>(cardImg);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   useEffect(() => {
     setSlider(cardImg);

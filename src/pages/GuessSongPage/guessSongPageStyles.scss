@@ -10,7 +10,7 @@
   align-items: center;
   text-align: center;
 
-  background-image: url('../../assets/images/backgrounds/guess-song/background.jpg');
+  background-image: url('../../assets/images/backgrounds/guess-song/background.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -59,7 +59,7 @@
           align-items: center;
           font-size: 40px;
           font-weight: 400;
-          color: white;
+          color: var.$color-white;
           border-radius: 10px;
         }
       }

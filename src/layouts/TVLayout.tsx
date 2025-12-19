@@ -54,6 +54,8 @@ const TVLayout = (): JSX.Element => {
       setLinkToNextPage('/tv/house');
     } else if (currentLocation === 'tv/house/game') {
       setLinkToNextPage('/tv/house/final');
+    } else if (currentLocation === 'tv/malahov-video') {
+      setLinkToNextPage('/tv/malahov');
     }
   }, [location]);
 

@@ -1,7 +1,7 @@
 import type { SwitchBtnInterface } from '../interfaces/switchBtnInterface';
 
 export const switchBtnData: SwitchBtnInterface[] = [
-  { number: 1, link: '', title: '' },
+  { number: 1, link: '/tv/malahov-video', title: 'Малахов+' },
   { number: 8, link: '/tv/facts-video', title: 'Необъяснимо, но факт' },
   { number: 2, link: '/tv/house-video', title: 'Пока все дома' },
   { number: 9, link: '', title: '' },
