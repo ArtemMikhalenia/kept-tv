@@ -4,6 +4,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 import birthdayBgImg from '../assets/images/backgrounds/birthday-page/background.webp';
+// import blueLightBgImg from '../assets/images/backgrounds/blue-light-page/background.jpeg';
 import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game_bg.webp';
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
 import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_background.jpg';
@@ -65,6 +66,9 @@ const PageLayout = () => {
     ) {
       setBackground(malahovBgImg);
     }
+    // else if (currentLocation === 'tv/blue-light') {
+    //   setBackground(blueLightBgImg);
+    // }
   }, [currentLocation]);
   return (
     <motion.div
@@ -75,7 +79,7 @@ const PageLayout = () => {
         position: 'relative',
         width: '100%',
         height: '100%',
-        padding: '3vh 13vw 3vh 3vw',
+        padding: '3vh 12vw 3vh 2vw',
         backgroundImage: `url("${background}")`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

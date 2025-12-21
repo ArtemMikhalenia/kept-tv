@@ -24,6 +24,7 @@ import { houseData, houseDataFinal } from '../../data/houseData';
 import { howDoesItWorkData } from '../../data/howDoesItWorkData';
 import { malahovData } from '../../data/malahovData';
 
+import thumbnailBlueLightImg from '../../assets/images/backgrounds/blue-light-page/thumbnail.jpg';
 import thumbnailDetectiveImg from '../../assets/images/backgrounds/detective-game/thumbnail.jpg';
 import thumbnailFactsImg from '../../assets/images/backgrounds/facts-page/thumbnail.jpg';
 import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/thumbnail.jpg';
@@ -33,6 +34,7 @@ import thumbnailMalahovImg from '../../assets/images/backgrounds/malahov-page/th
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
 import BirthdayPage from '../../pages/BirthdayPage/BirthdayPage';
+import BlueLightPage from '../../pages/BlueLightPage/BlueLightPage';
 import DetectivePage from '../../pages/DetectivePage/DetectivePage';
 import FactsPage from '../../pages/FactsPage/FactsPage';
 import GreetingsPage from '../../pages/GreetingsPage/GreetingsPage';
@@ -288,6 +290,28 @@ const router = createBrowserRouter(
         </Route>
         <Route path="birthday" element={<PageLayout />}>
           <Route index element={<BirthdayPage />} />
+        </Route>
+        <Route
+          index
+          path="blue-light-video"
+          element={
+            <VideoPage
+              url="https://vimeo.com/1145730426"
+              thumbnail={thumbnailBlueLightImg}
+            />
+          }
+        />
+        <Route path="blue-light" element={<PageLayout />}>
+          <Route index element={<BlueLightPage />} />
+          {/* <Route
+          path={'game'}
+          loader={() => houseData}
+          element={
+            <Suspense fallback={<TailSpin />}>
+              <HouseGame />
+            </Suspense>
+          }
+        /> */}
         </Route>
       </Route>
     </Route>

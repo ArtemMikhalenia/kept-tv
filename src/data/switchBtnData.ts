@@ -5,7 +5,7 @@ export const switchBtnData: SwitchBtnInterface[] = [
   { number: 8, link: '/tv/facts-video', title: 'Необъяснимо, но факт' },
   { number: 2, link: '/tv/house-video', title: 'Пока все дома' },
   { number: 9, link: '', title: '' },
-  { number: 3, link: '', title: '' },
+  { number: 3, link: '/tv/blue-light-video', title: 'Голубой огонёк' },
   { number: 10, link: '', title: '' },
   { number: 4, link: '/tv/guess-song-video', title: 'Угадай мелодию' },
   { number: 11, link: '', title: '' },
