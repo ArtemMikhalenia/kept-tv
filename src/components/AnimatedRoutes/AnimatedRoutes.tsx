@@ -6,11 +6,14 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-  useLocation,
 } from 'react-router';
 
 import { AnimatePresence } from 'motion/react';
 
+import {
+  blueLightLinksData,
+  blueLightRoutingLinks,
+} from '../../data/blueLightData';
 import { detectiveData } from '../../data/detectiveData';
 import { factsData } from '../../data/factsData';
 import {
@@ -24,13 +27,15 @@ import { houseData, houseDataFinal } from '../../data/houseData';
 import { howDoesItWorkData } from '../../data/howDoesItWorkData';
 import { malahovData } from '../../data/malahovData';
 
-import thumbnailBlueLightImg from '../../assets/images/backgrounds/blue-light-page/thumbnail.jpg';
-import thumbnailDetectiveImg from '../../assets/images/backgrounds/detective-game/thumbnail.jpg';
-import thumbnailFactsImg from '../../assets/images/backgrounds/facts-page/thumbnail.jpg';
-import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/thumbnail.jpg';
-import thumbnailHouseImg from '../../assets/images/backgrounds/house-page/thumbnail.jpg';
-import thumbnailHowDoesItWorkImg from '../../assets/images/backgrounds/how-does-it-work/thumbnail.jpg';
-import thumbnailMalahovImg from '../../assets/images/backgrounds/malahov-page/thumbnail.jpg';
+import type { BlueLightDepartmentInterface } from '../../interfaces/blueLightInterface';
+
+import thumbnailBlueLightImg from '../../assets/images/backgrounds/blue-light-page/thumbnail.webp';
+import thumbnailDetectiveImg from '../../assets/images/backgrounds/detective-game/thumbnail.webp';
+import thumbnailFactsImg from '../../assets/images/backgrounds/facts-page/thumbnail.webp';
+import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/thumbnail.webp';
+import thumbnailHouseImg from '../../assets/images/backgrounds/house-page/thumbnail.webp';
+import thumbnailHowDoesItWorkImg from '../../assets/images/backgrounds/how-does-it-work/thumbnail.webp';
+import thumbnailMalahovImg from '../../assets/images/backgrounds/malahov-page/thumbnail.webp';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
 import BirthdayPage from '../../pages/BirthdayPage/BirthdayPage';
@@ -71,13 +76,40 @@ const HouseGameFinal = lazy(() => import('../HouseGame/HouseGameFinal'));
 
 const MalahovGame = lazy(() => import('../MalahovGame/MalahovGame'));
 
+const BlueLightLinks = lazy(
+  () => import('../../pages/BlueLightPage/BlueLightLinks')
+);
+
+const BlueLightDepartment = lazy(
+  () => import('../../pages/BlueLightPage/BlueLightDepartment')
+);
+
 const AnimatedOutlet = (): JSX.Element => {
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
-      <Outlet key={location.pathname} />
+      <Outlet />
     </AnimatePresence>
+  );
+};
+
+const generateBlueLightRoutes = (database: BlueLightDepartmentInterface[]) => {
+  return database.map(
+    (data: BlueLightDepartmentInterface, index: number): JSX.Element => (
+      <Route
+        key={index}
+        path={data.link}
+        loader={() => {
+          return data;
+        }}
+        element={
+          <Suspense fallback={<TailSpin />}>
+            <BlueLightDepartment element={data} />
+          </Suspense>
+        }
+      />
+    )
   );
 };
 
@@ -301,17 +333,17 @@ const router = createBrowserRouter(
             />
           }
         />
-        <Route path="blue-light" element={<PageLayout />}>
-          <Route index element={<BlueLightPage />} />
-          {/* <Route
-          path={'game'}
-          loader={() => houseData}
-          element={
-            <Suspense fallback={<TailSpin />}>
-              <HouseGame />
-            </Suspense>
-          }
-        /> */}
+        <Route path="blue-light" element={<BlueLightPage />}>
+          <Route
+            index
+            loader={() => blueLightLinksData}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <BlueLightLinks />
+              </Suspense>
+            }
+          />
+          {generateBlueLightRoutes(blueLightRoutingLinks)}
         </Route>
       </Route>
     </Route>

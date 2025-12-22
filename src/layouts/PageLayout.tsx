@@ -4,16 +4,15 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 import birthdayBgImg from '../assets/images/backgrounds/birthday-page/background.webp';
-// import blueLightBgImg from '../assets/images/backgrounds/blue-light-page/background.jpeg';
 import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game_bg.webp';
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
-import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_background.jpg';
-import guessSongMainBgImg from '../assets/images/backgrounds/guess-song/main_bg.jpg';
+import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_background.webp';
+import guessSongMainBgImg from '../assets/images/backgrounds/guess-song/main_bg.webp';
 import houseBgImg from '../assets/images/backgrounds/house-page/house_background.webp';
-import howDoesItWorkBgImg from '../assets/images/backgrounds/how-does-it-work/1.png';
+import howDoesItWorkBgImg from '../assets/images/backgrounds/how-does-it-work/1.webp';
 import malahovBgImg from '../assets/images/backgrounds/malahov-page/background.webp';
 import resultsBgImg from '../assets/images/backgrounds/results-page/background.webp';
-import houseGameBgImg from '../assets/images/house_images/house_game_bg.jpg';
+import houseGameBgImg from '../assets/images/house_images/house_game_bg.webp';
 
 const PageLayout = () => {
   const location = useLocation();

@@ -130,15 +130,15 @@ import original6Img from '../assets/images/guess_song_images/round4/original6.we
 import original7Img from '../assets/images/guess_song_images/round4/original7.webp';
 import original8Img from '../assets/images/guess_song_images/round4/original8.webp';
 import original9Img from '../assets/images/guess_song_images/round4/original9.webp';
-import thumbnail1Img from '../assets/images/guess_song_images/round4/thumbnails/1.jpg';
-import thumbnail2Img from '../assets/images/guess_song_images/round4/thumbnails/2.jpg';
-import thumbnail3Img from '../assets/images/guess_song_images/round4/thumbnails/3.jpg';
-import thumbnail4Img from '../assets/images/guess_song_images/round4/thumbnails/4.jpg';
-import thumbnail5Img from '../assets/images/guess_song_images/round4/thumbnails/5.jpg';
-import thumbnail6Img from '../assets/images/guess_song_images/round4/thumbnails/6.jpg';
-import thumbnail7Img from '../assets/images/guess_song_images/round4/thumbnails/7.jpg';
-import thumbnail8Img from '../assets/images/guess_song_images/round4/thumbnails/8.jpg';
-import thumbnail9Img from '../assets/images/guess_song_images/round4/thumbnails/9.jpg';
+import thumbnail1Img from '../assets/images/guess_song_images/round4/thumbnails/1.webp';
+import thumbnail2Img from '../assets/images/guess_song_images/round4/thumbnails/2.webp';
+import thumbnail3Img from '../assets/images/guess_song_images/round4/thumbnails/3.webp';
+import thumbnail4Img from '../assets/images/guess_song_images/round4/thumbnails/4.webp';
+import thumbnail5Img from '../assets/images/guess_song_images/round4/thumbnails/5.webp';
+import thumbnail6Img from '../assets/images/guess_song_images/round4/thumbnails/6.webp';
+import thumbnail7Img from '../assets/images/guess_song_images/round4/thumbnails/7.webp';
+import thumbnail8Img from '../assets/images/guess_song_images/round4/thumbnails/8.webp';
+import thumbnail9Img from '../assets/images/guess_song_images/round4/thumbnails/9.webp';
 import type {
   GuessSongDataRound2Types,
   GuessSongDataRound3Types,

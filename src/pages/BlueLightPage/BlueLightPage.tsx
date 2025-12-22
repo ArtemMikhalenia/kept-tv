@@ -3,18 +3,11 @@ import {
   MouseParallaxChild,
   MouseParallaxContainer,
 } from 'react-parallax-mouse';
-import { Link } from 'react-router';
+import { Outlet } from 'react-router';
 import Snowfall from 'react-snowfall';
 
 import { motion } from 'motion/react';
 
-import buterImg from '../../assets/images/blue_light_images/buter.png';
-import charactersImg from '../../assets/images/blue_light_images/characters.png';
-import mandarinImg from '../../assets/images/blue_light_images/mandarin.png';
-import podarokImg from '../../assets/images/blue_light_images/podarok.png';
-import salutImg from '../../assets/images/blue_light_images/salut.png';
-import shampanskoeImg from '../../assets/images/blue_light_images/shampanskoe.png';
-import sharImg from '../../assets/images/blue_light_images/shar.png';
 import './blueLightPageStyles.scss';
 
 const BlueLightPage = (): JSX.Element => {
@@ -31,11 +24,6 @@ const BlueLightPage = (): JSX.Element => {
         radius={[2, 3]}
         style={{ zIndex: 2 }}
       />
-      {/* <MouseParallaxChild
-        factorX={0.1}
-        factorY={0.1}
-        style={{ height: '100%' }}
-      > */}
       <motion.div
         className="blue-light-page-container"
         initial={{ opacity: 0 }}
@@ -65,87 +53,11 @@ const BlueLightPage = (): JSX.Element => {
         <MouseParallaxChild
           factorX={0.3}
           factorY={0.2}
-          style={{ height: '100%' }}
           className="blue-light-page-content"
         >
-          <div className="blue-light-links">
-            <Link to="" className="blue-light-link buter">
-              <motion.img
-                src={buterImg}
-                alt="buter-img"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </Link>
-            <Link to="" className="blue-light-link shampanskoe">
-              <motion.img
-                src={shampanskoeImg}
-                alt="shampanskoe-img"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </Link>
-            <Link to="" className="blue-light-link salut">
-              <motion.img
-                src={salutImg}
-                alt="salut-img"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </Link>
-            <Link to="" className="blue-light-link characters">
-              <motion.img
-                src={charactersImg}
-                alt="characters-img"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </Link>
-            <Link to="" className="blue-light-link shar">
-              <motion.img
-                src={sharImg}
-                alt="shar-img"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </Link>
-            <Link to="" className="blue-light-link mandarin">
-              <motion.img
-                src={mandarinImg}
-                alt="mandarin-img"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </Link>
-            <Link to="" className="blue-light-link podarok">
-              <motion.img
-                src={podarokImg}
-                alt="podarok-img"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </Link>
-          </div>
+          <Outlet />
         </MouseParallaxChild>
-
-        {/* <motion.div
-            className="blue-light-link-container"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1, transition: { duration: 0.3, delay: 1 } }}
-          > */}
-        {/* <MouseParallaxChild factorX={0.3} factorY={0.3}>
-              <Link to="game">
-                <motion.img
-                  src={titleImg}
-                  alt="title-img"
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                />
-              </Link>
-            </MouseParallaxChild> */}
-        {/* </motion.div> */}
       </motion.div>
-      {/* </MouseParallaxChild> */}
     </MouseParallaxContainer>
   );
 };

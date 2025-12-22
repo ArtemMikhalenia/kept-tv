@@ -9,7 +9,6 @@ import newsImg1 from '../assets/images/facts_images/news/1.webp';
 import newsImg2 from '../assets/images/facts_images/news/2.webp';
 import newsImg3 from '../assets/images/facts_images/news/3.webp';
 import newsImg4 from '../assets/images/facts_images/news/4.webp';
-import newsImg5 from '../assets/images/facts_images/news/5.webp';
 import newsImg6 from '../assets/images/facts_images/news/6.webp';
 import newsImg7 from '../assets/images/facts_images/news/7.webp';
 import newsImg8 from '../assets/images/facts_images/news/8.webp';
@@ -204,50 +203,6 @@ export const factsData: FactsInterface[] = [
   },
   {
     lvl: 4,
-    background: bg2,
-    containerType: 'four-items',
-    correctAnswer: ['vdnh'],
-    correctImg: [newsImg5],
-    facts: [
-      {
-        id: 'chelyabinsk',
-        variant: 'a',
-        numberColor: 'number-blue',
-        factClassName: 'grid-item-4 facts-item2',
-        factText:
-          'В магазине игрушек Челябинска ребёнок отказался покупать куклу, потому что «она слишком счастливая»',
-        clicked: false,
-      },
-      {
-        id: 'vdnh',
-        variant: 'b',
-        numberColor: 'number-blue',
-        factClassName: 'grid-item-4 facts-item2',
-        factText:
-          'На ВДНХ открылась никому не интересная автомобильная выставка',
-        clicked: false,
-      },
-      {
-        id: 'sydney',
-        variant: 'c',
-        numberColor: 'number-blue',
-        factClassName: 'grid-item-4 facts-item2',
-        factText: 'Сиднейская опера предложила вечер опер для собак',
-        clicked: false,
-      },
-      {
-        id: 'bonus',
-        variant: 'd',
-        numberColor: 'number-blue',
-        factClassName: 'grid-item-4 facts-item2',
-        factText:
-          'Сеть магазинов предлагает бонусные баллы за добрые жесты к кассиру',
-        clicked: false,
-      },
-    ],
-  },
-  {
-    lvl: 5,
     background: bg1,
     containerType: 'four-items',
     correctAnswer: ['potter'],
@@ -291,7 +246,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 6,
+    lvl: 5,
     background: bg2,
     containerType: 'four-items',
     correctAnswer: ['perm'],
@@ -336,7 +291,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 7,
+    lvl: 6,
     background: bg3,
     containerType: 'four-items',
     correctAnswer: ['trup'],
@@ -380,7 +335,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 8,
+    lvl: 7,
     background: bg4,
     containerType: 'five-items',
     correctAnswer: ['kolbasa', 'zhuk'],
@@ -432,7 +387,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 9,
+    lvl: 8,
     background: bg4,
     containerType: 'five-items',
     correctAnswer: ['doneck', 'belka'],
@@ -484,7 +439,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 10,
+    lvl: 9,
     background: bg5,
     containerType: 'five-items',
     correctAnswer: ['nalogi', 'chukotka'],
@@ -536,7 +491,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 11,
+    lvl: 10,
     background: bg4,
     containerType: 'five-items',
     correctAnswer: ['iosif', 'leto'],
@@ -588,7 +543,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 12,
+    lvl: 11,
     background: bg5,
     containerType: 'five-items',
     correctAnswer: ['sputnik', 'ldina'],
@@ -638,7 +593,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 13,
+    lvl: 12,
     background: bg4,
     containerType: 'five-items',
     correctAnswer: ['saratov', 'kartoshka'],
@@ -690,7 +645,7 @@ export const factsData: FactsInterface[] = [
     ],
   },
   {
-    lvl: 14,
+    lvl: 13,
     background: bg4,
     containerType: 'five-items',
     correctAnswer: ['kant', 'taburet'],

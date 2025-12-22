@@ -59,7 +59,7 @@ const TVLayout = (): JSX.Element => {
     } else if (currentLocation === 'tv/blue-light-video') {
       setLinkToNextPage('/tv/blue-light');
     }
-  }, [location]);
+  }, [currentLocation]);
 
   const handleNextClickSound = useCallback(
     (e: React.MouseEvent) => {

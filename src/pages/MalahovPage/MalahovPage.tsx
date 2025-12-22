@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 
 import { motion } from 'motion/react';
 
-import malahovImg from '../../assets/images/backgrounds/malahov-page/malahov_bottom_title.png';
+import malahovImg from '../../assets/images/backgrounds/malahov-page/malahov_bottom_title.webp';
 import './malahovPageStyles.scss';
 
 const MalahovPage = (): JSX.Element => {
