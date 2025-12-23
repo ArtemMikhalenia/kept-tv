@@ -26,6 +26,7 @@ import {
 import { houseData, houseDataFinal } from '../../data/houseData';
 import { howDoesItWorkData } from '../../data/howDoesItWorkData';
 import { malahovData } from '../../data/malahovData';
+import { telechanceData } from '../../data/telechanceData';
 
 import type { BlueLightDepartmentInterface } from '../../interfaces/blueLightInterface';
 
@@ -36,6 +37,7 @@ import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/th
 import thumbnailHouseImg from '../../assets/images/backgrounds/house-page/thumbnail.webp';
 import thumbnailHowDoesItWorkImg from '../../assets/images/backgrounds/how-does-it-work/thumbnail.webp';
 import thumbnailMalahovImg from '../../assets/images/backgrounds/malahov-page/thumbnail.webp';
+import thumbnailTelechanceImg from '../../assets/images/backgrounds/telechance/thumbnail.webp';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
 import BirthdayPage from '../../pages/BirthdayPage/BirthdayPage';
@@ -49,6 +51,7 @@ import HowDoesItWorkPage from '../../pages/HowDoesItWorkPage/HowDoesItWorkPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
 import MalahovPage from '../../pages/MalahovPage/MalahovPage';
 import ResultsPage from '../../pages/ResultsPage/ResultsPage';
+import TelechancePage from '../../pages/TelechancePage/TelechancePage';
 import VideoPage from '../../pages/VideoPage/VideoPage';
 
 const GuessSongGameRound1 = lazy(
@@ -75,6 +78,7 @@ const HouseGame = lazy(() => import('../HouseGame/HouseGame'));
 const HouseGameFinal = lazy(() => import('../HouseGame/HouseGameFinal'));
 
 const MalahovGame = lazy(() => import('../MalahovGame/MalahovGame'));
+const TelechanceGame = lazy(() => import('../TelechanceGame/TelechanceGame'));
 
 const BlueLightLinks = lazy(
   () => import('../../pages/BlueLightPage/BlueLightLinks')
@@ -344,6 +348,32 @@ const router = createBrowserRouter(
             }
           />
           {generateBlueLightRoutes(blueLightRoutingLinks)}
+        </Route>
+        <Route
+          index
+          path="telechance-video"
+          element={
+            <VideoPage
+              url="https://vimeo.com/1145730562"
+              thumbnail={thumbnailTelechanceImg}
+            />
+          }
+        />
+        <Route path="telechance" element={<PageLayout />}>
+          <Route index element={<TelechancePage />} />
+          <Route
+            path={'game'}
+            loader={() => telechanceData}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <TelechanceGame />
+              </Suspense>
+            }
+          />
+          <Route
+            path="results"
+            element={<ResultsPage title="Поиск победителя" />}
+          />
         </Route>
       </Route>
     </Route>

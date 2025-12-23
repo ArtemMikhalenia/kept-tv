@@ -9,7 +9,7 @@ export const switchBtnData: SwitchBtnInterface[] = [
   { number: 10, link: '', title: '' },
   { number: 4, link: '/tv/guess-song-video', title: 'Угадай мелодию' },
   { number: 11, link: '', title: '' },
-  { number: 5, link: '', title: '' },
+  { number: 5, link: '/tv/telechance-video', title: 'Телешанс' },
   { number: 12, link: '', title: '' },
   { number: 6, link: '/tv/how-does-it-work-video', title: 'Как это работает?' },
   { number: 13, link: '', title: '' },
