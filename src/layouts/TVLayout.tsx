@@ -26,20 +26,22 @@ const TVLayout = (): JSX.Element => {
 
   const guessSongLinks = [
     'tv/guess-song/round1',
-    'tv/guess-song/round2',
     'tv/guess-song/round3',
     'tv/guess-song/round4',
     'tv/guess-song/round5',
     'tv/guess-song/round6',
+    'tv/guess-song/results',
   ];
 
   useEffect(() => {
     if (currentLocation === 'tv/guess-song-video') {
       setLinkToNextPage('/tv/guess-song');
+    } else if (currentLocation === 'tv/guess-song/round2') {
+      setLinkToPrevPage('/tv/guess-song');
+      setLinkToNextPage('/tv/guess-song/results');
     } else if (guessSongLinks.includes(currentLocation)) {
       setLinkToPrevPage('/tv/guess-song');
-    } else if (currentLocation === 'tv/guess-song') {
-      setLinkToNextPage('/tv/guess-song/results');
+      setLinkToNextPage('/tv/guess-song');
     } else if (currentLocation === 'tv/detective-video') {
       setLinkToNextPage('/tv/detective');
     } else if (currentLocation === 'tv/detective/game') {
@@ -48,18 +50,30 @@ const TVLayout = (): JSX.Element => {
       setLinkToNextPage('/tv/facts');
     } else if (currentLocation === 'tv/facts') {
       setLinkToNextPage('/tv/facts/game');
+    } else if (currentLocation === 'tv/facts/game') {
+      setLinkToNextPage('/tv/facts/results');
     } else if (currentLocation === 'tv/how-does-it-work-video') {
       setLinkToNextPage('/tv/how-does-it-work');
+    } else if (currentLocation === 'tv/how-does-it-work/game') {
+      setLinkToNextPage('/tv/how-does-it-work/results');
     } else if (currentLocation === 'tv/house-video') {
       setLinkToNextPage('/tv/house');
     } else if (currentLocation === 'tv/house/game') {
+      setLinkToNextPage('/tv/house/results');
+    } else if (currentLocation === 'tv/house/results') {
       setLinkToNextPage('/tv/house/final');
     } else if (currentLocation === 'tv/malahov-video') {
       setLinkToNextPage('/tv/malahov');
+    } else if (currentLocation === 'tv/malahov/game') {
+      setLinkToNextPage('/tv/malahov/results');
     } else if (currentLocation === 'tv/blue-light-video') {
       setLinkToNextPage('/tv/blue-light');
+    } else if (currentLocation === 'tv/ad-page/game') {
+      setLinkToNextPage('/tv/ad-page/results');
     } else if (currentLocation === 'tv/telechance-video') {
       setLinkToNextPage('/tv/telechance');
+    } else if (currentLocation === 'tv/telechance/game') {
+      setLinkToNextPage('/tv/telechance/results');
     }
   }, [currentLocation]);
 

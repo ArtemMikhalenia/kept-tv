@@ -1,4 +1,4 @@
-import { EffectCreative } from 'swiper/modules';
+import { EffectCreative, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -42,7 +42,7 @@ const GuessSongGameRound1 = (): JSX.Element => {
           className="swiper-r1"
           effect={'creative'}
           grabCursor={true}
-          modules={[EffectCreative]}
+          modules={[EffectCreative, Keyboard]}
           creativeEffect={{
             prev: {
               shadow: true,
@@ -54,6 +54,9 @@ const GuessSongGameRound1 = (): JSX.Element => {
           }}
           centeredSlides={true}
           spaceBetween={50}
+          keyboard={{
+            enabled: true,
+          }}
         >
           {guessSongCards.map(
             (element, index) =>

@@ -1,4 +1,4 @@
-import { EffectFlip } from 'swiper/modules';
+import { EffectFlip, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -200,10 +200,13 @@ const FactsGame = (): JSX.Element => {
         className="swiper-facts"
         effect={'flip'}
         grabCursor={true}
-        modules={[EffectFlip]}
+        modules={[EffectFlip, Keyboard]}
         centeredSlides={true}
         flipEffect={{
           slideShadows: false,
+        }}
+        keyboard={{
+          enabled: true,
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >

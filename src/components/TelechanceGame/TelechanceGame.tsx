@@ -1,4 +1,4 @@
-import { EffectFade } from 'swiper/modules';
+import { EffectFade, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useMemo, useState } from 'react';
@@ -88,7 +88,10 @@ const TelechanceGame = (): JSX.Element => {
           effect={'fade'}
           grabCursor={true}
           direction="vertical"
-          modules={[EffectFade]}
+          modules={[EffectFade, Keyboard]}
+          keyboard={{
+            enabled: true,
+          }}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         >
           {images.map(

@@ -1,4 +1,4 @@
-import { EffectCube, Pagination } from 'swiper/modules';
+import { EffectCube, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -33,14 +33,16 @@ const GuessSongGameRound2 = (): JSX.Element => {
           className="swiper-r2"
           effect={'cube'}
           grabCursor={true}
-          modules={[EffectCube, Pagination]}
+          modules={[EffectCube, Keyboard]}
           cubeEffect={{
             shadow: true,
             slideShadows: true,
             shadowOffset: 20,
             shadowScale: 0.94,
           }}
-          pagination={false}
+          keyboard={{
+            enabled: true,
+          }}
           centeredSlides={true}
         >
           {guessSongCards.map(

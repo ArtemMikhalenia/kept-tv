@@ -1,4 +1,4 @@
-import { EffectFade } from 'swiper/modules';
+import { EffectFade, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -109,9 +109,12 @@ const GuessSongGameRound4 = (): JSX.Element => {
           className="swiper-r4"
           effect={'fade'}
           grabCursor={true}
-          modules={[EffectFade]}
+          modules={[EffectFade, Keyboard]}
           centeredSlides={true}
           spaceBetween={30}
+          keyboard={{
+            enabled: true,
+          }}
         >
           {guessSongCards.map(
             (element, i: number): JSX.Element => (

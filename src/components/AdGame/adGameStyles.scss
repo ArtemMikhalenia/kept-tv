@@ -1,0 +1,26 @@
+@use '../../variables' as var;
+@use 'swiper/css';
+
+.ad-game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .ad-swiper {
+    pointer-events: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .ad-slide-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

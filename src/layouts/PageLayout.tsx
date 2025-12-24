@@ -3,6 +3,8 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import { motion } from 'motion/react';
 
+import adGameBgImg from '../assets/images/backgrounds/ad-page/game_bg.png';
+import adStartBgImg from '../assets/images/backgrounds/ad-page/start_background.png';
 import birthdayBgImg from '../assets/images/backgrounds/birthday-page/background.webp';
 import detectiveGameBgImg from '../assets/images/backgrounds/detective-game/game_bg.webp';
 import detectiveBgImg from '../assets/images/backgrounds/detective-game/start_bg.webp';
@@ -10,6 +12,7 @@ import factsMainBgImg from '../assets/images/backgrounds/facts-page/color_backgr
 import guessSongMainBgImg from '../assets/images/backgrounds/guess-song/main_bg.webp';
 import houseBgImg from '../assets/images/backgrounds/house-page/house_background.webp';
 import howDoesItWorkBgImg from '../assets/images/backgrounds/how-does-it-work/1.webp';
+import lunchBgImg from '../assets/images/backgrounds/lunch-page/lunch_bg.webp';
 import malahovBgImg from '../assets/images/backgrounds/malahov-page/background.webp';
 import resultsBgImg from '../assets/images/backgrounds/results-page/background.webp';
 import telechanceGameBgImg from '../assets/images/backgrounds/telechance/game-bg.webp';
@@ -38,7 +41,16 @@ const PageLayout = () => {
 
   const houseGameLinks = ['tv/house/game', 'tv/house/final'];
 
-  const resultsLinks = ['tv/detective/results'];
+  const resultsLinks = [
+    'tv/detective/results',
+    'tv/malahov/results',
+    'tv/house/results',
+    'tv/ad-page/results',
+    'tv/guess-song/results',
+    'tv/telechance/results',
+    'tv/how-does-it-work/results',
+    'tv/facts/results',
+  ];
 
   useEffect(() => {
     if (currentLocation === 'tv') {
@@ -60,6 +72,8 @@ const PageLayout = () => {
       setBackground(resultsBgImg);
     } else if (currentLocation === 'tv/birthday') {
       setBackground(birthdayBgImg);
+    } else if (currentLocation === 'tv/lunch') {
+      setBackground(lunchBgImg);
     } else if (
       currentLocation === 'tv/malahov' ||
       currentLocation === 'tv/malahov/game'
@@ -67,6 +81,10 @@ const PageLayout = () => {
       setBackground(malahovBgImg);
     } else if (currentLocation === 'tv/telechance/game') {
       setBackground(telechanceGameBgImg);
+    } else if (currentLocation === 'tv/ad-page') {
+      setBackground(adStartBgImg);
+    } else if (currentLocation === 'tv/ad-page/game') {
+      setBackground(adGameBgImg);
     }
   }, [currentLocation]);
   return (

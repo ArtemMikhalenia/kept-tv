@@ -1,4 +1,4 @@
-import { EffectCreative } from 'swiper/modules';
+import { EffectCreative, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -139,7 +139,7 @@ const DetectiveGame = (): JSX.Element => {
       <Swiper
         effect={'creative'}
         grabCursor={true}
-        modules={[EffectCreative]}
+        modules={[EffectCreative, Keyboard]}
         creativeEffect={{
           prev: {
             shadow: true,
@@ -152,6 +152,9 @@ const DetectiveGame = (): JSX.Element => {
         }}
         spaceBetween={50}
         centeredSlides={true}
+        keyboard={{
+          enabled: true,
+        }}
       >
         {detectiveCards.map(
           (element: DetectiveInterface, index: number): JSX.Element => (

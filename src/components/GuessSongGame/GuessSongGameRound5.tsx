@@ -1,4 +1,4 @@
-import { EffectCards } from 'swiper/modules';
+import { EffectCards, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -50,7 +50,10 @@ const GuessSongGameRound5 = (): JSX.Element => {
           className="swiper-r5"
           effect={'cards'}
           grabCursor={true}
-          modules={[EffectCards]}
+          modules={[EffectCards, Keyboard]}
+          keyboard={{
+            enabled: true,
+          }}
         >
           {guessSongCards.map(
             (element, i: number): JSX.Element => (

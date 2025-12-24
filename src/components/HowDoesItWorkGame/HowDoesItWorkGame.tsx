@@ -1,3 +1,4 @@
+import { Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -96,6 +97,10 @@ const HowDoesItWorkGame = (): JSX.Element => {
         direction={'vertical'}
         grabCursor={true}
         centeredSlides={true}
+        modules={[Keyboard]}
+        keyboard={{
+          enabled: true,
+        }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {slider.map((level, index) => (

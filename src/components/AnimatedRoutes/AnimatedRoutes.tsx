@@ -10,6 +10,7 @@ import {
 
 import { AnimatePresence } from 'motion/react';
 
+import { adGameData } from '../../data/adGameData';
 import {
   blueLightLinksData,
   blueLightRoutingLinks,
@@ -40,6 +41,7 @@ import thumbnailMalahovImg from '../../assets/images/backgrounds/malahov-page/th
 import thumbnailTelechanceImg from '../../assets/images/backgrounds/telechance/thumbnail.webp';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
+import AdPage from '../../pages/AdPage/AdPage';
 import BirthdayPage from '../../pages/BirthdayPage/BirthdayPage';
 import BlueLightPage from '../../pages/BlueLightPage/BlueLightPage';
 import DetectivePage from '../../pages/DetectivePage/DetectivePage';
@@ -49,6 +51,7 @@ import GuessSongPage from '../../pages/GuessSongPage/GuessSongPage';
 import HousePage from '../../pages/HousePage/HousePage';
 import HowDoesItWorkPage from '../../pages/HowDoesItWorkPage/HowDoesItWorkPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
+import LunchPage from '../../pages/LunchPage/LunchPage';
 import MalahovPage from '../../pages/MalahovPage/MalahovPage';
 import ResultsPage from '../../pages/ResultsPage/ResultsPage';
 import TelechancePage from '../../pages/TelechancePage/TelechancePage';
@@ -87,6 +90,8 @@ const BlueLightLinks = lazy(
 const BlueLightDepartment = lazy(
   () => import('../../pages/BlueLightPage/BlueLightDepartment')
 );
+
+const AdGame = lazy(() => import('../AdGame/AdGame'));
 
 const AnimatedOutlet = (): JSX.Element => {
   // const location = useLocation();
@@ -146,7 +151,7 @@ const router = createBrowserRouter(
           />
           <Route
             path="results"
-            element={<ResultsPage title="Поиск детектива" />}
+            element={<ResultsPage title="Поиск главного целителя" />}
           />
         </Route>
         <Route
@@ -208,7 +213,7 @@ const router = createBrowserRouter(
           />
           <Route
             path="results"
-            element={<ResultsPage title="Поиск победителя" />}
+            element={<ResultsPage title="Поиск победителей" />}
           />
         </Route>
         <Route
@@ -311,6 +316,10 @@ const router = createBrowserRouter(
             }
           />
           <Route
+            path="results"
+            element={<ResultsPage title="Поиск главного киномана" />}
+          />
+          <Route
             path={'final'}
             loader={() => houseDataFinal}
             element={
@@ -319,13 +328,12 @@ const router = createBrowserRouter(
               </Suspense>
             }
           />
-          <Route
-            path="results"
-            element={<ResultsPage title="Поиск победителя" />}
-          />
         </Route>
         <Route path="birthday" element={<PageLayout />}>
           <Route index element={<BirthdayPage />} />
+        </Route>
+        <Route path="lunch" element={<PageLayout />}>
+          <Route index element={<LunchPage />} />
         </Route>
         <Route
           index
@@ -367,6 +375,22 @@ const router = createBrowserRouter(
             element={
               <Suspense fallback={<TailSpin />}>
                 <TelechanceGame />
+              </Suspense>
+            }
+          />
+          <Route
+            path="results"
+            element={<ResultsPage title="Поиск победителя" />}
+          />
+        </Route>
+        <Route path="ad-page" element={<PageLayout />}>
+          <Route index element={<AdPage />} />
+          <Route
+            path={'game'}
+            loader={() => adGameData}
+            element={
+              <Suspense fallback={<TailSpin />}>
+                <AdGame />
               </Suspense>
             }
           />

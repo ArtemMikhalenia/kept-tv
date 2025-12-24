@@ -1,4 +1,4 @@
-import { EffectCoverflow } from 'swiper/modules';
+import { EffectCoverflow, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useEffect, useState } from 'react';
@@ -111,7 +111,10 @@ const GuessSongGameRound3 = (): JSX.Element => {
           modifier: 1,
           slideShadows: true,
         }}
-        modules={[EffectCoverflow]}
+        modules={[EffectCoverflow, Keyboard]}
+        keyboard={{
+          enabled: true,
+        }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {guessCards.map(
