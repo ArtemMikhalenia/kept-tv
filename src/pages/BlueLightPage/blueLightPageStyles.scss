@@ -1,4 +1,5 @@
 @use '../../variables' as var;
+@use 'swiper/css';
 
 .blue-light-page-container {
   text-transform: uppercase;
@@ -248,12 +249,59 @@
     z-index: 3;
     width: 100vw;
     height: 100vh;
-    padding: 150px;
-    background-color: red;
-    .color {
+    padding: 50px 100px 50px 150px;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .modal-header {
+      align-self: start;
+      padding: 10px 100px;
+
+      display: flex;
+      justify-content: end;
+
+      .close-btn {
+        outline: none;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        transition: all 0.5s ease 0s;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: 17px;
+          left: 0;
+          width: 35px;
+          height: 2px;
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .swiper-blue-light {
+      pointer-events: auto;
+      position: relative;
       width: 100%;
       height: 100%;
-      background-color: green;
+
+      .video-slide {
+        width: 100%;
+        height: 100%;
+        padding: 0px 100px 50px 20px;
+      }
     }
   }
 }

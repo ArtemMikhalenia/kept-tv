@@ -13,4 +13,6 @@ export interface BlueLightDepartmentInterface {
   image: string;
   bottomText: string;
   className: string;
+  videoLink1: string;
+  videoLink2: string;
 }

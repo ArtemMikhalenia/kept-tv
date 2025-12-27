@@ -1,9 +1,15 @@
+import { EffectCreative, Keyboard } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { type JSX, useState } from 'react';
 
 import { motion } from 'motion/react';
 
 import type { BlueLightDepartmentInterface } from '../../interfaces/blueLightInterface';
 
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
+
+import thumbnailImg from '../../assets/images/backgrounds/blue-light-page/thumbnail.jpg';
 import './blueLightPageStyles.scss';
 
 const BlueLightDepartment = ({
@@ -18,8 +24,11 @@ const BlueLightDepartment = ({
 
   const [openModal, setOpenModal] = useState(false);
 
-  const toggle = () => {
+  const openModalHandler = () => {
     setOpenModal(true);
+  };
+  const closeModalHandler = () => {
+    setOpenModal(false);
   };
 
   return (
@@ -30,7 +39,41 @@ const BlueLightDepartment = ({
     >
       {openModal && (
         <div className="modal">
-          <div className="color"></div>
+          <div className="modal-header">
+            <button className="close-btn" onClick={closeModalHandler} />
+          </div>
+          <Swiper
+            className="swiper-blue-light"
+            grabCursor={true}
+            modules={[EffectCreative, Keyboard]}
+            centeredSlides={true}
+            spaceBetween={50}
+            keyboard={{
+              enabled: true,
+            }}
+            effect={'creative'}
+            creativeEffect={{
+              prev: {
+                shadow: true,
+                translate: [0, 0, -400],
+              },
+              next: {
+                translate: ['100%', 0, 0],
+              },
+            }}
+          >
+            {element.videoLink1 !== '' ? (
+              <SwiperSlide className="video-slide">
+                <VideoPlayer
+                  url={element.videoLink1}
+                  thumbnail={thumbnailImg}
+                />
+              </SwiperSlide>
+            ) : null}
+            <SwiperSlide className="video-slide">
+              <VideoPlayer url={element.videoLink2} thumbnail={thumbnailImg} />
+            </SwiperSlide>
+          </Swiper>
         </div>
       )}
       <div className="top-department-text">
@@ -102,7 +145,10 @@ const BlueLightDepartment = ({
         initial={{ scale: 0 }}
         animate={{ scale: 1, transition: { duration: 1, delay: 2 } }}
       >
-        <button className="blue-light-department-button" onClick={toggle}>
+        <button
+          className="blue-light-department-button"
+          onClick={openModalHandler}
+        >
           <motion.img
             className={element.className}
             src={element.image}
