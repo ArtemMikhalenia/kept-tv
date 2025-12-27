@@ -3,7 +3,7 @@ import {
   MouseParallaxChild,
   MouseParallaxContainer,
 } from 'react-parallax-mouse';
-import { Outlet } from 'react-router';
+import { Link, Outlet } from 'react-router';
 import Snowfall from 'react-snowfall';
 
 import { motion } from 'motion/react';
@@ -45,10 +45,15 @@ const BlueLightPage = (): JSX.Element => {
           className="blue-light-main-title"
           style={{ transform: 'rotate(-20deg)' }}
         >
-          <motion.h1
-            initial={{ scale: 0 }}
-            animate={{ scale: 1, transition: { duration: 0.5, delay: 1 } }}
-          />
+          <Link to="/tv/blue-light">
+            <motion.span
+              className="blue-light-main-link"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1, transition: { duration: 0.5 } }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            />
+          </Link>
         </MouseParallaxChild>
         <MouseParallaxChild
           factorX={0.3}

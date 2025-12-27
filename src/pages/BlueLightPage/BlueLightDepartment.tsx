@@ -1,5 +1,4 @@
-import { type JSX } from 'react';
-import { Link } from 'react-router';
+import { type JSX, useState } from 'react';
 
 import { motion } from 'motion/react';
 
@@ -17,12 +16,23 @@ const BlueLightDepartment = ({
   const bottomText = `${element.bottomText}`;
   const bottomLetters = bottomText.split('');
 
+  const [openModal, setOpenModal] = useState(false);
+
+  const toggle = () => {
+    setOpenModal(true);
+  };
+
   return (
     <motion.div
       className="blue-light-department-links"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
     >
+      {openModal && (
+        <div className="modal">
+          <div className="color"></div>
+        </div>
+      )}
       <div className="top-department-text">
         <svg
           id="top-department-text-svg"
@@ -92,7 +102,7 @@ const BlueLightDepartment = ({
         initial={{ scale: 0 }}
         animate={{ scale: 1, transition: { duration: 1, delay: 2 } }}
       >
-        <Link to="/tv/blue-light" className="blue-light-department-link">
+        <button className="blue-light-department-button" onClick={toggle}>
           <motion.img
             className={element.className}
             src={element.image}
@@ -100,7 +110,7 @@ const BlueLightDepartment = ({
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
           />
-        </Link>
+        </button>
       </motion.div>
     </motion.div>
   );

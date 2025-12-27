@@ -9,7 +9,7 @@ import {
 } from 'react-parallax-mouse';
 import { useLoaderData } from 'react-router';
 
-import type { AdGameInterface } from '../../interfaces/AdGameInterface';
+import type { AdGameInterface } from '../../interfaces/advertGameInterface';
 
 import type { AdGameDataTypes } from '../../types/adGameTypes';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';

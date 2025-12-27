@@ -14,6 +14,7 @@ import houseBgImg from '../assets/images/backgrounds/house-page/house_background
 import howDoesItWorkBgImg from '../assets/images/backgrounds/how-does-it-work/1.webp';
 import lunchBgImg from '../assets/images/backgrounds/lunch-page/lunch_bg.webp';
 import malahovBgImg from '../assets/images/backgrounds/malahov-page/background.webp';
+import relaxBgImg from '../assets/images/backgrounds/relax-page/background.webp';
 import resultsBgImg from '../assets/images/backgrounds/results-page/background.webp';
 import telechanceGameBgImg from '../assets/images/backgrounds/telechance/game-bg.webp';
 import houseGameBgImg from '../assets/images/house_images/house_game_bg.webp';
@@ -85,6 +86,8 @@ const PageLayout = () => {
       setBackground(adStartBgImg);
     } else if (currentLocation === 'tv/ad-page/game') {
       setBackground(adGameBgImg);
+    } else if (currentLocation === 'tv/new-year-relax') {
+      setBackground(relaxBgImg);
     }
   }, [currentLocation]);
   return (

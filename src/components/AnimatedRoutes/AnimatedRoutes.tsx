@@ -53,6 +53,7 @@ import HowDoesItWorkPage from '../../pages/HowDoesItWorkPage/HowDoesItWorkPage';
 import LivingRoomPage from '../../pages/LivingRoomPage/LivingRoomPage';
 import LunchPage from '../../pages/LunchPage/LunchPage';
 import MalahovPage from '../../pages/MalahovPage/MalahovPage';
+import NewYearRelaxPage from '../../pages/NewYearRelaxPage/NewYearRelaxPage';
 import ResultsPage from '../../pages/ResultsPage/ResultsPage';
 import TelechancePage from '../../pages/TelechancePage/TelechancePage';
 import VideoPage from '../../pages/VideoPage/VideoPage';
@@ -334,6 +335,9 @@ const router = createBrowserRouter(
         </Route>
         <Route path="lunch" element={<PageLayout />}>
           <Route index element={<LunchPage />} />
+        </Route>
+        <Route path="new-year-relax" element={<PageLayout />}>
+          <Route index element={<NewYearRelaxPage />} />
         </Route>
         <Route
           index
