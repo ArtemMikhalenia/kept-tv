@@ -156,6 +156,7 @@ const MalahovGame = (): JSX.Element => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
+        spaceBetween={50}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,

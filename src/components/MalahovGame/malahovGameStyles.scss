@@ -13,6 +13,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    padding: 40px;
 
     .malahov-swiper-slide {
       text-shadow: 2px 2px var.$color-white;
@@ -26,7 +27,7 @@
       gap: 40px;
 
       font-family: 'Caveat', cursive;
-      color: #3e3e92;
+      color: var.$color-blue-malahov;
       border-radius: 18px;
 
       .malahov-swiper-text {
@@ -44,7 +45,7 @@
       }
 
       .malahov-swiper-parallax {
-        box-shadow: 7px 7px 1px 1px #3e3e92a9;
+        box-shadow: 7px 7px 1px 1px var.$color-blue-malahov-transparent;
         width: 100%;
         height: 100%;
       }

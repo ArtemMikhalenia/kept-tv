@@ -23,7 +23,7 @@ const VideoPlayer = ({ url, thumbnail }: VideoTypes): JSX.Element => {
       height="100%"
       playing={false}
       preload="true"
-      controls
+      controls={true}
     />
   );
 };

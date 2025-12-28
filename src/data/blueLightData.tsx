@@ -106,7 +106,7 @@ export const blueLightRoutingLinks: BlueLightDepartmentsDataTypes = [
     image: mandarinImg,
     bottomText: 'HR отдела',
     className: 'mandarin',
-    videoLink1: '',
+    videoLink1: 'https://youtu.be/qh7dQdJArVk?si=a58atI3oNrX3e7Qt',
     videoLink2: 'https://youtu.be/eSSg_fdux68?si=QFWPGqmLUsoiU1T6',
   },
   {
@@ -131,6 +131,6 @@ export const blueLightRoutingLinks: BlueLightDepartmentsDataTypes = [
     bottomText: 'Отдела поддержки аудита',
     className: 'podarok',
     videoLink1: '',
-    videoLink2: '',
+    videoLink2: 'https://youtu.be/8Q2WwUHDUj4?si=_EuuSzjDlCrDy-Iq',
   },
 ];

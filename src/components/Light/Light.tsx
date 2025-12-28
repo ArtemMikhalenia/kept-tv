@@ -13,7 +13,7 @@ const Light = ({ id, color }: LightInterface): JSX.Element => {
         backgroundColor: color,
         animationDelay: `${Math.random() * 10}s`,
       }}
-    ></div>
+    />
   );
 };
 

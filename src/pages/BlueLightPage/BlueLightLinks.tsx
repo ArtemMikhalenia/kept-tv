@@ -18,29 +18,31 @@ const BlueLightLinks = (): JSX.Element => {
 
   return (
     <motion.div className="blue-light-links">
-      {link.map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ x: `${item.x}`, y: `${item.y}`, scale: 0, opacity: 0 }}
-          animate={{
-            x: 0,
-            y: 0,
-            scale: 1,
-            opacity: 1,
-            transition: { duration: 1, delay: 1 },
-          }}
-          className={`blue-light-link ${item.className}`}
-        >
-          <Link to={item.url} title={item.titleText}>
-            <motion.img
-              src={item.imgSrc}
-              alt={`${item.imgAlt}-img`}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            />
-          </Link>
-        </motion.div>
-      ))}
+      {link.map(
+        (item: BlueLightInterface, i: number): JSX.Element => (
+          <motion.div
+            key={i}
+            initial={{ x: `${item.x}`, y: `${item.y}`, scale: 0, opacity: 0 }}
+            animate={{
+              x: 0,
+              y: 0,
+              scale: 1,
+              opacity: 1,
+              transition: { duration: 1, delay: 1 },
+            }}
+            className={`blue-light-link ${item.className}`}
+          >
+            <Link to={item.url} title={item.titleText}>
+              <motion.img
+                src={item.imgSrc}
+                alt={`${item.imgAlt}-img`}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              />
+            </Link>
+          </motion.div>
+        )
+      )}
     </motion.div>
   );
 };

@@ -1,10 +1,43 @@
 $color-white: rgba(255, 255, 255, 1);
 $color-black: rgba(0, 0, 0, 1);
+$color-black-03-transparent: rgba(0, 0, 0, 0.3);
+$color-black-half-transparent: rgba(0, 0, 0, 0.5);
+$color-black-07-transparent: rgba(0, 0, 0, 0.7);
+$color-purple-dark: rgba(24, 10, 23, 1);
+
 $color-yellow: rgba(255, 255, 0, 1);
+$color-orange: rgba(255, 68, 0, 1);
+$color-blue: rgba(0, 136, 255, 1);
 
 $color-red: rgba(148, 15, 15, 1);
 
-$text-shadow-blue: #006eff;
+$text-shadow-blue: rgba(0, 110, 255, 1);
 $shadow-grey: rgba(97, 97, 97, 0.6);
 
 $font-color: rgba(24, 24, 24, 1);
+
+//<Guess song>============================
+$color-grey-dark-guess-song: rgba(71, 101, 122, 1);
+$color-grey-light-guess-song: rgba(85, 121, 146, 1);
+$color-brown-light-guess-song: rgba(167, 155, 135, 1);
+$color-brown-dark-guess-song: rgba(134, 125, 108, 1);
+
+//<Malahov>============================
+$color-blue-malahov: rgba(62, 62, 146, 1);
+$color-blue-malahov-transparent: rgba(62, 62, 146, 0.6);
+
+//<Detective>============================
+$card-border-detective: rgba(200, 198, 189, 1);
+
+//<Facts>============================
+$color-pink-light-facts: rgba(255, 142, 213, 1);
+$color-lavender-facts: rgba(205, 154, 255, 1);
+$color-pink-dark-facts: rgba(255, 0, 162, 1);
+$color-red-facts: rgba(255, 0, 59, 1);
+$color-purple-facts: rgba(128, 47, 209, 1);
+$color-yellow-light-facts: rgba(252, 187, 101, 1);
+$color-yellow-facts: rgba(255, 204, 0, 1);
+$color-grey-facts: rgba(170, 170, 170, 1);
+$color-aqua-light-facts: rgba(90, 219, 228, 1);
+$color-aqua-dark-facts: rgba(55, 142, 148, 1);
+$color-blue-facts: rgba(40, 97, 210, 1);

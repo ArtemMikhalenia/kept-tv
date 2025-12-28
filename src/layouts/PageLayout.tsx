@@ -21,7 +21,7 @@ import houseGameBgImg from '../assets/images/house_images/house_game_bg.webp';
 
 const PageLayout = () => {
   const location = useLocation();
-  const [background, setBackground] = useState('');
+  const [background, setBackground] = useState<string>('');
   const currentLocation: string = location.pathname.slice(1);
 
   const guessSongLinks = [

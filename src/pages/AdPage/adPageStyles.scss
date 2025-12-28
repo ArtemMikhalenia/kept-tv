@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: end;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var.$color-black-half-transparent;
 
   .ad-button-container {
     padding-bottom: 100px;
@@ -49,19 +49,19 @@
         text-shadow:
           -2px -2px 5px var.$color-white,
           2px 2px 5px var.$color-white,
-          0 0 5px #f40,
-          0 0 10px #f40,
-          0 0 15px #f40,
-          0 0 20px #f40,
-          0 0 25px #f40;
+          0 0 5px var.$color-orange,
+          0 0 10px var.$color-orange,
+          0 0 15px var.$color-orange,
+          0 0 20px var.$color-orange,
+          0 0 25px var.$color-orange;
 
         box-shadow:
           0 0 25px var.$color-white,
           inset 0 0 25px var.$color-white,
-          0 0 10px #08f,
-          inset 0 0 10px #08f,
-          0 0 20px #08f,
-          inset 0 0 20px #08f;
+          0 0 10px var.$color-blue,
+          inset 0 0 10px var.$color-blue,
+          0 0 20px var.$color-blue,
+          inset 0 0 20px var.$color-blue;
       }
 
       20%,

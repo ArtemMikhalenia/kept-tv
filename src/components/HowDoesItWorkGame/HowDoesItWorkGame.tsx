@@ -103,17 +103,19 @@ const HowDoesItWorkGame = (): JSX.Element => {
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
-        {slider.map((level, index) => (
-          <SwiperSlide
-            key={level.id}
-            className={`how-does-it-work-slide ${level.slideClassname}`}
-          >
-            <HowDoesItWorkGameSlide
-              images={level.images}
-              isActive={index === activeIndex}
-            />
-          </SwiperSlide>
-        ))}
+        {slider.map(
+          (level: HdiwInterface, index: number): JSX.Element => (
+            <SwiperSlide
+              key={level.id}
+              className={`how-does-it-work-slide ${level.slideClassname}`}
+            >
+              <HowDoesItWorkGameSlide
+                images={level.images}
+                isActive={index === activeIndex}
+              />
+            </SwiperSlide>
+          )
+        )}
       </Swiper>
     </MouseParallaxContainer>
   );

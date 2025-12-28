@@ -169,7 +169,7 @@
           position: relative;
           border: 3px solid var.$color-black;
           border-radius: 50%;
-          background-color: #ff8ed5;
+          background-color: var.$color-pink-light-facts;
 
           .number {
             top: 8%;
@@ -177,7 +177,7 @@
           }
 
           &.active {
-            background-color: #ff00a2;
+            background-color: var.$color-pink-dark-facts;
           }
         }
         .facts-item2 {
@@ -205,7 +205,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #802fd1;
+            background-color: var.$color-purple-facts;
 
             .circle {
               width: 20px;
@@ -213,7 +213,7 @@
               display: block;
               border: 3px solid var.$color-black;
               border-radius: 50%;
-              background-color: #fcbb65;
+              background-color: var.$color-yellow-light-facts;
             }
 
             .cross {
@@ -245,14 +245,14 @@
           }
 
           &.active {
-            background-color: #aaaaaa;
+            background-color: var.$color-grey-facts;
           }
         }
         .facts-item3 {
           position: relative;
           border: 3px solid var.$color-black;
           border-radius: 20px;
-          background-color: #5adbe4;
+          background-color: var.$color-aqua-light-facts;
 
           .number {
             top: -10px;
@@ -261,13 +261,13 @@
 
           &.active {
             color: var.$color-white;
-            background-color: #378e94;
+            background-color: var.$color-aqua-dark-facts;
           }
         }
         .facts-item4 {
           position: relative;
           border: 5px solid var.$color-black;
-          background-color: #ff8ed5;
+          background-color: var.$color-pink-light-facts;
 
           .number {
             left: -15px;
@@ -275,14 +275,14 @@
           }
 
           &.active {
-            background-color: #ff00a2;
+            background-color: var.$color-pink-dark-facts;
           }
         }
         .facts-item5 {
           position: relative;
           color: var.$color-white;
           border: 5px solid var.$color-black;
-          background-color: #802fd1;
+          background-color: var.$color-purple-facts;
 
           .number {
             left: -15px;
@@ -291,7 +291,7 @@
 
           &.active {
             color: var.$color-black;
-            background-color: #cd9aff;
+            background-color: var.$color-lavender-facts;
           }
         }
 
@@ -310,12 +310,12 @@
 
         .number-blue {
           color: var.$color-white;
-          background-color: #2861d2;
+          background-color: var.$color-blue-facts;
         }
 
         .number-yellow {
           color: var.$color-black;
-          background-color: #ffcc00;
+          background-color: var.$color-yellow-facts;
         }
       }
 
@@ -350,7 +350,7 @@
           left: 0;
           width: 0;
           height: 100%;
-          background: #ff003b;
+          background: var.$color-red-facts;
           transition: all 0.35s;
         }
 

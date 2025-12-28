@@ -1,4 +1,4 @@
-import { EffectCreative, Keyboard } from 'swiper/modules';
+import { EffectCreative, Keyboard, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { type JSX, useState } from 'react';
@@ -22,7 +22,7 @@ const BlueLightDepartment = ({
   const bottomText = `${element.bottomText}`;
   const bottomLetters = bottomText.split('');
 
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
   const openModalHandler = () => {
     setOpenModal(true);
@@ -45,8 +45,9 @@ const BlueLightDepartment = ({
           <Swiper
             className="swiper-blue-light"
             grabCursor={true}
-            modules={[EffectCreative, Keyboard]}
+            modules={[EffectCreative, Keyboard, Navigation]}
             centeredSlides={true}
+            navigation={true}
             spaceBetween={50}
             keyboard={{
               enabled: true,
@@ -91,19 +92,21 @@ const BlueLightDepartment = ({
 
           <text>
             <textPath href="#textPath" startOffset="50%" textAnchor="middle">
-              {topLetters.map((letter, i) => (
-                <motion.tspan
-                  key={i}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 1,
-                    delay: i * 0.1,
-                  }}
-                >
-                  {letter}
-                </motion.tspan>
-              ))}
+              {topLetters.map(
+                (letter: string, i: number): JSX.Element => (
+                  <motion.tspan
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: i * 0.1,
+                    }}
+                  >
+                    {letter}
+                  </motion.tspan>
+                )
+              )}
             </textPath>
           </text>
         </svg>
@@ -123,19 +126,21 @@ const BlueLightDepartment = ({
           />
           <text>
             <textPath href="#textPath1" startOffset="50%" textAnchor="middle">
-              {bottomLetters.map((letter, i) => (
-                <motion.tspan
-                  key={i}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 1,
-                    delay: i * 0.2,
-                  }}
-                >
-                  {letter}
-                </motion.tspan>
-              ))}
+              {bottomLetters.map(
+                (letter: string, i: number): JSX.Element => (
+                  <motion.tspan
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 1,
+                      delay: i * 0.2,
+                    }}
+                  >
+                    {letter}
+                  </motion.tspan>
+                )
+              )}
             </textPath>
           </text>
         </svg>

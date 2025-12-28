@@ -15,7 +15,7 @@ const Firefly = ({ id, color }: FireflyInterface): JSX.Element => {
         animationDuration: `${Math.random() * 3 + 2}s`,
         animationDelay: `${Math.random() * 5}s`,
       }}
-    ></div>
+    />
   );
 };
 

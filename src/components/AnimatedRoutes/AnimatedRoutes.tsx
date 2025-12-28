@@ -38,6 +38,7 @@ import thumbnailGuessSongImg from '../../assets/images/backgrounds/guess-song/th
 import thumbnailHouseImg from '../../assets/images/backgrounds/house-page/thumbnail.webp';
 import thumbnailHowDoesItWorkImg from '../../assets/images/backgrounds/how-does-it-work/thumbnail.webp';
 import thumbnailMalahovImg from '../../assets/images/backgrounds/malahov-page/thumbnail.webp';
+import thumbnailChaoImg from '../../assets/images/backgrounds/relax-page/thumbnailChao.webp';
 import thumbnailTelechanceImg from '../../assets/images/backgrounds/telechance/thumbnail.webp';
 import PageLayout from '../../layouts/PageLayout';
 import TVLayout from '../../layouts/TVLayout';
@@ -339,6 +340,16 @@ const router = createBrowserRouter(
         <Route path="new-year-relax" element={<PageLayout />}>
           <Route index element={<NewYearRelaxPage />} />
         </Route>
+        <Route
+          index
+          path="new-year-relax-video"
+          element={
+            <VideoPage
+              url="https://vimeo.com/1149838077"
+              thumbnail={thumbnailChaoImg}
+            />
+          }
+        />
         <Route
           index
           path="blue-light-video"

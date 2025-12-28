@@ -13,7 +13,7 @@ const BigBtn = ({ id, link, title }: BigBtnInterface): JSX.Element => {
       className="big-btn"
       id={id}
     >
-      <Link className="big-btn-link" title={title} to={link}></Link>
+      <Link className="big-btn-link" title={title} to={link} />
     </motion.div>
   );
 };

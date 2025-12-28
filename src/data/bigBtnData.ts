@@ -8,7 +8,7 @@ export const bigBtnData: BigBtnInterface[] = [
   },
   {
     id: '2',
-    link: '',
-    title: '',
+    link: '/',
+    title: 'Вернуться на улицу',
   },
 ];

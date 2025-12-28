@@ -25,13 +25,15 @@
     }
     .new-year-relax-page-title-block {
       padding-top: 150px;
+      position: relative;
+      z-index: 10;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
 
       .new-year-relax-page-title {
-        position: relative;
+        cursor: pointer;
 
         .santa-hat {
           position: absolute;
@@ -41,7 +43,7 @@
           width: 70px;
         }
 
-        h1 {
+        a {
           text-shadow: var.$color-red 6px 0 10px;
           max-width: 800px;
           font-family: 'Shantell Sans', cursive;
@@ -50,6 +52,7 @@
           line-height: 120%;
           text-align: center;
           color: var.$color-white;
+          cursor: pointer;
         }
       }
     }

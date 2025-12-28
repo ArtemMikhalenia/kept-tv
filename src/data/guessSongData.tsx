@@ -1,7 +1,3 @@
-// import coldImg from '../assets/images/guess_song_images/round1/1/cold.webp';
-// import elochkeImg from '../assets/images/guess_song_images/round1/1/elochke.webp';
-// import malenkoiImg from '../assets/images/guess_song_images/round1/1/malenkoi.webp';
-// import zimoiImg from '../assets/images/guess_song_images/round1/1/zimoi.webp';
 import etoImg from '../assets/images/guess_song_images/round1/2/eto.webp';
 import luchshiyImg from '../assets/images/guess_song_images/round1/2/luchshiy.webp';
 import moiImg from '../assets/images/guess_song_images/round1/2/moi.webp';
@@ -25,8 +21,6 @@ import legImg from '../assets/images/guess_song_images/round1/6/leg.webp';
 import naImg from '../assets/images/guess_song_images/round1/6/na.webp';
 import provodaImg from '../assets/images/guess_song_images/round1/6/provoda.webp';
 import siniiImg from '../assets/images/guess_song_images/round1/6/sinii.webp';
-// import kruzhitsaImg from '../assets/images/guess_song_images/round1/7/kruzhitsa.webp';
-// import letaetImg from '../assets/images/guess_song_images/round1/7/letaet.webp';
 import snegImg from '../assets/images/guess_song_images/round1/7/sneg.webp';
 import dverImg from '../assets/images/guess_song_images/round1/8/dver.webp';
 import ledyanoiImg from '../assets/images/guess_song_images/round1/8/ledyanoi.webp';
@@ -42,11 +36,7 @@ import igryshkiImg from '../assets/images/guess_song_images/round1/10/igryshki.w
 import novogodnieImg from '../assets/images/guess_song_images/round1/10/novogodnie.webp';
 import svechiImg from '../assets/images/guess_song_images/round1/10/svechi.webp';
 import aImg from '../assets/images/guess_song_images/round1/11/a.webp';
-// import begutImg from '../assets/images/guess_song_images/round1/11/begut.webp';
 import idutImg from '../assets/images/guess_song_images/round1/11/idut.webp';
-// import nosikiImg from '../assets/images/guess_song_images/round1/11/nosiki.webp';
-// import strelkiImg from '../assets/images/guess_song_images/round1/11/strelki.webp';
-// import tictacImg from '../assets/images/guess_song_images/round1/11/tictac.webp';
 import dusheImg from '../assets/images/guess_song_images/round1/12/dushe.webp';
 import serdtseImg from '../assets/images/guess_song_images/round1/12/serdtse.webp';
 import viugaImg from '../assets/images/guess_song_images/round1/12/viuga.webp';
@@ -75,27 +65,21 @@ import yanvarskayaImg from '../assets/images/guess_song_images/round1/16/yanvars
 import zvenitImg from '../assets/images/guess_song_images/round1/16/zvenit.webp';
 import peppersImg from '../assets/images/guess_song_images/round2/1_Red_Hot_Chili Peppers.webp';
 import rollingImg from '../assets/images/guess_song_images/round2/2_Rolling_Stones.webp';
-// import panicImg from '../assets/images/guess_song_images/round2/3_Panic!_At The Disco_ili_discoteca_avaria.webp';
 import glukozaImg from '../assets/images/guess_song_images/round2/4_rus_glukoza.webp';
 import greenImg from '../assets/images/guess_song_images/round2/5_Green_Day.webp';
 import deepImg from '../assets/images/guess_song_images/round2/6_Deep_Purple.webp';
 import chaiImg from '../assets/images/guess_song_images/round2/7_rus_chai_vdvoem.webp';
 import alicaImg from '../assets/images/guess_song_images/round2/8_rus_alica.webp';
 import rukiImg from '../assets/images/guess_song_images/round2/9_rus_ruki_vverh.webp';
-// import serebroImg from '../assets/images/guess_song_images/round2/10_rus_serebro.webp';
 import gradusiImg from '../assets/images/guess_song_images/round2/11_rus_gradusi.webp';
 import sveloImg from '../assets/images/guess_song_images/round2/12_rus_nogu_svelo.webp';
 import kishImg from '../assets/images/guess_song_images/round2/13_rus_kish.webp';
-// import smyslovieImg from '../assets/images/guess_song_images/round2/14_rus_smyslovie_gluki.webp';
 import mumiyImg from '../assets/images/guess_song_images/round2/15_rus_mumiy_troll.webp';
 import beatlesImg from '../assets/images/guess_song_images/round2/16_beatles.webp';
 import dragonsImg from '../assets/images/guess_song_images/round2/17_Imagine_Dragons.webp';
-// import monkeysImg from '../assets/images/guess_song_images/round2/18_Arctic_Monkeys.webp';
 import rosesImg from '../assets/images/guess_song_images/round2/19_Guns_N’_Roses.webp';
 import pilotsImg from '../assets/images/guess_song_images/round2/20_Twenty_One_Pilots.webp';
-// import papaImg from '../assets/images/guess_song_images/round2/21_Papa_Roach.webp';
 import zveriImg from '../assets/images/guess_song_images/round2/22_rus_zveri.webp';
-// import kissImg from '../assets/images/guess_song_images/round2/23_Kiss.webp';
 import coldplayImg from '../assets/images/guess_song_images/round2/24_Coldplay.webp';
 import belarusLogoImg from '../assets/images/guess_song_images/round3/belarus_logo.webp';
 import chtoGdeKogdaImg from '../assets/images/guess_song_images/round3/chto_gde_kogda.webp';
@@ -177,15 +161,6 @@ export const guessSongLinksData: GuessSongLinkTypes = [
 ];
 
 export const guessSongDataRound1: GuessSongDataTypes = [
-  // {
-  //   lvl: 0,
-  //   images: [
-  //     { id: 1, src: malenkoiImg, alt: 'malenkoi-image' },
-  //     { id: 2, src: elochkeImg, alt: 'elochke-image' },
-  //     { id: 3, src: coldImg, alt: 'cold-image' },
-  //     { id: 4, src: zimoiImg, alt: 'zimoi-image' },
-  //   ],
-  // },
   {
     lvl: 0,
     images: [
@@ -235,15 +210,6 @@ export const guessSongDataRound1: GuessSongDataTypes = [
       { id: 6, src: provodaImg, alt: 'provoda-image' },
     ],
   },
-  // {
-  //   lvl: 6,
-  //   images: [
-  //     { id: 1, src: snegImg, alt: 'sneg-image' },
-  //     { id: 2, src: kruzhitsaImg, alt: 'kruzhitsa-image' },
-  //     { id: 3, src: letaetImg, alt: 'letaet-image' },
-  //     { id: 4, src: letaetImg, alt: 'letaet-image' },
-  //   ],
-  // },
   {
     lvl: 5,
     images: [
@@ -272,18 +238,6 @@ export const guessSongDataRound1: GuessSongDataTypes = [
       { id: 5, src: hlopushkiImg, alt: 'hlopushki-image' },
     ],
   },
-  // {
-  //   lvl: 10,
-  //   images: [
-  //     { id: 1, src: tictacImg, alt: 'tictac-image' },
-  //     { id: 2, src: chasiImg, alt: 'chasi-image' },
-  //     { id: 3, src: idutImg, alt: 'idut-image' },
-  //     { id: 4, src: aImg, alt: 'a-image' },
-  //     { id: 5, src: strelkiImg, alt: 'strelki-image' },
-  //     { id: 6, src: nosikiImg, alt: 'nosiki-image' },
-  //     { id: 7, src: begutImg, alt: 'begut-image' },
-  //   ],
-  // },
   {
     lvl: 8,
     images: [
@@ -359,11 +313,6 @@ export const guessSongDataRound2: GuessSongDataRound2Types = [
     src: rollingImg,
     alt: 'rolling-image',
   },
-  // {
-  //   lvl: 2,
-  //   src: panicImg,
-  //   alt: 'panic-image',
-  // },
   {
     lvl: 2,
     src: glukozaImg,
@@ -394,11 +343,6 @@ export const guessSongDataRound2: GuessSongDataRound2Types = [
     src: rukiImg,
     alt: 'ruki-image',
   },
-  // {
-  //   lvl: 9,
-  //   src: serebroImg,
-  //   alt: 'serebro-image',
-  // },
   {
     lvl: 8,
     src: gradusiImg,
@@ -414,11 +358,6 @@ export const guessSongDataRound2: GuessSongDataRound2Types = [
     src: kishImg,
     alt: 'kish-image',
   },
-  // {
-  //   lvl: 13,
-  //   src: smyslovieImg,
-  //   alt: 'smyslovie-image',
-  // },
   {
     lvl: 11,
     src: mumiyImg,
@@ -434,11 +373,6 @@ export const guessSongDataRound2: GuessSongDataRound2Types = [
     src: dragonsImg,
     alt: 'dragons-image',
   },
-  // {
-  //   lvl: 17,
-  //   src: monkeysImg,
-  //   alt: 'monkeys-image',
-  // },
   {
     lvl: 14,
     src: rosesImg,
@@ -449,21 +383,11 @@ export const guessSongDataRound2: GuessSongDataRound2Types = [
     src: pilotsImg,
     alt: 'pilots-image',
   },
-  // {
-  //   lvl: 20,
-  //   src: papaImg,
-  //   alt: 'papa-image',
-  // },
   {
     lvl: 16,
     src: zveriImg,
     alt: 'zveri-image',
   },
-  // {
-  //   lvl: 22,
-  //   src: kissImg,
-  //   alt: 'kiss-image',
-  // },
   {
     lvl: 17,
     src: coldplayImg,

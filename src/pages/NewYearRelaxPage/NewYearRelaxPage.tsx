@@ -3,6 +3,7 @@ import {
   MouseParallaxChild,
   MouseParallaxContainer,
 } from 'react-parallax-mouse';
+import { Link } from 'react-router';
 
 import { motion } from 'motion/react';
 
@@ -68,16 +69,20 @@ const NewYearRelaxPage = (): JSX.Element => {
               animate={{
                 opacity: 1,
                 scale: 1,
-                transition: { duration: 1 },
+                transition: { duration: 0.5 },
               }}
-              viewport={{ once: true, amount: 0.1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              // viewport={{ once: true, amount: 0.1 }}
             >
               <img
                 className="santa-hat"
                 src={santaIcon}
                 alt="front-santa-hat"
               />
-              <h1>Новогодний relax</h1>
+              <Link to="/tv/new-year-relax-video" title="Чао!">
+                Новогодний relax
+              </Link>
             </motion.div>
           </MouseParallaxChild>
         </div>

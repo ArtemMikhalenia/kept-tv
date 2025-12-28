@@ -110,34 +110,40 @@ export const FactsGameSlide = ({
         style={{ height: '100%' }}
         className={`grid-container ${level.containerType}`}
       >
-        {facts.map((fact: FactInterface) => (
-          <motion.div
-            key={fact.id}
-            id={fact.id}
-            initial={{ scale: 0 }}
-            animate={
-              isActive
-                ? {
-                    scale: 1,
-                    transition: { duration: 0.5, delay: 0.1 },
-                  }
-                : { scale: 0, opacity: 0 }
-            }
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className={
-              fact.clicked ? fact.factClassName + ' active' : fact.factClassName
-            }
-            onClick={() => toggleCard(fact.id)}
-          >
-            <span className={`number ${fact.numberColor}`}>{fact.variant}</span>
-            <span className="header">
-              <div className="circle"></div>
-              <div className="cross"></div>
-            </span>
-            <span className="text">{fact.factText}</span>
-          </motion.div>
-        ))}
+        {facts.map(
+          (fact: FactInterface): JSX.Element => (
+            <motion.div
+              key={fact.id}
+              id={fact.id}
+              initial={{ scale: 0 }}
+              animate={
+                isActive
+                  ? {
+                      scale: 1,
+                      transition: { duration: 0.5, delay: 0.1 },
+                    }
+                  : { scale: 0, opacity: 0 }
+              }
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className={
+                fact.clicked
+                  ? fact.factClassName + ' active'
+                  : fact.factClassName
+              }
+              onClick={() => toggleCard(fact.id)}
+            >
+              <span className={`number ${fact.numberColor}`}>
+                {fact.variant}
+              </span>
+              <span className="header">
+                <div className="circle"></div>
+                <div className="cross"></div>
+              </span>
+              <span className="text">{fact.factText}</span>
+            </motion.div>
+          )
+        )}
       </MouseParallaxChild>
       <MouseParallaxChild
         factorX={0.5}
