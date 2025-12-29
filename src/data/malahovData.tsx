@@ -227,7 +227,7 @@ export const malahovData: MalahovInterface[] = [
     textAnimationXEnd: '0',
     textAnimationYStart: '0',
     textAnimationYEnd: '0',
-    text: 'Несколько раз в день, по старинному рецепту, нужно смазывать «ЭТИ МЕСТА» соплями и вскоре вы почувствуете облегчение',
+    text: 'Несколько раз в день, по старинному рецепту, нужно смазывать «ЭТИ МЕСТА» соплями и вскоре вы почувствуете облегчение.',
     swiperImageXStart: '0',
     swiperImageXEnd: '0',
     swiperImageYStart: '100%',

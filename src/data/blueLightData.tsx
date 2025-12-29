@@ -22,10 +22,10 @@ export const blueLightLinksData: BlueLightDataTypes = [
   },
   {
     className: 'shampanskoe',
-    url: 'bookkeeping',
+    url: 'accounting',
     imgSrc: shampanskoeImg,
     imgAlt: 'shampanskoe',
-    titleText: 'Book keeping',
+    titleText: 'Accounting',
     x: '0',
     y: '-45%',
   },
@@ -86,9 +86,9 @@ export const blueLightRoutingLinks: BlueLightDepartmentsDataTypes = [
     videoLink2: 'https://youtu.be/SS7HFg02TS0?si=vIb5oE-vLTDWnmkF',
   },
   {
-    link: 'bookkeeping',
+    link: 'accounting',
     image: shampanskoeImg,
-    bottomText: 'Отдела book keeping',
+    bottomText: 'Отдела бухгалтерии',
     className: 'shampanskoe',
     videoLink1: '',
     videoLink2: 'https://youtu.be/-NZOmv27-OQ?si=OsdMO9RFUHxupdlo',
@@ -122,7 +122,7 @@ export const blueLightRoutingLinks: BlueLightDepartmentsDataTypes = [
     image: sharImg,
     bottomText: 'Отдела ТЦО',
     className: 'shar',
-    videoLink1: '',
+    videoLink1: 'https://youtu.be/nFbsI4W5lKI?si=IFe2VhlfIGHunEtI',
     videoLink2: 'https://youtu.be/aC7_ZAnY9OE?si=P25LbXUCj_YB-Lcq',
   },
   {
@@ -130,7 +130,7 @@ export const blueLightRoutingLinks: BlueLightDepartmentsDataTypes = [
     image: podarokImg,
     bottomText: 'Отдела поддержки аудита',
     className: 'podarok',
-    videoLink1: '',
+    videoLink1: 'https://youtu.be/43HK3yuBLDQ?si=ijWYR7RKtgtW0vMw',
     videoLink2: 'https://youtu.be/8Q2WwUHDUj4?si=_EuuSzjDlCrDy-Iq',
   },
 ];

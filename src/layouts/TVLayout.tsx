@@ -74,6 +74,8 @@ const TVLayout = (): JSX.Element => {
       setLinkToNextPage('/tv/telechance');
     } else if (currentLocation === 'tv/telechance/game') {
       setLinkToNextPage('/tv/telechance/results');
+    } else {
+      setLinkToNextPage('/tv');
     }
   }, [currentLocation]);
 
